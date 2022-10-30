@@ -1,6 +1,6 @@
-DataPre\Cleaning Data\cleaned1.csv
-DataPre\Cleaning Data\removed.csv
-DataPre\Cleaning Data\tax\year_abnormal1.csv
-DataPre\Cleaning Data\tax \year_qs1.csv
 *.iml
 *.xml
+DataPre/Cleaning Data/cleaned1.csv
+DataPre/Cleaning Data/removed.csv
+DataPre/Cleaning Data/tax/year_abnormal1.csv
+DataPre/Cleaning Data/tax/year_qs1.csv
