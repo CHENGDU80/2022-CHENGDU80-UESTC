@@ -88,6 +88,7 @@ def draw_entpies(entid,file_name):
     )
     pie.render('./e_htmls/'+file_name+'.html')
 
+
 if __name__ == '__main__':
     data = pd.read_csv('importance.csv')
     #传递每个type的top3-top10

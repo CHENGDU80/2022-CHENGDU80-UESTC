@@ -92,7 +92,6 @@ class MainPage(QWidget):
         layout1.addWidget(self.w21_widget12, 1, 0, 4, 1)
         layout1.addWidget(self.w21_widget13, 5, 0, 4, 1)
         layout1.addWidget(self.w21_widget14, 9, 0, 4, 1)
-        # load_path = 'file://'+path+'/dist/index.html'
         load_path = 'file://'+path+'/dist/index.html'
         self.w21_widget2.load(QUrl(load_path))
         # 加载其余控价内容
@@ -203,7 +202,7 @@ class MainPage(QWidget):
             importance = path + '/htmls/type%d_importance.html' % type
             probability = path + '/htmls/%d.html' % entid
             al = path + '/e_htmls/Al_%d.html' % entid
-            image = path + '/images/%d.png' % entid
+            # image = path + '/images/%d.png' % entid
             self.w22_web11.load(QUrl.fromLocalFile(importance))
             self.w22_web12.load(QUrl.fromLocalFile(probability))
             self.w22_web13.load(QUrl.fromLocalFile(al))
