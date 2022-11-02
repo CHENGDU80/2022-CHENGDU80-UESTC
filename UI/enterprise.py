@@ -4,13 +4,16 @@ from pyecharts.charts import Grid,Pie,Bar
 from pyecharts import options as opts
 import tqdm
 
+WIDTH = '750px'
+HEIGHT = '400px'
+
 def draw_bars(type,filename):
     extract = data[data['type']==type]
     extract = extract.sort_values(by='importance',ascending=False)
     attrs = extract['attribute'].tolist()
     values = extract['importance'].tolist()
     bar = (
-        Bar(init_opts=opts.InitOpts(width='500px',height='215px'))
+        Bar(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
         .add_xaxis(attrs)
         .add_yaxis('Attribute-weights',values,color='#518D79')
         #.reversal_axis()
@@ -28,7 +31,7 @@ def draw_types(dataset,file_name):
     r_attrs = [attrs[i] for i in remain_index]
     r_dataset = [dataset[i] for i in remain_index]
     pie = (
-        Pie(init_opts=opts.InitOpts(width='500px',height='215px'))
+        Pie(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
         .add("",[list(z) for z in zip(attrs,dataset)])
         .set_global_opts(title_opts=opts.TitleOpts(title="Corporate Risk Probability"),legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
         .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}", is_show=False))
@@ -46,7 +49,7 @@ def draw_entpies(entid,file_name):
     nums = [aver_Al,100-aver_Al]
     nums[1] = float('%.2f' % nums[1])
     pie = (
-        Pie(init_opts=opts.InitOpts(width='500px',height='215px'))
+        Pie(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
             .add(
             "",
             [list(z) for z in zip(attrs,nums)],

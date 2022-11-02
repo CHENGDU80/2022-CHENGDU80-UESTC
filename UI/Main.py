@@ -1,10 +1,11 @@
 import sys
 import os
+import pandas as pd
 
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import Qt, QUrl
 from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from pyecharts.faker import Faker
@@ -12,6 +13,8 @@ from pyecharts.faker import Faker
 from MainWindow import Ui_MainWindow
 
 path = os.getcwd()
+data = pd.read_csv('ent_type.csv')
+
 
 class MyMainForm(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -26,37 +29,83 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # 设定窗口移动尺寸变化变量
         self.evn = 0
 
-        # 设置web组件路径
-        self.html = path+'/htmls/industry_bar.html'
-        self.MainWeb.setUrl(QUrl('file://' + self.html))
-        self.init_cake()
+        # 设置页面切换响应事件
+        self.IntroList.itemClicked.connect(self.displayIntroPage)
+        self.DetailsList.itemClicked.connect(self.displayDetailsPage)
+        # self.SearchBarComboBox.itemClicked.connect()
+        # self.SearchBarLine.
+        # self.btn12.clicked.connect(self.search_context)
 
+        # 初始页设定
+        self.mainPageStart()
+        self.searchPageStart()
+        self.piePageStart()
+
+    # 首页-函数设定
+    def mainPageStart(self,):
         # 设置UI阴影效果
         self.effect_shadow_style(self.FirstFrame)
         self.effect_shadow_style2(self.SecondFrame)
         self.effect_shadow_style3(self.ThirdFrame)
         self.effect_shadow_style4(self.FourthFrame)
 
-        # 设置页面切换响应事件
-        self.IntroList.itemClicked.connect(self.displayIntroPage)
-        self.DetailsList.itemClicked.connect(self.displayDetailsPage)
+        # 设置首页选择列表的跳转函数
+        self.MainPageChooseList.itemClicked.connect(self.mainPageList)
 
-    # Web饼状图显示设定
-    def init_cake(self,):
-        pie = Pie()
-        pie.add(
-            "",
-            [list(z) for z in zip(Faker.choose(), Faker.values())],
-            radius=["40%", "75%"],
-        )
-        pie.set_global_opts(
-            title_opts=opts.TitleOpts(title=''),
-            legend_opts=opts.LegendOpts(orient="vertical", pos_top="15%", pos_left="2%"),
-        )
-        pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
-        pie.render(self.html)
-        self.MainWeb.setUrl(QUrl('file://' + self.html))
-        self.MainWeb.setZoomFactor(0.5)
+        # 设置按钮展示选择
+        self.FirstFrameButton.clicked.connect(self.mainPageFirstButton)
+        self.SecondFrameButton.clicked.connect(self.mainPageSecondButton)
+        self.ThirdFrameButton.clicked.connect(self.mainPageThirdButton)
+        self.FourthFrameButton.clicked.connect(self.mainPageFourthButton)
+
+    # 首页-ListWeb元素选择跳转
+    def mainPageList(self):
+        text = self.MainPageChooseList.currentItem().text()
+        if text == 'Last 120 second':
+            self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar0.html'))
+        elif text == 'Last 30 minute':
+            self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar1.html'))
+        elif text == 'Last 24 hours':
+            self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar2.html'))
+        elif text == 'Last 5 days':
+            self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar3.html'))
+
+    # 首页-Button元素选择跳转
+    def mainPageFirstButton(self):
+        self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar0.html'))
+    def mainPageSecondButton(self):
+        self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar1.html'))
+    def mainPageThirdButton(self):
+        self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar2.html'))
+    def mainPageFourthButton(self):
+        self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar3.html'))
+
+    # piePage页-函数设定
+    def piePageStart(self):
+        # 设置piePage页选择列表的跳转函数
+        self.PiePageChooseList.itemClicked.connect(self.piePageList)
+
+    # piePage页-ListWeb元素选择跳转
+    def piePageList(self):
+        text = self.PiePageChooseList.currentItem().text()
+        if text == 'Pie 1':
+            self.PieWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar0.html'))
+        elif text == 'Pie 2':
+            self.PieWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar1.html'))
+        elif text == 'Pie 3':
+            self.PieWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar2.html'))
+        elif text == 'Pie 4':
+            self.PieWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar3.html'))
+
+    # searchPage页-函数设定
+    def searchPageStart(self):
+        self.SearchPageChooseList.itemClicked.connect(self.searchPageList)
+
+    # searchPage页-函数设定
+    def searchPageList(self):
+        text=self.SearchPageChooseList.currentItem().text()
+        if text == 'show the result':
+            self.SearchWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar0.html'))
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
     def mousePressEvent(self, event):
@@ -143,21 +192,18 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         effect_shadow.setBlurRadius(48)  # 阴影半径
         effect_shadow.setColor(QColor(162, 129, 247))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
-
     def effect_shadow_style2(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
         effect_shadow.setBlurRadius(48)  # 阴影半径
         effect_shadow.setColor(QColor(253, 139, 133))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
-
     def effect_shadow_style3(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
         effect_shadow.setBlurRadius(48)  # 阴影半径
         effect_shadow.setColor(QColor(243, 175, 189))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
-
     def effect_shadow_style4(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
@@ -168,19 +214,62 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # 跳转页面函数设定
     def displayIntroPage(self):
         text = self.IntroList.currentItem().text()
-        if text == 'Homepage':
+        if text == 'Mainpage':
             self.DisplayPage.setCurrentIndex(0)  # 主页
-
     def displayDetailsPage(self):
         text = self.DetailsList.currentItem().text()
+        if text == 'Bar':
+            self.DisplayPage.setCurrentIndex(2)  # Bar页
         if text == 'Pie':
-            self.DisplayPage.setCurrentIndex(2)  # Pie页
-        elif text == 'Graph':
             self.DisplayPage.setCurrentIndex(3)  # Pie页
+        elif text == 'Graph':
+            self.DisplayPage.setCurrentIndex(4)  # Graph页
 
     # 搜索页面函数设定
     def displaySearchPage(self):
-        self.DisplayPage.setCurrentIndex(1)  # 搜索结果页
+        text = self.SearchBar.text()
+        if len(text) == 0 or text == 'Please input an entid:':
+            QMessageBox.warning(self, 'Empty Search', 'Error Input', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+            # 重置内容
+            self.SearchBar.setText('Please input an entid:')
+        else:
+            self.DisplayPage.setCurrentIndex(1)  # Search页
+            self.entidChanged(text)
+
+    def entidChanged(self, text):
+        entid = int(text)
+        extract = data[data['entid'] == entid]
+        if len(extract) == 0:
+            QMessageBox.critical(self, 'Error Input', 'Error Input', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+        else:
+            type = extract['CaseType'].tolist()[0]
+            type = int(type)
+            importance = path + '/htmls/type%d_importance.html' % type
+            probability = path + '/htmls/%d.html' % entid
+            al = path + '/e_htmls/Al_%d.html' % entid
+            # image = path + '/images/%d.png' % entid
+            self.SearchWeb.load(QUrl.fromLocalFile(importance))
+            # self.SearchWeb.load(QUrl.fromLocalFile(probability))
+            # self.SearchWeb.load(QUrl.fromLocalFile(al))
+            # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
+
+    # Web饼状图显示设定
+    def init_cake(self,):
+        pie=Pie()
+        pie.add(
+            "",
+            [list(z) for z in zip(Faker.choose(),Faker.values())],
+            radius=["40%","75%"],
+        )
+        pie.set_global_opts(
+            title_opts=opts.TitleOpts(title=''),
+            legend_opts=opts.LegendOpts(orient="vertical",pos_top="15%",pos_left="2%"),
+        )
+        pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
+        pie.render(self.html)
+        self.MainWeb.setUrl(QUrl('file://'+self.html))
+        self.MainWeb.setZoomFactor(0.5)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

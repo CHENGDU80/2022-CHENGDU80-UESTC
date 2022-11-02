@@ -4,6 +4,8 @@ import numpy as np
 from pyecharts import options as opts
 from pyecharts.charts import Grid,Pie,Bar
 
+WIDTH = '750px'
+HEIGHT = '400px'
 
 # 绘制柱状图
 def draw_bari(dataset,file_name):
@@ -19,7 +21,7 @@ def draw_bari(dataset,file_name):
         attrs.append(str(ids[i]))
 
     ind_bar = (
-        Bar(init_opts=opts.InitOpts(width='640px',height='205px'))
+        Bar(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
         .add_xaxis(attrs)
         .add_yaxis('Risk0',i_0,stack='stack1')
         .add_yaxis('Risk1',i_1,stack='stack1')
@@ -46,7 +48,7 @@ def draw_bare(dataset,file_name):
         attrs.append(str(ids[i]))
 
     ind_bar = (
-        Bar(init_opts=opts.InitOpts(width='640px',height='205px'))
+        Bar(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
         .add_xaxis(attrs)
         .add_yaxis('Risk0',i_0,stack='stack1')
         .add_yaxis('Risk1',i_1,stack='stack1')
@@ -76,7 +78,7 @@ if __name__ == '__main__':
     risk_attrs = t_attrs[:-1]
     risk_nums = type_nums[:-1]
     type_pie = (
-        Pie(init_opts=opts.InitOpts(width='640px',height='205px'))
+        Pie(init_opts=opts.InitOpts(WIDTH,height=HEIGHT))
         .add('Overall', [list(z) for z in zip(t_attrs, type_nums)],center=["25%","50%"])
         .add('Risk',[list(z) for z in zip(t_attrs,risk_nums)],center=['75%','50%'])
         .set_global_opts(title_opts=opts.TitleOpts(title="Corporate Risk Management"),legend_opts=opts.LegendOpts(pos_right="0%"))
