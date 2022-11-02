@@ -350,7 +350,7 @@ class Ui_MainWindow(object):
         self.SearchBarLayout.setContentsMargins(12, -1, 12, -1)
         self.SearchBarLayout.setSpacing(0)
         self.SearchBarLayout.setObjectName("SearchBarLayout")
-        self.SearchLOGO = QtWidgets.QWidget(self.SearchBar)
+        self.SearchLOGO = QtWidgets.QFrame(self.SearchBar)
         self.SearchLOGO.setMinimumSize(QtCore.QSize(18, 18))
         self.SearchLOGO.setMaximumSize(QtCore.QSize(18, 18))
         self.SearchLOGO.setStyleSheet("image: url(:/buttom/img/buttom/搜索_search.svg);")
@@ -365,21 +365,27 @@ class Ui_MainWindow(object):
         self.SearchBarLine.setStyleSheet("background-color: rgba(255, 255, 255, 0);\n"
 "margin-left:12px;\n"
 "border:none;")
+        self.SearchBarLine.setText("")
         self.SearchBarLine.setClearButtonEnabled(True)
         self.SearchBarLine.setObjectName("SearchBarLine")
         self.SearchBarLayout.addWidget(self.SearchBarLine)
-        self.SearchBarLayout.setStretch(0, 1)
         self.horizontalLayout_5.addLayout(self.SearchBarLayout)
-        self.SearchBarUESTC = QtWidgets.QLabel(self.SearchBar)
+        self.SearchBarButton = QtWidgets.QPushButton(self.SearchBar)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
-        font.setPointSize(9)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.SearchBarUESTC.setFont(font)
-        self.SearchBarUESTC.setStyleSheet("color: rgb(186, 186, 186);")
-        self.SearchBarUESTC.setObjectName("SearchBarUESTC")
-        self.horizontalLayout_5.addWidget(self.SearchBarUESTC)
+        self.SearchBarButton.setFont(font)
+        self.SearchBarButton.setStyleSheet("QPushButton:hover {\n"
+"border-left: 2px solid rgb(255, 255, 255)\n"
+"}\n"
+"QPushButton:pressed {\n"
+"background-color: transparent;\n"
+"background-color: rgba(225, 225, 225,150);\n"
+"}")
+        self.SearchBarButton.setObjectName("SearchBarButton")
+        self.horizontalLayout_5.addWidget(self.SearchBarButton)
         self.SearchBarComboBox = QtWidgets.QComboBox(self.SearchBar)
         self.SearchBarComboBox.setMinimumSize(QtCore.QSize(40, 32))
         self.SearchBarComboBox.setMaximumSize(QtCore.QSize(16777215, 16777))
@@ -1504,7 +1510,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Preservation"))
         self.DetailsList.setSortingEnabled(__sortingEnabled)
         self.SearchBarLine.setPlaceholderText(_translate("MainWindow", "Search Type"))
-        self.SearchBarUESTC.setText(_translate("MainWindow", "UESTC"))
+        self.SearchBarButton.setText(_translate("MainWindow", "Search"))
         self.MainPageTitle.setText(_translate("MainWindow", "Realtime Message Data"))
         self.FirstFrameButton.setText(_translate("MainWindow", "Videoconferencing"))
         self.FirstFrameDate.setText(_translate("MainWindow", "March 27th 2019"))

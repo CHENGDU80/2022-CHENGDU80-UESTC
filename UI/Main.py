@@ -32,14 +32,14 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # 设置页面切换响应事件
         self.IntroList.itemClicked.connect(self.displayIntroPage)
         self.DetailsList.itemClicked.connect(self.displayDetailsPage)
-        # self.SearchBarComboBox.itemClicked.connect()
-        # self.SearchBarLine.
-        # self.btn12.clicked.connect(self.search_context)
+        self.SearchBarButton.clicked.connect(self.displaySearchPage)
 
-        # 初始页设定
+        # 页面设定
         self.mainPageStart()
         self.searchPageStart()
+        self.barPageStart()
         self.piePageStart()
+        self.graphPageStart()
 
     # 首页-函数设定
     def mainPageStart(self,):
@@ -80,6 +80,33 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def mainPageFourthButton(self):
         self.MainWeb.load(QUrl.fromLocalFile(path+'/htmls/industry_bar3.html'))
 
+    # searchPage页-函数设定
+    def searchPageStart(self):
+        self.SearchPageChooseList.itemClicked.connect(self.searchPageList)
+
+    # searchPage页-ListWeb元素选择跳转
+    def searchPageList(self):
+        text=self.SearchPageChooseList.currentItem().text()
+        if text == 'show the result':
+            self.SearchWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar0.html'))
+
+    # barPage页-函数设定
+    def barPageStart(self):
+        # 设置piePage页选择列表的跳转函数
+        self.BarPageChooseList.itemClicked.connect(self.barPageList)
+
+    # barPage页-ListWeb元素选择跳转
+    def barPageList(self):
+        text = self.BarPageChooseList.currentItem().text()
+        if text == 'Bar 1':
+            self.BarWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar0.html'))
+        elif text == 'Bar 2':
+            self.BarWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar1.html'))
+        elif text == 'Bar 3':
+            self.BarWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar2.html'))
+        elif text == 'Bar 4':
+            self.BarWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar3.html'))
+
     # piePage页-函数设定
     def piePageStart(self):
         # 设置piePage页选择列表的跳转函数
@@ -97,15 +124,17 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         elif text == 'Pie 4':
             self.PieWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar3.html'))
 
-    # searchPage页-函数设定
-    def searchPageStart(self):
-        self.SearchPageChooseList.itemClicked.connect(self.searchPageList)
+    # graphPage页-函数设定
+    def graphPageStart(self):
+        # 设置piePage页选择列表的跳转函数
+        self.GraphPageChooseList.itemClicked.connect(self.graphPageList)
 
-    # searchPage页-函数设定
-    def searchPageList(self):
-        text=self.SearchPageChooseList.currentItem().text()
-        if text == 'show the result':
-            self.SearchWeb.load(QUrl.fromLocalFile(path+'/htmls/enterprise_bar0.html'))
+    # graphPage页-ListWeb元素选择跳转
+    def graphPageList(self):
+        text = self.GraphPageChooseList.currentItem().text()
+        if text == 'Graph 1':
+            self.GraphWeb.load(QUrl.fromLocalFile(path+'/dist/index.html'))
+
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
     def mousePressEvent(self, event):
@@ -227,31 +256,24 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # 搜索页面函数设定
     def displaySearchPage(self):
-        text = self.SearchBar.text()
-        if len(text) == 0 or text == 'Please input an entid:':
-            QMessageBox.warning(self, 'Empty Search', 'Error Input', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
-            # 重置内容
-            self.SearchBar.setText('Please input an entid:')
-        else:
-            self.DisplayPage.setCurrentIndex(1)  # Search页
-            self.entidChanged(text)
+        text = self.SearchBarLine.text()
+        self.DisplayPage.setCurrentIndex(1)  # Search页
+        self.entidChanged(text)
 
     def entidChanged(self, text):
         entid = int(text)
         extract = data[data['entid'] == entid]
-        if len(extract) == 0:
-            QMessageBox.critical(self, 'Error Input', 'Error Input', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
-        else:
-            type = extract['CaseType'].tolist()[0]
-            type = int(type)
-            importance = path + '/htmls/type%d_importance.html' % type
-            probability = path + '/htmls/%d.html' % entid
-            al = path + '/e_htmls/Al_%d.html' % entid
-            # image = path + '/images/%d.png' % entid
-            self.SearchWeb.load(QUrl.fromLocalFile(importance))
-            # self.SearchWeb.load(QUrl.fromLocalFile(probability))
-            # self.SearchWeb.load(QUrl.fromLocalFile(al))
-            # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
+        type = extract['CaseType'].tolist()[0]
+        type = int(type)
+        # importance = path + '/htmls/type%d_importance.html' % type
+        # probability = path + '/htmls/%d.html' % entid
+        # al = path + '/e_htmls/Al_%d.html' % entid
+        # image = path + '/images/%d.png' % entid
+        # self.SearchWeb.load(QUrl.fromLocalFile(importance))
+        # self.SearchWeb.load(QUrl.fromLocalFile(probability))
+        # self.SearchWeb.load(QUrl.fromLocalFile(al))
+        self.SearchWeb.load(QUrl.fromLocalFile(path+'/dist/index.html'))
+        # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # Web饼状图显示设定
     def init_cake(self,):

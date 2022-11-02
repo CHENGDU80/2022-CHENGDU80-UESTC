@@ -706,7 +706,7 @@ border-bottom-left-radius:0px;</string>
                  <number>0</number>
                 </property>
                 <item>
-                 <layout class="QHBoxLayout" name="SearchBarLayout" stretch="1,0">
+                 <layout class="QHBoxLayout" name="SearchBarLayout" stretch="0,0">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -717,7 +717,7 @@ border-bottom-left-radius:0px;</string>
                    <number>12</number>
                   </property>
                   <item>
-                   <widget class="QWidget" name="SearchLOGO" native="true">
+                   <widget class="QFrame" name="SearchLOGO">
                     <property name="minimumSize">
                      <size>
                       <width>18</width>
@@ -754,6 +754,9 @@ border-bottom-left-radius:0px;</string>
 margin-left:12px;
 border:none;</string>
                     </property>
+                    <property name="text">
+                     <string/>
+                    </property>
                     <property name="placeholderText">
                      <string>Search Type</string>
                     </property>
@@ -765,20 +768,26 @@ border:none;</string>
                  </layout>
                 </item>
                 <item>
-                 <widget class="QLabel" name="SearchBarUESTC">
+                 <widget class="QPushButton" name="SearchBarButton">
                   <property name="font">
                    <font>
                     <family>Tahoma</family>
-                    <pointsize>9</pointsize>
+                    <pointsize>11</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color: rgb(186, 186, 186);</string>
+                   <string notr="true">QPushButton:hover {
+border-left: 2px solid rgb(255, 255, 255)
+}
+QPushButton:pressed {
+background-color: transparent;
+background-color: rgba(225, 225, 225,150);
+}</string>
                   </property>
                   <property name="text">
-                   <string>UESTC</string>
+                   <string>Search</string>
                   </property>
                  </widget>
                 </item>
