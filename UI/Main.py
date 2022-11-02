@@ -1,0 +1,189 @@
+import sys
+import os
+
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtCore import Qt, QUrl
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QMainWindow, QApplication
+from pyecharts import options as opts
+from pyecharts.charts import Pie
+from pyecharts.faker import Faker
+
+from MainWindow import Ui_MainWindow
+
+path = os.getcwd()
+
+class MyMainForm(QMainWindow, Ui_MainWindow):
+    def __init__(self, parent=None):
+        # 设定窗口
+        super().__init__(parent)
+        self.setupUi(self)
+        self.start_x = None
+        self.start_y = None
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlags(Qt.FramelessWindowHint)  # 设置窗口标志：隐藏窗口边框
+
+        # 设定窗口移动尺寸变化变量
+        self.evn = 0
+
+        # 设置web组件路径
+        self.html = path+'/htmls/industry_bar.html'
+        self.MainWeb.setUrl(QUrl('file://' + self.html))
+        self.init_cake()
+
+        # 设置UI阴影效果
+        self.effect_shadow_style(self.FirstFrame)
+        self.effect_shadow_style2(self.SecondFrame)
+        self.effect_shadow_style3(self.ThirdFrame)
+        self.effect_shadow_style4(self.FourthFrame)
+
+        # 设置页面切换响应事件
+        self.IntroList.itemClicked.connect(self.displayIntroPage)
+        self.DetailsList.itemClicked.connect(self.displayDetailsPage)
+
+    # Web饼状图显示设定
+    def init_cake(self,):
+        pie = Pie()
+        pie.add(
+            "",
+            [list(z) for z in zip(Faker.choose(), Faker.values())],
+            radius=["40%", "75%"],
+        )
+        pie.set_global_opts(
+            title_opts=opts.TitleOpts(title=''),
+            legend_opts=opts.LegendOpts(orient="vertical", pos_top="15%", pos_left="2%"),
+        )
+        pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
+        pie.render(self.html)
+        self.MainWeb.setUrl(QUrl('file://' + self.html))
+        self.MainWeb.setZoomFactor(0.5)
+
+    # 窗口尺寸调整-按压鼠标获取窗体坐标函数
+    def mousePressEvent(self, event):
+        if self.childAt(event.x(), event.y()) in [self.RightBottomWindowEdge]:
+            self.evn = 1
+            self.mouse_x = event.globalX()  # 获取鼠标当前的坐标
+            self.mouse_y = event.globalY()
+            self.origin_x = self.x()  # 获取窗体当前坐标
+            self.origin_y = self.y()
+        elif self.childAt(event.x(), event.y()) in [self.RightWindowEdge]:
+            self.evn = 2
+            self.mouse_x = event.globalX()  # 获取鼠标当前的坐标
+            self.mouse_y = event.globalY()
+            self.origin_x = self.x()  # 获取窗体当前坐标
+            self.origin_y = self.y()
+        elif self.childAt(event.x(), event.y()) in [self.BottomWindowEdge]:
+            self.evn = 3
+            self.mouse_x = event.globalX()  # 获取鼠标当前的坐标
+            self.mouse_y = event.globalY()
+            self.origin_x = self.x()  # 获取窗体当前坐标
+            self.origin_y = self.y()
+        else:
+            self.evn = 0
+            super(MyMainForm, self).mousePressEvent(event)
+            self.start_x = event.x()
+            self.start_y = event.y()
+
+    # 窗口尺寸调整-松开鼠标重置窗口位置信息
+    def mouseReleaseEvent(self, event):
+        self.origin_x = None
+        self.origin_y = None
+        self.start_x = None
+        self.start_y = None
+
+    # 窗口尺寸调整-移动鼠标调整窗口位置信息
+    def mouseMoveEvent(self, event):
+        #
+        if self.evn == 0:
+            super(MyMainForm, self).mouseMoveEvent(event)
+            dis_x = event.x() - self.start_x
+            dis_y = event.y() - self.start_y
+            self.move(self.x() + dis_x, self.y() + dis_y)
+        elif self.evn == 1:  # 计算鼠标移动的x，y位移
+            try:
+                if event.x() < 814:
+                    x = 814
+                else:
+                    x = event.x()
+                if event.y() < 272:
+                    y = 272
+                else:
+                    y = event.y()
+                self.setGeometry(self.origin_x, self.origin_y, x, y)
+                self.RightBottomWindowEdge.setGeometry(0, 0, x, y)
+            except BaseException as f:
+                pass
+        elif self.evn == 2:  # 计算鼠标移动的x，y位移
+            try:
+                # 移动窗体
+                if event.x() < 814:
+                    x = 814
+                else:
+                    x = event.x()
+                self.setGeometry(self.origin_x, self.origin_y, x, self.height())
+                self.RightWindowEdge.setGeometry(0, 0, x, self.RightWindowEdge.height())
+            except BaseException as f:
+                pass
+        elif self.evn == 3:  # 计算鼠标移动的x，y位移
+            try:
+                # 移动窗体
+                if event.y() < 272:
+                    y = 272
+                else:
+                    y = event.y()
+                self.setGeometry(self.origin_x, self.origin_y, self.width(), y)
+                self.BottomWindowEdge.setGeometry(0, 0, self.BottomWindowEdge.width(), y)
+            except BaseException as f:
+                pass
+
+    # 设置色块阴影颜色效果
+    def effect_shadow_style(self, widget):
+        effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        effect_shadow.setOffset(0, 8)  # 偏移
+        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setColor(QColor(162, 129, 247))  # 阴影颜色
+        widget.setGraphicsEffect(effect_shadow)
+
+    def effect_shadow_style2(self, widget):
+        effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        effect_shadow.setOffset(0, 8)  # 偏移
+        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setColor(QColor(253, 139, 133))  # 阴影颜色
+        widget.setGraphicsEffect(effect_shadow)
+
+    def effect_shadow_style3(self, widget):
+        effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        effect_shadow.setOffset(0, 8)  # 偏移
+        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setColor(QColor(243, 175, 189))  # 阴影颜色
+        widget.setGraphicsEffect(effect_shadow)
+
+    def effect_shadow_style4(self, widget):
+        effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        effect_shadow.setOffset(0, 8)  # 偏移
+        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setColor(QColor(66, 226, 192))  # 阴影颜色
+        widget.setGraphicsEffect(effect_shadow)
+
+    # 跳转页面函数设定
+    def displayIntroPage(self):
+        text = self.IntroList.currentItem().text()
+        if text == 'Homepage':
+            self.DisplayPage.setCurrentIndex(0)  # 主页
+
+    def displayDetailsPage(self):
+        text = self.DetailsList.currentItem().text()
+        if text == 'Pie':
+            self.DisplayPage.setCurrentIndex(2)  # Pie页
+        elif text == 'Graph':
+            self.DisplayPage.setCurrentIndex(3)  # Pie页
+
+    # 搜索页面函数设定
+    def displaySearchPage(self):
+        self.DisplayPage.setCurrentIndex(1)  # 搜索结果页
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWin = MyMainForm()
+    myWin.show()
+    sys.exit(app.exec_())
