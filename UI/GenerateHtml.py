@@ -3,6 +3,7 @@ import numpy as np
 import json
 from pyecharts.charts import Bar, Pie, Line, Timeline, Tree
 from pyecharts import options as opts
+from pyecharts.commons.utils import JsCode
 from pyecharts.faker import Faker
 from Config import *
 
@@ -16,7 +17,7 @@ def drawSimpleBar(x, y, file_name, file_id):
                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                         legend_opts=opts.LegendOpts(pos_right="0%"))
     bar.set_series_opts(label_opts=opts.LabelOpts(position='top'))
-    bar.render(PATH+file_name+str(file_id)+'.html')
+    bar.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
 # 复杂柱状图渲染
@@ -32,7 +33,7 @@ def drawComplexBar(x, y, file_name, file_id):
                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                         legend_opts=opts.LegendOpts(pos_right="0%"))
     bar.set_series_opts(label_opts=opts.LabelOpts(position='top'))
-    bar.render(PATH+file_name+str(file_id)+'.html')
+    bar.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
 # 复杂饼状图渲染
@@ -42,7 +43,7 @@ def drawComplexPie(x, y, file_name, file_id):
     pie.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
                         legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
     pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}", is_show=False))
-    pie.render(PATH+file_name+str(file_id)+'.html')
+    pie.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
 # 简单饼状图渲染
@@ -61,7 +62,7 @@ def drawSimplePie(x, y, file_name, file_id):
                                                     "borderRadius": 2}}))
     pie.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
                         legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
-    pie.render(PATH+file_name+str(file_id)+'.html')
+    pie.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 # 复杂饼状图渲染
 def drawSimpleLine(x, y, file_name, file_id):
@@ -72,7 +73,7 @@ def drawSimpleLine(x, y, file_name, file_id):
                          datazoom_opts=opts.DataZoomOpts(is_show=True),
                          legend_opts=opts.LegendOpts(pos_right="0%"))
     line.set_series_opts(label_opts=opts.LabelOpts(position='top'))
-    line.render(PATH+file_name+str(file_id)+'.html')
+    line.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
 # 时间线饼图渲染
@@ -85,28 +86,41 @@ def drawTimeLine(x, y, file_name, file_id):
                             datazoom_opts=opts.DataZoomOpts(is_show=True),
                             legend_opts=opts.LegendOpts(pos_right="0%"))
         tl.add(pie, "{}年".format(i))
-    tl.render(PATH+file_name+str(file_id)+'.html')
+    tl.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
-# 树状图渲染
-def drawTree(x, y, file_name, file_id):
-    with open("flare.json", "r", encoding="utf-8") as f:
-        j = json.load(f)
+# 环形树状图渲染
+def drawCircleTree(x, y, file_name, file_id):
+    with open("test.json","r",encoding="utf-8") as f:
+        j=json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
     tree.add("", [j], collapse_interval=2, layout="radial")
     tree.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
-                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                          legend_opts=opts.LegendOpts(pos_right="0%"))
     tree.set_series_opts(label_opts=opts.LabelOpts(position='top'))
-    tree.render(PATH+file_name+str(file_id)+'.html')
+    tree.render(HTML_PATH+file_name+str(file_id)+'.html')
+
+# 普通树状图渲染
+def drawSimpleTree(x, y, file_name, file_id):
+    with open("test.json","r",encoding="utf-8") as f:
+        j=json.load(f)
+    tree = Tree(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
+    tree.add("", [j], collapse_interval=2)
+    tree.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+                         legend_opts=opts.LegendOpts(pos_right="0%"))
+    tree.set_series_opts(label_opts=opts.LabelOpts(position='top'))
+    tree.render(HTML_PATH+file_name+str(file_id)+'.html')
+
 
 
 if __name__ == '__main__':
     data = pd.read_csv('importance.csv')
     data.sort_index(axis=0, ascending= False, inplace=True)
-    drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleBar', 0)
-    drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'ComplexBar', 0)
-    drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'ComplexPie', 0)
-    drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'SimplePie', 0)
-    drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleLine', 0)
-    drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'TimeLine', 0)
+    drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleBar_', 0)
+    drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'ComplexBar_', 0)
+    drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'ComplexPie_', 0)
+    drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'SimplePie_', 0)
+    drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleLine_', 0)
+    drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'TimeLine_', 0)
+    drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'CircleTree_', 0)
+    drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleTree_', 0)
