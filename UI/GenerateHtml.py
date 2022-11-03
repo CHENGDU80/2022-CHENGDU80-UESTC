@@ -112,15 +112,14 @@ def drawSimpleTree(x, y, file_name, file_id):
     tree.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
-
 if __name__ == '__main__':
     data = pd.read_csv('importance.csv')
     data.sort_index(axis=0, ascending= False, inplace=True)
-    drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleBar_', 0)
-    drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'ComplexBar_', 0)
-    drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'ComplexPie_', 0)
-    drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'SimplePie_', 0)
-    drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleLine_', 0)
-    drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'TimeLine_', 0)
-    drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'CircleTree_', 0)
-    drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'SimpleTree_', 0)
+    drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'Bar_Simple_', 0)
+    drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'Bar_Complex_', 0)
+    drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'Pie_Complex_', 0)
+    drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'Pie_Simple_', 0)
+    drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Simple_', 0)
+    drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Time_', 0)
+    drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Circle_', 0)
+    drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Simple_', 0)

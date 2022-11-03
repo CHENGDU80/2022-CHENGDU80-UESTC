@@ -874,7 +874,7 @@ QComboBox:off{
                    <x>0</x>
                    <y>0</y>
                    <width>915</width>
-                   <height>540</height>
+                   <height>591</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -937,7 +937,7 @@ border-bottom-left-radius:0px;
                         </font>
                        </property>
                        <property name="text">
-                        <string>Realtime Message Data</string>
+                        <string>Main Page</string>
                        </property>
                       </widget>
                      </item>
@@ -1925,7 +1925,7 @@ QWebEngineView{
                          </property>
                          <property name="url" stdset="0">
                           <url>
-                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/enterprise_bar.html</string>
+                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
                           </url>
                          </property>
                         </widget>
@@ -2019,7 +2019,7 @@ border-bottom-left-radius:0px;
                       <rect>
                        <x>10</x>
                        <y>110</y>
-                       <width>800</width>
+                       <width>880</width>
                        <height>450</height>
                       </rect>
                      </property>
@@ -2275,7 +2275,7 @@ border-bottom-left-radius:0px;
                       <rect>
                        <x>10</x>
                        <y>110</y>
-                       <width>800</width>
+                       <width>880</width>
                        <height>450</height>
                       </rect>
                      </property>
@@ -2546,7 +2546,7 @@ border-bottom-left-radius:0px;
                       <rect>
                        <x>10</x>
                        <y>110</y>
-                       <width>800</width>
+                       <width>880</width>
                        <height>450</height>
                       </rect>
                      </property>
@@ -2834,7 +2834,7 @@ border-bottom-left-radius:0px;
                         <rect>
                          <x>10</x>
                          <y>110</y>
-                         <width>800</width>
+                         <width>880</width>
                          <height>450</height>
                         </rect>
                        </property>

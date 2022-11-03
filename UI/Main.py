@@ -60,23 +60,23 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def mainPageList(self):
         text = self.MainPageChooseList.currentItem().text()
         if text == 'Last 120 second':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_Complex_0.html'))
         elif text == 'Last 30 minute':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_Simple_0.html'))
         elif text == 'Last 24 hours':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Complex_0.html'))
         elif text == 'Last 5 days':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Simple_0.html'))
 
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Complex_0.html'))
     def mainPageSecondButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
     def mainPageThirdButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
     def mainPageFourthButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
 
     # searchPage页-函数设定
     def searchPageStart(self):
@@ -86,7 +86,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def searchPageList(self):
         text=self.SearchPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
 
     # barPage页-函数设定
     def barPageStart(self):
@@ -97,13 +97,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def barPageList(self):
         text = self.BarPageChooseList.currentItem().text()
         if text == 'Bar 1':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 2':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 3':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 4':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
 
     # piePage页-函数设定
     def piePageStart(self):
@@ -114,13 +114,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def piePageList(self):
         text = self.PiePageChooseList.currentItem().text()
         if text == 'Pie 1':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimplePie_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 2':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimplePie_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 3':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimplePie_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 4':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimplePie_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
 
     # graphPage页-函数设定
     def graphPageStart(self):
@@ -131,7 +131,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def graphPageList(self):
         text = self.GraphPageChooseList.currentItem().text()
         if text == 'Graph 1':
-            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleTree_0.html'))
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
     def mousePressEvent(self, event):
@@ -247,13 +247,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         text = self.DetailsList.currentItem().text()
         if text == 'Bar':
             self.DisplayPage.setCurrentIndex(2)  # Bar页
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimpleBar_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
         if text == 'Pie':
             self.DisplayPage.setCurrentIndex(3)  # Pie页
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'SimplePie_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
         elif text == 'Graph':
             self.DisplayPage.setCurrentIndex(4)  # Graph页
-            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'CircleTree_0.html'))
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Circle_0.html'))
 
     # 搜索页面函数设定
     def displaySearchPage(self):
@@ -273,7 +273,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.SearchWeb.load(QUrl.fromLocalFile(importance))
         # self.SearchWeb.load(QUrl.fromLocalFile(probability))
         # self.SearchWeb.load(QUrl.fromLocalFile(al))
-        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'CircleTree_0.html'))
+        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Tree_Circle_0.html'))
         # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # Web饼状图显示设定
