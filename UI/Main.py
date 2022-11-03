@@ -70,7 +70,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Complex_0.html'))
+        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Time_0.html'))
     def mainPageSecondButton(self):
         self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
     def mainPageThirdButton(self):
@@ -242,7 +242,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         text = self.IntroList.currentItem().text()
         if text == 'Mainpage':
             self.DisplayPage.setCurrentIndex(0)  # 主页
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'ComplexBar_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
     def displayDetailsPage(self):
         text = self.DetailsList.currentItem().text()
         if text == 'Bar':
@@ -262,10 +262,10 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.entidChanged(text)
 
     def entidChanged(self, text):
-        entid = int(text)
-        extract = data[data['entid'] == entid]
-        type = extract['CaseType'].tolist()[0]
-        type = int(type)
+        # entid = int(text)
+        # extract = data[data['entid'] == entid]
+        # ype = extract['CaseType'].tolist()[0]
+        # type = int(type)
         # importance = ABS_PATH + HTML_PATH+'type%d_importance.html' % type
         # probability = ABS_PATH + HTML_PATH+'%d.html' % entid
         # al = ABS_PATH + '/e_htmls/Al_%d.html' % entid
@@ -273,25 +273,8 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.SearchWeb.load(QUrl.fromLocalFile(importance))
         # self.SearchWeb.load(QUrl.fromLocalFile(probability))
         # self.SearchWeb.load(QUrl.fromLocalFile(al))
-        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Tree_Circle_0.html'))
+        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
         # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
-
-    # Web饼状图显示设定
-    def initPie(self,):
-        pie=Pie()
-        pie.add(
-            "",
-            [list(z) for z in zip(Faker.choose(),Faker.values())],
-            radius=["40%","75%"],
-        )
-        pie.set_global_opts(
-            title_opts=opts.TitleOpts(title=''),
-            legend_opts=opts.LegendOpts(orient="vertical",pos_top="15%",pos_left="2%"),
-        )
-        pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
-        pie.render(self.html)
-        self.MainWeb.setUrl(QUrl('file://'+self.html))
-        self.MainWeb.setZoomFactor(0.5)
 
 
 if __name__ == "__main__":

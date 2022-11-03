@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-gl.min.js"></script>
 
 </head>
 <body>
-    <div id="a30a012df73f46f58291c52a09858d31" class="chart-container" style="width:850px; height:400px;"></div>
+    <div id="e2e006b8d96644fe889a5ea127d564ca" class="chart-container" style="width:850px; height:300px;"></div>
     <script>
-        var chart_a30a012df73f46f58291c52a09858d31 = echarts.init(
-            document.getElementById('a30a012df73f46f58291c52a09858d31'), 'white', {renderer: 'canvas'});
-        var option_a30a012df73f46f58291c52a09858d31 = {
+        var chart_e2e006b8d96644fe889a5ea127d564ca = echarts.init(
+            document.getElementById('e2e006b8d96644fe889a5ea127d564ca'), 'white', {renderer: 'canvas'});
+        var option_e2e006b8d96644fe889a5ea127d564ca = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -21,7 +22,6 @@
     "animationEasingUpdate": "cubicOut",
     "animationDelayUpdate": 0,
     "color": [
-        "#518D79",
         "#c23531",
         "#2f4554",
         "#61a0a8",
@@ -49,250 +49,272 @@
     ],
     "series": [
         {
-            "type": "line",
-            "name": "Yaix",
-            "connectNulls": false,
-            "symbolSize": 4,
-            "showSymbol": true,
-            "smooth": false,
-            "clip": true,
-            "step": false,
+            "type": "bar3D",
             "data": [
                 [
+                    4,
                     "tax_state",
                     26
                 ],
                 [
+                    4,
                     "taxtype",
                     28
                 ],
                 [
+                    4,
                     "VENDINC",
                     28
                 ],
                 [
+                    4,
                     "ttype",
                     34
                 ],
                 [
+                    4,
                     "RECCAP",
                     40
                 ],
                 [
+                    4,
                     "Unpaid",
                     64
                 ],
                 [
+                    4,
                     "INDUSTRYPHY",
                     80
                 ],
                 [
+                    4,
                     "ENTTYPE",
                     126
                 ],
                 [
+                    4,
                     "Ratio",
                     182
                 ],
                 [
+                    4,
                     "BUSST",
                     340
                 ],
                 [
+                    3,
                     "assets_re",
                     34
                 ],
                 [
+                    3,
                     "ASSGRO",
                     36
                 ],
                 [
+                    3,
                     "total_profit",
                     38
                 ],
                 [
+                    3,
                     "RECCAP",
                     52
                 ],
                 [
+                    3,
                     "NETINC",
                     54
                 ],
                 [
+                    3,
                     "INDUSTRYPHY",
                     58
                 ],
                 [
+                    3,
                     "Unpaid",
                     70
                 ],
                 [
+                    3,
                     "ENTTYPE",
                     126
                 ],
                 [
+                    3,
                     "Ratio",
                     168
                 ],
                 [
+                    3,
                     "BUSST",
                     310
                 ],
                 [
+                    2,
                     "TOTEQU",
                     30
                 ],
                 [
+                    2,
                     "Action_Grade",
                     32
                 ],
                 [
+                    2,
                     "assets_re",
                     50
                 ],
                 [
+                    2,
                     "Unpaid",
                     52
                 ],
                 [
+                    2,
                     "RECCAP",
                     72
                 ],
                 [
+                    2,
                     "NETINC",
                     78
                 ],
                 [
+                    2,
                     "INDUSTRYPHY",
                     86
                 ],
                 [
+                    2,
                     "BUSST",
                     146
                 ],
                 [
+                    2,
                     "Ratio",
                     156
                 ],
                 [
+                    2,
                     "ENTTYPE",
                     234
                 ],
                 [
+                    1,
                     "Action_Grade",
                     26
                 ],
                 [
+                    1,
                     "total_profit",
                     32
                 ],
                 [
+                    1,
                     "Frequency",
                     32
                 ],
                 [
+                    1,
                     "ASSGRO",
                     50
                 ],
                 [
+                    1,
                     "Unpaid",
                     50
                 ],
                 [
+                    1,
                     "INDUSTRYPHY",
                     80
                 ],
                 [
+                    1,
                     "ENTTYPE",
                     100
                 ],
                 [
+                    1,
                     "BUSST",
                     132
                 ],
                 [
+                    1,
                     "RECCAP",
                     146
                 ],
                 [
+                    1,
                     "Ratio",
                     178
                 ],
                 [
+                    0,
                     "NETINC",
                     16
                 ],
                 [
+                    0,
                     "Frequency",
                     22
                 ],
                 [
+                    0,
                     "assets_re",
                     54
                 ],
                 [
+                    0,
                     "Ratio",
                     56
                 ],
                 [
+                    0,
                     "ENTTYPE",
                     76
                 ],
                 [
+                    0,
                     "Social",
                     78
                 ],
                 [
+                    0,
                     "total_profit",
                     86
                 ],
                 [
+                    0,
                     "RECCAP",
                     96
                 ],
                 [
+                    0,
                     "BUSST",
                     102
                 ],
                 [
+                    0,
                     "Unpaid",
                     104
                 ]
             ],
-            "hoverAnimation": true,
             "label": {
-                "show": true,
+                "show": false,
                 "position": "top",
                 "margin": 8
-            },
-            "lineStyle": {
-                "show": true,
-                "width": 1,
-                "opacity": 1,
-                "curveness": 0,
-                "type": "solid"
-            },
-            "areaStyle": {
-                "opacity": 0
-            },
-            "zlevel": 0,
-            "z": 0,
-            "rippleEffect": {
-                "show": true,
-                "brushType": "stroke",
-                "scale": 2.5,
-                "period": 4
             }
         }
     ],
     "legend": [
         {
             "data": [
-                "Yaix"
+                ""
             ],
-            "selected": {
-                "Yaix": true
-            },
+            "selected": {},
             "show": true,
             "right": "0%",
             "padding": 5,
@@ -318,123 +340,102 @@
         "borderWidth": 0,
         "padding": 5
     },
-    "xAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            },
-            "data": [
-                "tax_state",
-                "taxtype",
-                "VENDINC",
-                "ttype",
-                "RECCAP",
-                "Unpaid",
-                "INDUSTRYPHY",
-                "ENTTYPE",
-                "Ratio",
-                "BUSST",
-                "assets_re",
-                "ASSGRO",
-                "total_profit",
-                "RECCAP",
-                "NETINC",
-                "INDUSTRYPHY",
-                "Unpaid",
-                "ENTTYPE",
-                "Ratio",
-                "BUSST",
-                "TOTEQU",
-                "Action_Grade",
-                "assets_re",
-                "Unpaid",
-                "RECCAP",
-                "NETINC",
-                "INDUSTRYPHY",
-                "BUSST",
-                "Ratio",
-                "ENTTYPE",
-                "Action_Grade",
-                "total_profit",
-                "Frequency",
-                "ASSGRO",
-                "Unpaid",
-                "INDUSTRYPHY",
-                "ENTTYPE",
-                "BUSST",
-                "RECCAP",
-                "Ratio",
-                "NETINC",
-                "Frequency",
-                "assets_re",
-                "Ratio",
-                "ENTTYPE",
-                "Social",
-                "total_profit",
-                "RECCAP",
-                "BUSST",
-                "Unpaid"
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 0,
+        "max": 400,
+        "inRange": {
+            "color": [
+                "#313695",
+                "#4575b4",
+                "#74add1",
+                "#abd9e9",
+                "#e0f3f8",
+                "#ffffbf",
+                "#fee090",
+                "#fdae61",
+                "#f46d43",
+                "#d73027",
+                "#a50026"
             ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    },
+    "xAxis3D": {
+        "data": [
+            4,
+            3,
+            2,
+            1,
+            0
+        ],
+        "nameGap": 20,
+        "type": "category",
+        "axisLabel": {
+            "margin": 8
         }
-    ],
-    "yAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
+    },
+    "yAxis3D": {
+        "data": [
+            "tax_state",
+            "taxtype",
+            "VENDINC",
+            "ttype",
+            "RECCAP",
+            "Unpaid",
+            "INDUSTRYPHY",
+            "ENTTYPE",
+            "Ratio",
+            "BUSST",
+            "assets_re",
+            "ASSGRO",
+            "total_profit",
+            "NETINC",
+            "TOTEQU",
+            "Action_Grade",
+            "Frequency",
+            "Social"
+        ],
+        "nameGap": 20,
+        "type": "category",
+        "axisLabel": {
+            "margin": 8
         }
-    ],
+    },
+    "zAxis3D": {
+        "nameGap": 20,
+        "type": "value",
+        "axisLabel": {
+            "margin": 8
+        }
+    },
+    "grid3D": {
+        "boxWidth": 200,
+        "boxHeight": 100,
+        "boxDepth": 80,
+        "viewControl": {
+            "autoRotate": false,
+            "autoRotateSpeed": 10,
+            "rotateSensitivity": 1
+        }
+    },
     "title": [
         {
             "text": "Title",
             "padding": 5,
             "itemGap": 10
         }
-    ],
-    "dataZoom": {
-        "show": true,
-        "type": "slider",
-        "realtime": true,
-        "start": 20,
-        "end": 80,
-        "orient": "horizontal",
-        "zoomLock": false,
-        "filterMode": "filter"
-    }
+    ]
 };
-        chart_a30a012df73f46f58291c52a09858d31.setOption(option_a30a012df73f46f58291c52a09858d31);
+        chart_e2e006b8d96644fe889a5ea127d564ca.setOption(option_e2e006b8d96644fe889a5ea127d564ca);
     </script>
 </body>
 </html>
