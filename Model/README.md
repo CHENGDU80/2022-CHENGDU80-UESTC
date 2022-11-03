@@ -15,7 +15,7 @@ Model\
 	train.py：模型训练流程定义
 	model.py：模型定义
 	validation.py：验证流程定义
-	data.py：未定，为模型整理输入数据集
+	dataop.py：为模型整理输入数据集
 	predict.py：预测入口
 ```
 
