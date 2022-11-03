@@ -28,7 +28,9 @@ def draw_bari(dataset,file_name):
         .add_yaxis('Risk2',i_2,stack='stack1')
         .add_yaxis('Risk3',i_3,stack='stack1')
         .add_yaxis('Risk4',i_4,stack='stack1')
-        .set_global_opts(title_opts=opts.TitleOpts(title='Industry Risk Probabilities'),datazoom_opts=opts.DataZoomOpts(is_show=True),legend_opts=opts.LegendOpts(pos_right="0%"))
+        .set_global_opts(title_opts=opts.TitleOpts(title='Industry Risk Probabilities'),
+                         datazoom_opts=opts.DataZoomOpts(is_show=True),
+                         legend_opts=opts.LegendOpts(pos_right="0%"))
         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
     )
     ind_bar.render('./htmls/'+file_name+'.html')
