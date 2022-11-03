@@ -1,5 +1,5 @@
-
-
+Model/__pycache__
+Model/SavedModel
 *.iml
 *.xml
 DataPre/Cleaning Data/cleaned1.csv
