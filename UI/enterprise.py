@@ -40,7 +40,7 @@ def draw_types(dataset,file_name):
 
 def draw_entpies(entid,file_name):
     en_data = ent_data[ent_data['entid']==entid]
-    Al_ratios = en_data['Al_ratio'].copy().tolist()
+    Al_ratios = en_data['Ratio'].copy().tolist()
     aver_Al = np.average(Al_ratios)
     if entid == 102673201:
         aver_Al = 83.884567
@@ -114,7 +114,7 @@ if __name__ == '__main__':
     id1 = 102673201
     id2 = 1157977132
     data1 = [0.15, 0.1, 0.05, 0.65, 0.05]
-    data2 =  [0.1, 0.05, 0.05, 0.1, 0.7]
+    data2 = [0.1, 0.05, 0.05, 0.1, 0.7]
     draw_types(data1,str(id1))
     draw_types(data2,str(id2))
     #保存企业-类型数据(需检验是否存在多类型）

@@ -276,7 +276,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # Web饼状图显示设定
-    def init_cake(self,):
+    def initPie(self,):
         pie=Pie()
         pie.add(
             "",
