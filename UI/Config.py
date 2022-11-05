@@ -1,6 +1,8 @@
 import os
 
 # UI的配置设定文件
+WINDOW_WIDTH = 1250
+WINDOW_HEIGHT = 750
 
 # 主页的Web组件尺寸
 MAIN_WIDTH = '850px'

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1239</width>
-    <height>693</height>
+    <width>1250</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -874,7 +874,7 @@ QComboBox:off{
                    <x>0</x>
                    <y>0</y>
                    <width>915</width>
-                   <height>591</height>
+                   <height>641</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -1945,7 +1945,7 @@ QWebEngineView{
                    <x>11</x>
                    <y>11</y>
                    <width>915</width>
-                   <height>540</height>
+                   <height>615</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -2020,7 +2020,7 @@ border-bottom-left-radius:0px;
                        <x>10</x>
                        <y>110</y>
                        <width>880</width>
-                       <height>450</height>
+                       <height>510</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -2201,7 +2201,7 @@ border-bottom: 3px solid rgb(119, 111, 255)
                    <x>11</x>
                    <y>11</y>
                    <width>915</width>
-                   <height>540</height>
+                   <height>615</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -2276,7 +2276,7 @@ border-bottom-left-radius:0px;
                        <x>10</x>
                        <y>110</y>
                        <width>880</width>
-                       <height>450</height>
+                       <height>510</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -2472,7 +2472,7 @@ border-bottom: 3px solid rgb(119, 111, 255)
                    <x>11</x>
                    <y>11</y>
                    <width>915</width>
-                   <height>540</height>
+                   <height>615</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -2547,7 +2547,7 @@ border-bottom-left-radius:0px;
                        <x>10</x>
                        <y>110</y>
                        <width>880</width>
-                       <height>450</height>
+                       <height>510</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -2835,7 +2835,7 @@ border-bottom-left-radius:0px;
                          <x>10</x>
                          <y>110</y>
                          <width>880</width>
-                         <height>450</height>
+                         <height>510</height>
                         </rect>
                        </property>
                        <property name="font">

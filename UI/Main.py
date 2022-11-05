@@ -1,17 +1,12 @@
 import sys
 import pandas as pd
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtCore import Qt, QUrl
+from PyQt5.QtCore import Qt, QUrl, QCoreApplication
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
-from pyecharts import options as opts
-from pyecharts.charts import Pie
-from pyecharts.faker import Faker
 
 from MainWindow import Ui_MainWindow
 from Config import *
-
-data = pd.read_csv('ent_type.csv')
 
 
 class MyMainForm(QMainWindow, Ui_MainWindow):
@@ -38,6 +33,11 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.barPageStart()
         self.piePageStart()
         self.graphPageStart()
+
+        # 窗口设定
+        self.PageCloseButton.clicked.connect(QCoreApplication.instance().quit)
+        self.PageMaximizeButton.clicked.connect(self.windowMaximized)
+        self.PageMinimizeButton.clicked.connect(self.windowMinimized)
 
     # 首页-函数设定
     def mainPageStart(self,):
@@ -84,7 +84,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # searchPage页-ListWeb元素选择跳转
     def searchPageList(self):
-        text=self.SearchPageChooseList.currentItem().text()
+        text = self.SearchPageChooseList.currentItem().text()
         if text == 'show the result':
             self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
 
@@ -275,6 +275,20 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.SearchWeb.load(QUrl.fromLocalFile(al))
         self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
         # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
+
+    def windowMaximized(self):
+        # 获取桌面尺寸
+        desktop = QApplication.desktop()
+        rect = desktop.availableGeometry()
+        self.setGeometry(rect)  # 这样就可以了，就是会导致窗口的标题栏在最上边不可见
+
+    def windowMinimized(self):
+        desktop = QApplication.desktop()
+        desktopRect = desktop.availableGeometry()
+        desktopRect.width()
+        rect = QtCore.QRect(int((desktopRect.width()-WINDOW_WIDTH)/2), int((desktopRect.height()-WINDOW_HEIGHT)/2),
+                            WINDOW_WIDTH, WINDOW_HEIGHT)
+        self.setGeometry(rect)
 
 
 if __name__ == "__main__":
