@@ -64,9 +64,9 @@ def solve_knn(feature,label,test):
 
 ## main
 
-feature_path = r"data\train\constructed_trainset_1000.csv"
+feature_path = r"data/train/constructed_trainset_1000.csv"
 feature = pd.read_csv(feature_path)
-label_path = r'data\train\enhanced_feature.csv'
+label_path = r'data/train/enhanced_feature.csv'
 label = pd.read_csv(label_path)
 label = label.values
 label=label.ravel()
@@ -74,9 +74,9 @@ print(label)
 label = np.transpose(label)
 #label = label.ravel()
 #feature = feature.drop(columns=["APPLICATION_ID"])
-test_path = r"data\test\constructed_testset.csv"
+test_path = r"data/test/constructed_testset.csv"
 test = pd.read_csv(test_path)
-tans_path = r"data\test\label.csv"
+tans_path = r"data/test/label.csv"
 tans = pd.read_csv(tans_path)
 tans = tans.drop(columns=["APPLICATION_ID","APPLICATION_DATE"])
 tans = tans.values
