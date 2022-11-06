@@ -47,7 +47,7 @@ def calc_result(tans, answer):
     print("roc_auc", roc_auc)
 
 def solve_svc(feature,label,test):
-    svm_trainer = SVC(C=1, kernel='rbf', gamma='auto', coef0=0.0, tol=1e-1)
+    svm_trainer = SVC(C=1, kernel='rbf', gamma='auto', coef0=0.0, tol=1e-3)
     # sklearn.svm.SVC(C=1.0, kernel='rbf', degree=3, gamma='auto', coef0=0.0, shrinking=True, probability=False, tol=0.001,
     #                cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape=None,random_state=None)
     svm_trainer.fit(feature, label)
@@ -66,7 +66,7 @@ def solve_knn(feature,label,test):
 
 feature_path = r"data\train\constructed_trainset.csv"
 feature = pd.read_csv(feature_path)
-label_path = r'data\train\enhanced_feature_label.csv'
+label_path = r'data\train\enhanced_feature_label_3_1.csv'
 label = pd.read_csv(label_path)
 label = label.values
 label=label.ravel()
