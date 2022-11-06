@@ -8,3 +8,4 @@ DataPre/Cleaning Data/tax/year_abnormal1.csv
 DataPre/Cleaning Data/tax/year_qs1.csv
 *.pyc
 *.csv
+*.npy
