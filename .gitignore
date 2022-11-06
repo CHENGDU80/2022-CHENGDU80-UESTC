@@ -9,4 +9,7 @@ DataPre/Cleaning Data/tax/year_qs1.csv
 *.pyc
 feature.csv
 label.csv
+enhanced_feature_label.csv
+enhanced_feature.csv
+constructed_trainset.csv
 *.npy
