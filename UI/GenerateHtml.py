@@ -79,6 +79,7 @@ def drawSimplePie(x, y, file_name, file_id):
                         legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
     pie.render(HTML_PATH+file_name+str(file_id)+'.html')
 
+
 # 复杂线状图渲染
 def drawSimpleLine(x, y, file_name, file_id):
     line = Line(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
@@ -129,7 +130,7 @@ def drawSimpleTree(x, y, file_name, file_id):
 
 
 if __name__ == '__main__':
-    data = pd.read_csv('importance.csv')
+    data = pd.read_csv('./importance_.csv')
     data.sort_index(axis=0, ascending= False, inplace=True)
 
     # 生成柱状图

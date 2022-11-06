@@ -41,20 +41,35 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # 首页-函数设定
     def mainPageStart(self,):
-        # 设置UI阴影效果
-        self.effect_shadow_style(self.FirstFrame)
+        # 设置底端阴影效果
+        self.effect_shadow_style1(self.FirstFrame)
         self.effect_shadow_style2(self.SecondFrame)
         self.effect_shadow_style3(self.ThirdFrame)
         self.effect_shadow_style4(self.FourthFrame)
 
+        # 设置用户滚动阴影效果
+        self.effect_shadow_style0(self.Scroll1)
+        self.effect_shadow_style0(self.Scroll2)
+        self.effect_shadow_style0(self.Scroll3)
+        self.effect_shadow_style0(self.Scroll4)
+        self.effect_shadow_style0(self.Scroll5)
+        self.effect_shadow_style0(self.Scroll6)
+        self.effect_shadow_style0(self.Scroll7)
+
         # 设置首页选择列表的跳转函数
-        self.MainPageChooseList.itemClicked.connect(self.mainPageList)
+        # self.MainPageChooseList.itemClicked.connect(self.mainPageList)
 
         # 设置按钮展示选择
         self.FirstFrameButton.clicked.connect(self.mainPageFirstButton)
         self.SecondFrameButton.clicked.connect(self.mainPageSecondButton)
         self.ThirdFrameButton.clicked.connect(self.mainPageThirdButton)
         self.FourthFrameButton.clicked.connect(self.mainPageFourthButton)
+
+        # 首页大屏效果
+        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
+        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
+        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
+        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Simple_0.html'))
 
     # 首页-ListWeb元素选择跳转
     def mainPageList(self):
@@ -70,13 +85,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Time_0.html'))
+        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Time_0.html'))
     def mainPageSecondButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
+        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
     def mainPageThirdButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
+        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
     def mainPageFourthButton(self):
-        self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
+        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
 
     # searchPage页-函数设定
     def searchPageStart(self):
@@ -212,7 +227,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
                 pass
 
     # 设置色块阴影颜色效果
-    def effect_shadow_style(self, widget):
+    def effect_shadow_style0(self,widget):
+        effect_shadow=QtWidgets.QGraphicsDropShadowEffect(self)
+        effect_shadow.setOffset(0,5)  # 偏移
+        effect_shadow.setBlurRadius(12)  # 阴影半径
+        effect_shadow.setColor(QtCore.Qt.gray)  # 阴影颜色
+        widget.setGraphicsEffect(effect_shadow)
+    def effect_shadow_style1(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
         effect_shadow.setBlurRadius(48)  # 阴影半径
@@ -276,12 +297,14 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
         # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
 
+    # 窗口最大化函数设定
     def windowMaximized(self):
         # 获取桌面尺寸
         desktop = QApplication.desktop()
         rect = desktop.availableGeometry()
         self.setGeometry(rect)  # 这样就可以了，就是会导致窗口的标题栏在最上边不可见
 
+    # 窗口最小化函数设定
     def windowMinimized(self):
         desktop = QApplication.desktop()
         desktopRect = desktop.availableGeometry()
