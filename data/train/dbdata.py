@@ -5,23 +5,22 @@ from sklearn.cluster import DBSCAN
 from sklearn import preprocessing
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
-# data_path = r"feature.csv"
-# data = pd.read_csv(data_path)
-# data = data.drop("APPLICATION_ID", axis=1)
-# data = data.fillna(0)
-#print(data)
-data_path ='cos_data.csv'
-data=pd.read_csv(data_path)
-new_data = preprocessing.normalize(data)
-new_data=np.transpose(new_data)
+data_path = r"constructed_trainset-20.csv"
+data = pd.read_csv(data_path)
+# #print(data)
+#new_data=np.load('cos_data.npy')
+
+# new_data=np.transpose(data)
+
+
 # cos_data =cosine_similarity(new_data, new_data)
 # np.save(r"cos_data",cos_data)
 # exit()
-# #
-# new_data = np.transpose(new_data)
-#db = DBSCAN(eps=0.5, min_samples=5,metric='manhattan')
-kmeans = KMeans(n_clusters=40, random_state=0).fit(new_data)
-ids = kmeans.labels_
+#
+db = DBSCAN(eps=0.08, min_samples=5,metric='cosine')
+ids = db.fit(data).labels_
+#kmeans = KMeans(n_clusters=30, random_state=0).fit(new_data)
+#ids = kmeans.labels_
 
 #ids, error, nfound = kcluster(new_data,  nclusters=20, dist='u', npass=100)
 mx = np.max(ids)
