@@ -64,7 +64,7 @@ def solve_knn(feature,label,test):
 
 ## main
 
-feature_path = r"data/train/constructed_trainset_1000.csv"
+feature_path = r"data/train/constructed_trainset.csv"
 feature = pd.read_csv(feature_path)
 label_path = r'data/train/enhanced_feature_label.csv'
 label = pd.read_csv(label_path)
