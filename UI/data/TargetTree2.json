@@ -1,0 +1,7 @@
+{"name": "repayment ability", "children": [
+ {"name": "income", "children": [
+  {"name": "the latest month", "value": 3938},
+  {"name": "the latest three months", "value": 3938},
+  {"name": "the latest year", "value": 3812}]},
+ {"name": "immovable property", "children": [
+  {"name": "housing/estate", "value": 3812}]}]}

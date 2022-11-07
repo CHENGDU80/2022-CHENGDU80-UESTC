@@ -1,0 +1,10 @@
+{"name": "personal information", "children": [
+ {"name": "identitiy information", "children": [
+  {"name": "date of birth", "value": 3938},
+  {"name": "current and previous address", "value": 3812}]},
+ {"name": "profession", "children": [
+  {"name": "years on job", "value": 3938},
+  {"name": "employer", "value": 3938},
+  {"name": "position", "value": 3812}]},
+ {"name": "marriage", "value": 6714},
+ {"name": "education", "value": 6714}]}
