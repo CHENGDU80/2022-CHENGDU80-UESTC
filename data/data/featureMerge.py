@@ -90,6 +90,6 @@ if not os.path.exists(enhancedTrainPath) and not os.path.exists(enhancedTrainLab
     print(labelDf)
     newTrainDf.to_csv(enhancedTrainPath, index=False, sep=",")
     labelDf.to_csv(enhancedTrainLabelPath, index=False, sep=",")
-ConstructDatasetwithAll1(originTrainPath, constructedTestPath, clusterDf, labelDf)
+ConstructDatasetwithAll1(originTrainPath, constructedTrainPath, clusterDf, labelDf)
 # ConstructDataset(enhancedTrainPath, constructedTrainPath, clusterDf)
 ConstructDataset(originTestPath, constructedTestPath, clusterDf)
