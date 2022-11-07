@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import json
-from pyecharts.charts import Bar, Bar3D, Pie, Line, Timeline, Tree
+from pyecharts.charts import Bar, Bar3D, Pie, Line, Timeline, Tree, Radar
 from pyecharts import options as opts
 from pyecharts.commons.utils import JsCode
 from pyecharts.faker import Faker
@@ -107,7 +107,7 @@ def drawTimeLine(x, y, file_name, file_id):
 
 # 环形树状图渲染
 def drawCircleTree(x, y, file_name, file_id):
-    with open("test.json","r",encoding="utf-8") as f:
+    with open("./data/test.json","r",encoding="utf-8") as f:
         j=json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
     tree.add("", [j], collapse_interval=2, layout="radial")
@@ -119,7 +119,7 @@ def drawCircleTree(x, y, file_name, file_id):
 
 # 简单树状图渲染
 def drawSimpleTree(x, y, file_name, file_id):
-    with open("test.json","r",encoding="utf-8") as f:
+    with open("./data/test.json","r",encoding="utf-8") as f:
         j=json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
     tree.add("", [j], collapse_interval=2)
@@ -129,9 +129,28 @@ def drawSimpleTree(x, y, file_name, file_id):
     tree.render(HTML_PATH+file_name+str(file_id)+'.html')
 
 
+def drawSimpleRadar(x, y, file_name, file_id):
+    x = [[4300, 10000, 28000, 35000, 50000, 19000]]
+    radar = Radar(init_opts=opts.InitOpts(width='400px',height='300px'))
+    radar.add_schema(schema=[
+                opts.RadarIndicatorItem(name="", max_=6500),
+                opts.RadarIndicatorItem(name="First", max_=16000),
+                opts.RadarIndicatorItem(name="First", max_=30000),
+                opts.RadarIndicatorItem(name="First", max_=38000),
+                opts.RadarIndicatorItem(name="First", max_=52000),
+                opts.RadarIndicatorItem(name="First", max_=25000),])
+    radar.add("Judgment", x)
+    radar.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+    radar.set_global_opts(legend_opts=opts.LegendOpts(pos_right="0%",selected_mode="single"),
+                          title_opts=opts.TitleOpts(title="Radar-单例模式"),)
+    radar.render(HTML_PATH+file_name+str(file_id)+'.html')
+
+
 if __name__ == '__main__':
-    data = pd.read_csv('./importance_.csv')
+    data = pd.read_csv('./data/importance_.csv')
     data.sort_index(axis=0, ascending= False, inplace=True)
+
+    cluster_data = np.load('./data/ids.npy')
 
     # 生成柱状图
     drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'Bar_Simple_', 0)
@@ -150,3 +169,6 @@ if __name__ == '__main__':
     # 生成树状图
     drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Circle_', 0)
     drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Simple_', 0)
+
+    # 生成雷达图
+    drawSimpleRadar(data['attribute'].tolist(), data['importance'].tolist(), 'Radar_Simple_', 0)
