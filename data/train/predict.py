@@ -1,12 +1,17 @@
 import pandas as pd
 import numpy as np
 import os
+import argparse
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score, recall_score, f1_score
 from sklearn.metrics import roc_auc_score
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-thrs', type=float, default=0.5)
+
+args = parser.parse_args()
+thrs = args.thrs
 
 testFilePath = "../data/test/constructed_testset.csv"
 testLabelFilePath = "../data/test/label.csv"
@@ -16,17 +21,17 @@ testData = np.array(testDf)
 modelDf = pd.read_csv(modelPath).drop("Unnamed: 0", axis=1)
 modelData = np.array(modelDf)
 cosData = cosine_similarity(testData, modelData)
-print(cosData)
-print(cosData.shape)
+# print(cosData)
+# print(cosData.shape)
 res = np.max(cosData, axis=1)
-print(res)
-print(res.shape)
+# print(res)
+# print(res.shape)
 resDf = pd.DataFrame(cosData)
 resLabel = []
-print(resDf)
+# print(resDf)
 count = 0
 for index, row in resDf.iterrows():
-    if row.max() < 0.55:
+    if row.max() < thrs:
         count += 1
         resLabel.append(1)
         # resDf["label"] = 1
@@ -35,7 +40,7 @@ for index, row in resDf.iterrows():
         resLabel.append(0)
 print(count)
 resLabel = np.array(resLabel)
-print(resLabel)
+# print(resLabel)
 # resLabel = resDf["label"]
 # exit()
 actualLabel = pd.read_csv(testLabelFilePath)["DEFAULT_LABEL"]
