@@ -25,11 +25,12 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # 设置页面切换响应事件
         self.IntroList.itemClicked.connect(self.displayIntroPage)
         self.DetailsList.itemClicked.connect(self.displayDetailsPage)
-        self.SearchBarButton.clicked.connect(self.displaySearchPage)
+        self.SearchBarButton.clicked.connect(self.displayUserPage)
 
         # 页面设定
         self.mainPageStart()
-        self.searchPageStart()
+        self.userPageStart()
+        self.modelPageStart()
         self.barPageStart()
         self.piePageStart()
         self.graphPageStart()
@@ -108,18 +109,36 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.DisplayPage.setCurrentIndex(4)  # Graph页
         self.graphPageStart()
 
-    # searchPage页-函数设定
-    def searchPageStart(self):
-        self.SearchPageChooseList.itemClicked.connect(self.searchPageList)
-        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_3D_0.html'))
-        self.SearchWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+    # userPage页-函数设定
+    def userPageStart(self):
+        self.UserPageChooseList.itemClicked.connect(self.userPageList)
+        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
+        self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
-    # searchPage页-ListWeb元素选择跳转
-    def searchPageList(self):
-        text = self.SearchPageChooseList.currentItem().text()
+    # userPage页-ListWeb元素选择跳转
+    def userPageList(self):
+        text = self.UserPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
-        self.SearchWeb.page().setBackgroundColor(QColor(0,0,0,0))
+            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
+            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+
+        self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+
+    # modelPage页-函数设定
+    def modelPageStart(self):
+        self.ModelPageChooseList.itemClicked.connect(self.userPageList)
+        self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
+
+    # modelPage页-ListWeb元素选择跳转
+    def modelPageList(self):
+        text = self.ModelPageChooseList.currentItem().text()
+        if text == 'show the result':
+            self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
+        self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # barPage页-函数设定
     def barPageStart(self):
@@ -291,22 +310,31 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         if text == 'Mainpage':
             self.DisplayPage.setCurrentIndex(0)  # 主页
             self.mainPageStart()
+        if text == 'User Profile':
+            self.DisplayPage.setCurrentIndex(1)  # 用户页面
+            self.mainPageStart()
+        if text == 'Model':
+            self.DisplayPage.setCurrentIndex(2)  # 模型页面
+            self.mainPageStart()
+        if text == 'Analysis':
+            self.DisplayPage.setCurrentIndex(3)  # 分析页面
+            self.mainPageStart()
     def displayDetailsPage(self):
         text = self.DetailsList.currentItem().text()
         if text == 'Bar':
-            self.DisplayPage.setCurrentIndex(2)  # Bar页
+            self.DisplayPage.setCurrentIndex(4)  # Bar页
             self.barPageStart()
         if text == 'Pie':
-            self.DisplayPage.setCurrentIndex(3)  # Pie页
+            self.DisplayPage.setCurrentIndex(5)  # Pie页
             self.piePageStart()
         elif text == 'Graph':
-            self.DisplayPage.setCurrentIndex(4)  # Graph页
+            self.DisplayPage.setCurrentIndex(6)  # Graph页
             self.graphPageStart()
 
     # 搜索页面函数设定
-    def displaySearchPage(self):
-        text = self.SearchBarLine.text()
-        self.DisplayPage.setCurrentIndex(1)  # Search页
+    def displayUserPage(self):
+        text = self.UserBarLine.text()
+        self.DisplayPage.setCurrentIndex(1)  # User页
         self.entidChanged(text)
 
     def entidChanged(self, text):
@@ -318,11 +346,11 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # probability = ABS_PATH + HTML_PATH+'%d.html' % entid
         # al = ABS_PATH + '/e_htmls/Al_%d.html' % entid
         # image = ABS_PATH + '/images/%d.png' % entid
-        # self.SearchWeb.load(QUrl.fromLocalFile(importance))
-        # self.SearchWeb.load(QUrl.fromLocalFile(probability))
-        # self.SearchWeb.load(QUrl.fromLocalFile(al))
-        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
-        # self.SearchWeb.setStyleSheet('image:url(./images/102673201.png)')
+        # self.UserWeb.load(QUrl.fromLocalFile(importance))
+        # self.UserWeb.load(QUrl.fromLocalFile(probability))
+        # self.UserWeb.load(QUrl.fromLocalFile(al))
+        self.UserWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
+        # self.UserWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # 窗口最大化函数设定
     def windowMaximized(self):

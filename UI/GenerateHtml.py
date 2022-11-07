@@ -12,7 +12,7 @@ from Config import *
 def drawSimpleBar(x, y, file_name, file_id):
     bar = Bar(init_opts=opts.InitOpts(width=WIDTH,height=HEIGHT))
     bar.add_xaxis(x)
-    bar.add_yaxis('Yaix', y, color='#518D79')
+    bar.add_yaxis('Cluster Type', y, color='#518D79')
     bar.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                         legend_opts=opts.LegendOpts(pos_right="0%"))
@@ -148,27 +148,31 @@ def drawSimpleRadar(x, y, file_name, file_id):
 
 if __name__ == '__main__':
     data = pd.read_csv('./data/importance_.csv')
-    data.sort_index(axis=0, ascending= False, inplace=True)
+    data.sort_index(axis=0, ascending=False, inplace=True)
 
+    # 簇的聚类情况
     cluster_data = np.load('./data/ids.npy')
+    cluster_data_type = [np.sum(cluster_data == i) for i in range(31)]
+    drawSimpleBar([i for i in range(31)], cluster_data_type, 'Cluster_Bar_', 0)
+    drawComplexBar([i for i in range(31)], cluster_data_type, 'Cluster_Pie_', 0)
 
-    # 生成柱状图
-    drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'Bar_Simple_', 0)
-    drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'Bar_Complex_', 0)
-    draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),
-              data.values.tolist(), 'Bar_3D_', 0)
-
-    # 生成饼状图
-    drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'Pie_Complex_', 0)
-    drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'Pie_Simple_', 0)
-
-    # 生成折线图
-    drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Simple_', 0)
-    drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Time_', 0)
-
-    # 生成树状图
-    drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Circle_', 0)
-    drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Simple_', 0)
-
-    # 生成雷达图
-    drawSimpleRadar(data['attribute'].tolist(), data['importance'].tolist(), 'Radar_Simple_', 0)
+    # # 生成柱状图
+    # drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'Bar_Simple_', 0)
+    # drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'Bar_Complex_', 0)
+    # draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),
+    #           data.values.tolist(), 'Bar_3D_', 0)
+    #
+    # # 生成饼状图
+    # drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'Pie_Complex_', 0)
+    # drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'Pie_Simple_', 0)
+    #
+    # # 生成折线图
+    # drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Simple_', 0)
+    # drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Time_', 0)
+    #
+    # # 生成树状图
+    # drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Circle_', 0)
+    # drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Simple_', 0)
+    #
+    # # 生成雷达图
+    # drawSimpleRadar(data['attribute'].tolist(), data['importance'].tolist(), 'Radar_Simple_', 0)
