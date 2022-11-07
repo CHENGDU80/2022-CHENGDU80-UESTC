@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1707</width>
+    <width>1795</width>
     <height>960</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>40</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -240,44 +246,7 @@ QPushButton:pressed {
             </layout>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="titleLOGO">
-            <property name="minimumSize">
-             <size>
-              <width>210</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>210</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Tahoma</family>
-             </font>
-            </property>
-            <property name="toolTip">
-             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap>images/teamLogo_white.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0" colspan="2">
+          <item row="3" column="0" colspan="2">
            <widget class="QLabel" name="titleIntro">
             <property name="maximumSize">
              <size>
@@ -288,7 +257,7 @@ p, li { white-space: pre-wrap; }
             <property name="font">
              <font>
               <family>Tahoma</family>
-              <pointsize>11</pointsize>
+              <pointsize>14</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -302,7 +271,7 @@ padding-left:12px;</string>
             </property>
            </widget>
           </item>
-          <item row="5" column="0" colspan="2">
+          <item row="4" column="0" colspan="2">
            <widget class="QListWidget" name="IntroList">
             <property name="minimumSize">
              <size>
@@ -319,7 +288,7 @@ padding-left:12px;</string>
             <property name="font">
              <font>
               <family>Tahoma</family>
-              <pointsize>11</pointsize>
+              <pointsize>13</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -426,20 +395,20 @@ border-left: 2px solid rgb(255, 255, 255)
             </item>
             <item>
              <property name="text">
+              <string>User Profile</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/buttom_white/img/buttom_white/个人隐私_personal-privacy.svg</normaloff>:/buttom_white/img/buttom_white/个人隐私_personal-privacy.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
               <string>Communication</string>
              </property>
              <property name="icon">
               <iconset resource="resources.qrc">
                <normaloff>:/buttom_white/img/buttom_white/沟通_communication.svg</normaloff>:/buttom_white/img/buttom_white/沟通_communication.svg</iconset>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Name</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resources.qrc">
-               <normaloff>:/buttom_white/img/buttom_white/个人隐私_personal-privacy.svg</normaloff>:/buttom_white/img/buttom_white/个人隐私_personal-privacy.svg</iconset>
              </property>
             </item>
             <item>
@@ -462,7 +431,7 @@ border-left: 2px solid rgb(255, 255, 255)
             </item>
            </widget>
           </item>
-          <item row="7" column="0" colspan="2">
+          <item row="6" column="0" colspan="2">
            <widget class="QLabel" name="titleDetails">
             <property name="maximumSize">
              <size>
@@ -473,7 +442,7 @@ border-left: 2px solid rgb(255, 255, 255)
             <property name="font">
              <font>
               <family>Tahoma</family>
-              <pointsize>11</pointsize>
+              <pointsize>14</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -487,7 +456,7 @@ padding-left:12px;</string>
             </property>
            </widget>
           </item>
-          <item row="8" column="0" colspan="2">
+          <item row="7" column="0" colspan="2">
            <widget class="QListWidget" name="DetailsList">
             <property name="minimumSize">
              <size>
@@ -504,7 +473,7 @@ padding-left:12px;</string>
             <property name="font">
              <font>
               <family>Tahoma</family>
-              <pointsize>11</pointsize>
+              <pointsize>13</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -647,6 +616,91 @@ border-left: 2px solid rgb(255, 255, 255)
             </item>
            </widget>
           </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="LOGOLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>20</number>
+            </property>
+            <property name="rightMargin">
+             <number>20</number>
+            </property>
+            <property name="bottomMargin">
+             <number>30</number>
+            </property>
+            <item>
+             <widget class="QWebEngineView" name="LOGOWeb" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>85</width>
+                <height>85</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>85</width>
+                <height>85</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Tahoma</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="url" stdset="0">
+               <url>
+                <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls_main/logo.html</string>
+               </url>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="titleLOGO">
+              <property name="minimumSize">
+               <size>
+                <width>220</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>170</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Tahoma</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>images/ProductLOGO_white.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
          </layout>
         </widget>
        </item>
@@ -698,20 +752,28 @@ background-color: rgb(241, 244, 249)
             <property name="styleSheet">
              <string notr="true"/>
             </property>
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0" colspan="2">
-              <widget class="QFrame" name="SearchBar">
+            <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0">
+             <item row="4" column="1">
+              <widget class="QFrame" name="RightBottomWindowEdge">
+               <property name="minimumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>21</width>
+                 <height>21</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
                  <family>Tahoma</family>
                 </font>
                </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);
-border-top-left-radius:0px;
-border-top-right-radius:10px;
-border-bottom-right-radius:0px;
-border-bottom-left-radius:0px;</string>
+               <property name="cursor">
+                <cursorShape>SizeFDiagCursor</cursorShape>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -719,193 +781,44 @@ border-bottom-left-radius:0px;</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,0,0,0">
-                <property name="spacing">
-                 <number>12</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>12</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <layout class="QHBoxLayout" name="SearchBarLayout" stretch="0,0">
-                  <property name="spacing">
-                   <number>0</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>12</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>12</number>
-                  </property>
-                  <item>
-                   <widget class="QFrame" name="SearchLOGO">
-                    <property name="minimumSize">
-                     <size>
-                      <width>18</width>
-                      <height>18</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>18</width>
-                      <height>18</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Tahoma</family>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">image: url(:/buttom/img/buttom/搜索_search.svg);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="SearchBarLine">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>32</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Tahoma</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgba(255, 255, 255, 0);
-margin-left:12px;
-border:none;</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="placeholderText">
-                     <string>Search Type</string>
-                    </property>
-                    <property name="clearButtonEnabled">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="SearchBarButton">
-                  <property name="font">
-                   <font>
-                    <family>Tahoma</family>
-                    <pointsize>11</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton:hover {
-border-left: 2px solid rgb(255, 255, 255)
-}
-QPushButton:pressed {
-background-color: transparent;
-background-color: rgba(225, 225, 225,150);
-}</string>
-                  </property>
-                  <property name="text">
-                   <string>Search</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="SearchBarComboBox">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>32</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Tahoma</family>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QComboBox{
-	background-color: rgba(255, 255, 255, 0);
-text-align:center;
-padding:8px;
-border-radius:10px
-}
-QComboBox::drop-down{
-	
-	image: url(:/buttom/img/buttom/下_down.svg);
-	width:30px;
-}
-
-QComboBox:on{
-	color: rgba(25, 95, 254);
-	gridline-color: rgb(64, 53, 255);
-}
-QComboBox:off{
-	color:  rgb(0, 0, 0);
-}</string>
-                  </property>
-                  <property name="iconSize">
-                   <size>
-                    <width>36</width>
-                    <height>36</height>
-                   </size>
-                  </property>
-                  <item>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="icon">
-                    <iconset>
-                     <normaloff>images/logo.png</normaloff>images/logo.png</iconset>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="Line" name="SearchBarRightLine">
-                  <property name="maximumSize">
-                   <size>
-                    <width>1</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Tahoma</family>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(241, 244, 249)</string>
-                  </property>
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
               </widget>
+             </item>
+             <item row="4" column="0">
+              <layout class="QHBoxLayout" name="WindowEdgeLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="BottomWindowEdge">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>SizeVerCursor</cursorShape>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
              <item row="1" column="0">
               <widget class="QStackedWidget" name="DisplayPage">
@@ -982,673 +895,10 @@ border-bottom-left-radius:0px;
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,1,1">
+                    <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,1,1,0">
                      <property name="topMargin">
                       <number>24</number>
                      </property>
-                     <item row="2" column="0">
-                      <layout class="QHBoxLayout" name="MainPageLayout2" stretch="1,1,1">
-                       <property name="spacing">
-                        <number>12</number>
-                       </property>
-                       <item>
-                        <widget class="QFrame" name="FirstFrame">
-                         <property name="font">
-                          <font>
-                           <family>Tahoma</family>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QFrame#FirstFrame{
-color: rgb(255, 255, 255);
-border-radius: 10px;
-background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));
-border: 1px outset rgb(98, 91, 213);
-}
-</string>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_15" stretch="1,1,10">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QFrame" name="FirstFrameButtonFrame">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>30</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_15">
-                             <property name="topMargin">
-                              <number>5</number>
-                             </property>
-                             <item>
-                              <widget class="QPushButton" name="FirstFrameButton">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>41677</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>50</weight>
-                                 <bold>false</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QPushButton{
-	color: rgb(255, 255, 255);
-text-align:left;
-
-	border:0px outset rgb(255, 255, 255);
-	border-radius:8px;
-}
-QPushButton:hover {
-
-border:2px outset rgba(36, 36, 36,0);
-}
-QPushButton:pressed {
-
-border:4px outset rgba(36, 36, 36,0);
-}
-</string>
-                               </property>
-                               <property name="text">
-                                <string>Konwledge Graph</string>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="resources.qrc">
-                                 <normaloff>:/buttom_white/img/buttom_white/图形分割_rectangular-circular-separation.svg</normaloff>:/buttom_white/img/buttom_white/图形分割_rectangular-circular-separation.svg</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="Line" name="FirstFrameLine">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>1</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
-                            </property>
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="FirstFrameDateFrame">
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_16">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QWidget" name="FirstFrameWebWidget" native="true">
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                </font>
-                               </property>
-                               <widget class="QWebEngineView" name="FirstFrameWeb" native="true">
-                                <property name="geometry">
-                                 <rect>
-                                  <x>10</x>
-                                  <y>10</y>
-                                  <width>420</width>
-                                  <height>330</height>
-                                 </rect>
-                                </property>
-                                <property name="font">
-                                 <font>
-                                  <family>Tahoma</family>
-                                 </font>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">QWidget{
-	background-color: rgba(255, 255, 255, 0);
-	selection-background-color: rgba(255, 255, 255, 0);
-}
-QWebEngineView{
-	background-color: rgba(0, 0, 0, 0);
-	selection-background-color: rgba(0, 0, 0, 0);
-
-}</string>
-                                </property>
-                                <property name="url" stdset="0">
-                                 <url>
-                                  <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
-                                 </url>
-                                </property>
-                               </widget>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="SecondFrame">
-                         <property name="font">
-                          <font>
-                           <family>Tahoma</family>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QFrame#SecondFrame{
-color: rgb(255, 255, 255);
-border-radius: 10px;
-background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(253, 139, 133),  stop:1 rgb(248, 194, 152));
-border: 1px outset rgb(252, 194, 149)
-}
-</string>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_17" stretch="0,1,10">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QFrame" name="SecondFrameButtonFrame">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>30</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_16">
-                             <property name="topMargin">
-                              <number>5</number>
-                             </property>
-                             <item>
-                              <widget class="QPushButton" name="SecondFrameButton">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>41677</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                 <pointsize>11</pointsize>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QPushButton{
-	color: rgb(255, 255, 255);
-text-align:left;
-
-	border:0px outset rgb(255, 255, 255);
-	border-radius:8px;
-}
-QPushButton:hover {
-
-border:2px outset rgba(36, 36, 36,0);
-}
-QPushButton:pressed {
-
-border:4px outset rgba(36, 36, 36,0);
-}
-</string>
-                               </property>
-                               <property name="text">
-                                <string>Target Tree</string>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="resources.qrc">
-                                 <normaloff>:/buttom_white/img/buttom_white/圣诞树_christmas-tree.svg</normaloff>:/buttom_white/img/buttom_white/圣诞树_christmas-tree.svg</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="Line" name="SecondFrameLine">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>1</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
-                            </property>
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="SecondFrameDateFrame">
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_18">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QWidget" name="SecondFrameWebWidget" native="true">
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                </font>
-                               </property>
-                               <widget class="QWebEngineView" name="SecondFrameWeb" native="true">
-                                <property name="geometry">
-                                 <rect>
-                                  <x>10</x>
-                                  <y>10</y>
-                                  <width>420</width>
-                                  <height>330</height>
-                                 </rect>
-                                </property>
-                                <property name="font">
-                                 <font>
-                                  <family>Tahoma</family>
-                                 </font>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">QWidget{
-	background-color: rgba(255, 255, 255, 0);
-	selection-background-color: rgba(255, 255, 255, 0);
-}
-QWebEngineView{
-	background-color: rgba(0, 0, 0, 0);
-	selection-background-color: rgba(0, 0, 0, 0);
-
-}</string>
-                                </property>
-                                <property name="url" stdset="0">
-                                 <url>
-                                  <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
-                                 </url>
-                                </property>
-                               </widget>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="FourthFrame">
-                         <property name="font">
-                          <font>
-                           <family>Tahoma</family>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QFrame#FourthFrame{
-color: rgb(255, 255, 255);
-border-radius: 10px;
-background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(66, 226, 192),  stop:1 rgb(62, 154, 193));
-border: 1px outset rgb(72, 158, 204)
-}
-</string>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_21" stretch="1,1,10">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QFrame" name="FourthFrameButtonFrame">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>30</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_18">
-                             <property name="topMargin">
-                              <number>5</number>
-                             </property>
-                             <item>
-                              <widget class="QPushButton" name="FourthFrameButton">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>41677</width>
-                                 <height>20</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                 <pointsize>11</pointsize>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QPushButton{
-	color: rgb(255, 255, 255);
-text-align:left;
-
-	border:0px outset rgb(255, 255, 255);
-	border-radius:8px;
-}
-QPushButton:hover {
-
-border:2px outset rgba(36, 36, 36,0);
-}
-QPushButton:pressed {
-
-border:4px outset rgba(36, 36, 36,0);
-}
-</string>
-                               </property>
-                               <property name="text">
-                                <string>Person Radar</string>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="resources.qrc">
-                                 <normaloff>:/buttom_white/img/buttom_white/雷达_radar.svg</normaloff>:/buttom_white/img/buttom_white/雷达_radar.svg</iconset>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="Line" name="FourthFrameLine">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>1</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
-                            </property>
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="FourthFrameDateFrame">
-                            <property name="font">
-                             <font>
-                              <family>Tahoma</family>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_22">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QWidget" name="FourthFrameWebWidget" native="true">
-                               <property name="font">
-                                <font>
-                                 <family>Tahoma</family>
-                                </font>
-                               </property>
-                               <widget class="QWebEngineView" name="FourthFrameWeb" native="true">
-                                <property name="geometry">
-                                 <rect>
-                                  <x>10</x>
-                                  <y>10</y>
-                                  <width>420</width>
-                                  <height>330</height>
-                                 </rect>
-                                </property>
-                                <property name="font">
-                                 <font>
-                                  <family>Tahoma</family>
-                                 </font>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">QWidget{
-	background-color: rgba(255, 255, 255, 0);
-	selection-background-color: rgba(255, 255, 255, 0);
-}
-QWebEngineView{
-	background-color: rgba(0, 0, 0, 0);
-	selection-background-color: rgba(0, 0, 0, 0);
-
-}</string>
-                                </property>
-                                <property name="url" stdset="0">
-                                 <url>
-                                  <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
-                                 </url>
-                                </property>
-                               </widget>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="MainPageTitle">
-                       <property name="font">
-                        <font>
-                         <family>Tahoma</family>
-                         <pointsize>16</pointsize>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Main Page</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="1" column="0">
                       <layout class="QVBoxLayout" name="MainPageLayout1" stretch="1">
                        <property name="spacing">
@@ -1661,6 +911,12 @@ QWebEngineView{
                          </property>
                          <item>
                           <widget class="QScrollArea" name="ScrollArea">
+                           <property name="maximumSize">
+                            <size>
+                             <width>400</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
                            <property name="font">
                             <font>
                              <family>Tahoma</family>
@@ -1695,7 +951,7 @@ QWebEngineView{
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>447</width>
+                              <width>400</width>
                               <height>616</height>
                              </rect>
                             </property>
@@ -1762,6 +1018,7 @@ border-radius:28px</string>
                                    <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
 color: rgb(255, 0, 0);
+
 
 border-radius:32px</string>
                                   </property>
@@ -2730,7 +1987,7 @@ border-radius:8px</string>
                                </property>
                                <property name="maximumSize">
                                 <size>
-                                 <width>260</width>
+                                 <width>300</width>
                                  <height>71</height>
                                 </size>
                                </property>
@@ -2806,7 +2063,7 @@ border-radius:12px</string>
                                   <property name="font">
                                    <font>
                                     <family>Tahoma</family>
-                                    <pointsize>12</pointsize>
+                                    <pointsize>13</pointsize>
                                     <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
@@ -2830,6 +2087,42 @@ border-radius:12px</string>
                           </widget>
                          </item>
                          <item>
+                          <widget class="QWidget" name="RadarWidget" native="true">
+                           <widget class="QWebEngineView" name="RadarWeb" native="true">
+                            <property name="geometry">
+                             <rect>
+                              <x>0</x>
+                              <y>0</y>
+                              <width>451</width>
+                              <height>361</height>
+                             </rect>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Tahoma</family>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QWidget{
+	background-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
+}
+QWebEngineView{
+	background-color: rgba(0, 0, 0, 0);
+	selection-background-color: rgba(0, 0, 0, 0);
+
+}</string>
+                            </property>
+                            <property name="url" stdset="0">
+                             <url>
+                              <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                             </url>
+                            </property>
+                           </widget>
+                          </widget>
+                         </item>
+                         <item>
                           <layout class="QFormLayout" name="InforArea">
                            <property name="horizontalSpacing">
                             <number>2</number>
@@ -2838,7 +2131,7 @@ border-radius:12px</string>
                             <widget class="QFrame" name="frame_4">
                              <property name="styleSheet">
                               <string notr="true">QFrame{
-background-color: rgb(156, 158, 156);
+background-color: rgb(230, 71, 40);
 border:0px solid red;
 	color: rgb(255, 254, 255);
 border-radius:30px
@@ -3180,7 +2473,7 @@ border-radius:30px
                              <property name="frameShadow">
                               <enum>QFrame::Raised</enum>
                              </property>
-                             <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="0,1,1">
+                             <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="0,1,1,0">
                               <property name="spacing">
                                <number>0</number>
                               </property>
@@ -3595,97 +2888,265 @@ border-radius:10px
                                 <zorder>frame_39</zorder>
                                </widget>
                               </item>
+                              <item>
+                               <widget class="QFrame" name="frame_26">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>121</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>121</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_29">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">
+
+QFrame{
+padding:8px;
+image: url(:/svg/img/svg/闪电-实.png);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_35">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>111</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_25">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_33">
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>Ability</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_39">
+                                    <item>
+                                     <widget class="QLabel" name="label_34">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>0.83</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QWidget" name="widget_9" native="true">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>16</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_35</zorder>
+                                <zorder>frame_29</zorder>
+                               </widget>
+                              </item>
                              </layout>
                             </widget>
                            </item>
                           </layout>
                          </item>
-                         <item>
-                          <widget class="QFrame" name="ThirdFrame">
-                           <property name="font">
-                            <font>
-                             <family>Tahoma</family>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QFrame#ThirdFrame{
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QWidget" name="MainPageLayout2" native="true">
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+                       </property>
+                       <layout class="QHBoxLayout" name="MainPageLayout2_2" stretch="1,1,1,1">
+                        <property name="spacing">
+                         <number>12</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>12</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="FirstFrame">
+                          <property name="font">
+                           <font>
+                            <family>Tahoma</family>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame#FirstFrame{
 color: rgb(255, 255, 255);
 border-radius: 10px;
-background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(243, 175, 189),  stop:1 rgb(155, 118, 218));
-border: 1px outset rgb(153, 117, 219)
+background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));
+border: 1px outset rgb(98, 91, 213);
 }
 </string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_15" stretch="1,0,0">
+                           <property name="spacing">
+                            <number>0</number>
                            </property>
-                           <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                           <property name="leftMargin">
+                            <number>0</number>
                            </property>
-                           <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                           <property name="topMargin">
+                            <number>0</number>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_19" stretch="1,1,10">
-                            <property name="spacing">
-                             <number>0</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="ThirdFrameButtonFrame">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>30</height>
-                               </size>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="FirstFrameButtonFrame">
+                             <property name="minimumSize">
+                              <size>
+                               <width>50</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_15">
+                              <property name="topMargin">
+                               <number>5</number>
                               </property>
-                              <property name="font">
-                               <font>
-                                <family>Tahoma</family>
-                               </font>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">border:none</string>
-                              </property>
-                              <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
-                              </property>
-                              <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
-                              </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_17">
-                               <property name="topMargin">
-                                <number>5</number>
-                               </property>
-                               <item>
-                                <widget class="QPushButton" name="ThirdFrameButton">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>0</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>41677</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                 <property name="font">
-                                  <font>
-                                   <family>Tahoma</family>
-                                   <pointsize>11</pointsize>
-                                  </font>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">QPushButton{
+                              <item>
+                               <widget class="QPushButton" name="FirstFrameButton">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>41677</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                  <pointsize>13</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QPushButton{
 	color: rgb(255, 255, 255);
 text-align:left;
 
@@ -3701,123 +3162,826 @@ QPushButton:pressed {
 border:4px outset rgba(36, 36, 36,0);
 }
 </string>
-                                 </property>
-                                 <property name="text">
-                                  <string>3D Bar</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset resource="resources.qrc">
-                                   <normaloff>:/buttom_white/img/buttom_white/kagi图_kagi-map.svg</normaloff>:/buttom_white/img/buttom_white/kagi图_kagi-map.svg</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="Line" name="ThirdFrameLine">
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>1</height>
-                               </size>
+                                </property>
+                                <property name="text">
+                                 <string>Konwledge Graph</string>
+                                </property>
+                                <property name="icon">
+                                 <iconset resource="resources.qrc">
+                                  <normaloff>:/buttom_white/img/buttom_white/图形分割_rectangular-circular-separation.svg</normaloff>:/buttom_white/img/buttom_white/图形分割_rectangular-circular-separation.svg</iconset>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="FirstFrameLine">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>1</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
+                             </property>
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="FirstFrameDateFrame">
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_16">
+                              <property name="spacing">
+                               <number>0</number>
                               </property>
-                              <property name="font">
-                               <font>
-                                <family>Tahoma</family>
-                               </font>
+                              <property name="leftMargin">
+                               <number>0</number>
                               </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
+                              <property name="topMargin">
+                               <number>0</number>
                               </property>
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                              <property name="rightMargin">
+                               <number>0</number>
                               </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="ThirdFrameDateFrame">
-                              <property name="font">
-                               <font>
-                                <family>Tahoma</family>
-                               </font>
+                              <property name="bottomMargin">
+                               <number>0</number>
                               </property>
-                              <property name="styleSheet">
-                               <string notr="true">border:none</string>
+                              <item>
+                               <widget class="QWidget" name="FirstFrameWebWidget" native="true">
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                 </font>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="SecondFrame">
+                          <property name="font">
+                           <font>
+                            <family>Tahoma</family>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame#SecondFrame{
+color: rgb(255, 255, 255);
+border-radius: 10px;
+background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(253, 139, 133),  stop:1 rgb(248, 194, 152));
+border: 1px outset rgb(252, 194, 149)
+}
+</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_17" stretch="0,1,10">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="SecondFrameButtonFrame">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_16">
+                              <property name="topMargin">
+                               <number>5</number>
                               </property>
-                              <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                              <item>
+                               <widget class="QPushButton" name="SecondFrameButton">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>41677</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                  <pointsize>13</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+text-align:left;
+
+	border:0px outset rgb(255, 255, 255);
+	border-radius:8px;
+}
+QPushButton:hover {
+
+border:2px outset rgba(36, 36, 36,0);
+}
+QPushButton:pressed {
+
+border:4px outset rgba(36, 36, 36,0);
+}
+</string>
+                                </property>
+                                <property name="text">
+                                 <string>Target Tree</string>
+                                </property>
+                                <property name="icon">
+                                 <iconset resource="resources.qrc">
+                                  <normaloff>:/buttom_white/img/buttom_white/圣诞树_christmas-tree.svg</normaloff>:/buttom_white/img/buttom_white/圣诞树_christmas-tree.svg</iconset>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="SecondFrameLine">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>1</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
+                             </property>
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="SecondFrameDateFrame">
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_18">
+                              <property name="spacing">
+                               <number>0</number>
                               </property>
-                              <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                              <property name="leftMargin">
+                               <number>0</number>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_20">
-                               <property name="spacing">
-                                <number>0</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QWidget" name="ThirdFrameWebWidget" native="true">
-                                 <property name="font">
-                                  <font>
-                                   <family>Tahoma</family>
-                                  </font>
-                                 </property>
-                                 <widget class="QWebEngineView" name="ThirdFrameWeb" native="true">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>10</x>
-                                    <y>10</y>
-                                    <width>420</width>
-                                    <height>330</height>
-                                   </rect>
-                                  </property>
-                                  <property name="font">
-                                   <font>
-                                    <family>Tahoma</family>
-                                   </font>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QWidget{
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QWidget" name="SecondFrameWebWidget" native="true">
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                 </font>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="ThirdFrame">
+                          <property name="font">
+                           <font>
+                            <family>Tahoma</family>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame#ThirdFrame{
+color: rgb(255, 255, 255);
+border-radius: 10px;
+background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(243, 175, 189),  stop:1 rgb(155, 118, 218));
+border: 1px outset rgb(153, 117, 219)
+}
+</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_19" stretch="1,1,10">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="ThirdFrameButtonFrame">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_17">
+                              <property name="topMargin">
+                               <number>5</number>
+                              </property>
+                              <item>
+                               <widget class="QPushButton" name="ThirdFrameButton">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>41677</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                  <pointsize>13</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+text-align:left;
+
+	border:0px outset rgb(255, 255, 255);
+	border-radius:8px;
+}
+QPushButton:hover {
+
+border:2px outset rgba(36, 36, 36,0);
+}
+QPushButton:pressed {
+
+border:4px outset rgba(36, 36, 36,0);
+}
+</string>
+                                </property>
+                                <property name="text">
+                                 <string>3D Bar</string>
+                                </property>
+                                <property name="icon">
+                                 <iconset resource="resources.qrc">
+                                  <normaloff>:/buttom_white/img/buttom_white/kagi图_kagi-map.svg</normaloff>:/buttom_white/img/buttom_white/kagi图_kagi-map.svg</iconset>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="ThirdFrameLine">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>1</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
+                             </property>
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="ThirdFrameDateFrame">
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_20">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QWidget" name="ThirdFrameWebWidget" native="true">
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                 </font>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="FourthFrame">
+                          <property name="font">
+                           <font>
+                            <family>Tahoma</family>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QFrame#FourthFrame{
+color: rgb(255, 255, 255);
+border-radius: 10px;
+background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(66, 226, 192),  stop:1 rgb(62, 154, 193));
+border: 1px outset rgb(72, 158, 204)
+}
+</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_21" stretch="1,1,10">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="FourthFrameButtonFrame">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_18">
+                              <property name="topMargin">
+                               <number>5</number>
+                              </property>
+                              <item>
+                               <widget class="QPushButton" name="FourthFrameButton">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>41677</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                  <pointsize>13</pointsize>
+                                  <weight>75</weight>
+                                  <bold>true</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+text-align:left;
+
+	border:0px outset rgb(255, 255, 255);
+	border-radius:8px;
+}
+QPushButton:hover {
+
+border:2px outset rgba(36, 36, 36,0);
+}
+QPushButton:pressed {
+
+border:4px outset rgba(36, 36, 36,0);
+}
+</string>
+                                </property>
+                                <property name="text">
+                                 <string>Person Radar</string>
+                                </property>
+                                <property name="icon">
+                                 <iconset resource="resources.qrc">
+                                  <normaloff>:/buttom_white/img/buttom_white/雷达_radar.svg</normaloff>:/buttom_white/img/buttom_white/雷达_radar.svg</iconset>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="FourthFrameLine">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>1</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgba(255, 255, 255, 89);</string>
+                             </property>
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="FourthFrameDateFrame">
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border:none</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_22">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QWidget" name="FourthFrameWebWidget" native="true">
+                                <property name="font">
+                                 <font>
+                                  <family>Tahoma</family>
+                                 </font>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="MainPageTitle">
+                       <property name="font">
+                        <font>
+                         <family>Tahoma</family>
+                         <pointsize>16</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Main Page</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <layout class="QHBoxLayout" name="MainPageLayout3" stretch="1,1,1,1">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QWebEngineView" name="FirstFrameWeb" native="true">
+                         <property name="minimumSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Tahoma</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QWidget{
 	background-color: rgba(255, 255, 255, 0);
 	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
 }
 QWebEngineView{
 	background-color: rgba(0, 0, 0, 0);
 	selection-background-color: rgba(0, 0, 0, 0);
 
 }</string>
-                                  </property>
-                                  <property name="url" stdset="0">
-                                   <url>
-                                    <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
-                                   </url>
-                                  </property>
-                                 </widget>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                        </layout>
+                         </property>
+                         <property name="url" stdset="0">
+                          <url>
+                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                          </url>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QWebEngineView" name="SecondFrameWeb" native="true">
+                         <property name="minimumSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Tahoma</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QWidget{
+	background-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
+}
+QWebEngineView{
+	background-color: rgba(0, 0, 0, 0);
+	selection-background-color: rgba(0, 0, 0, 0);
+
+}</string>
+                         </property>
+                         <property name="url" stdset="0">
+                          <url>
+                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                          </url>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QWebEngineView" name="ThirdFrameWeb" native="true">
+                         <property name="minimumSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Tahoma</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QWidget{
+	background-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
+}
+QWebEngineView{
+	background-color: rgba(0, 0, 0, 0);
+	selection-background-color: rgba(0, 0, 0, 0);
+
+}</string>
+                         </property>
+                         <property name="url" stdset="0">
+                          <url>
+                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                          </url>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QWebEngineView" name="FourthFrameWeb" native="true">
+                         <property name="minimumSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Tahoma</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QWidget{
+	background-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
+}
+QWebEngineView{
+	background-color: rgba(0, 0, 0, 0);
+	selection-background-color: rgba(0, 0, 0, 0);
+
+}</string>
+                         </property>
+                         <property name="url" stdset="0">
+                          <url>
+                           <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                          </url>
+                         </property>
+                        </widget>
                        </item>
                       </layout>
                      </item>
                     </layout>
+                    <zorder>MainPageLayout2</zorder>
+                    <zorder>MainPageTitle</zorder>
+                    <zorder></zorder>
                    </widget>
                   </item>
                  </layout>
@@ -3827,10 +3991,10 @@ QWebEngineView{
                 <widget class="QFrame" name="SearchPageFrame">
                  <property name="geometry">
                   <rect>
-                   <x>11</x>
-                   <y>11</y>
-                   <width>915</width>
-                   <height>615</height>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1391</width>
+                   <height>851</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -3902,10 +4066,10 @@ border-bottom-left-radius:0px;
                     <widget class="QWebEngineView" name="SearchWeb" native="true">
                      <property name="geometry">
                       <rect>
-                       <x>10</x>
+                       <x>0</x>
                        <y>110</y>
-                       <width>880</width>
-                       <height>510</height>
+                       <width>1391</width>
+                       <height>741</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -4083,10 +4247,10 @@ border-bottom: 3px solid rgb(119, 111, 255)
                 <widget class="QFrame" name="BarPageFrame">
                  <property name="geometry">
                   <rect>
-                   <x>11</x>
-                   <y>11</y>
-                   <width>915</width>
-                   <height>615</height>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1391</width>
+                   <height>851</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -4158,10 +4322,10 @@ border-bottom-left-radius:0px;
                     <widget class="QWebEngineView" name="BarWeb" native="true">
                      <property name="geometry">
                       <rect>
-                       <x>10</x>
+                       <x>0</x>
                        <y>110</y>
-                       <width>880</width>
-                       <height>510</height>
+                       <width>1391</width>
+                       <height>741</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -4354,10 +4518,10 @@ border-bottom: 3px solid rgb(119, 111, 255)
                 <widget class="QFrame" name="PiePageFrame">
                  <property name="geometry">
                   <rect>
-                   <x>11</x>
-                   <y>11</y>
-                   <width>915</width>
-                   <height>615</height>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1391</width>
+                   <height>851</height>
                   </rect>
                  </property>
                  <property name="minimumSize">
@@ -4429,10 +4593,10 @@ border-bottom-left-radius:0px;
                     <widget class="QWebEngineView" name="PieWeb" native="true">
                      <property name="geometry">
                       <rect>
-                       <x>10</x>
+                       <x>0</x>
                        <y>110</y>
-                       <width>880</width>
-                       <height>510</height>
+                       <width>1391</width>
+                       <height>741</height>
                       </rect>
                      </property>
                      <property name="font">
@@ -4646,6 +4810,18 @@ border-bottom: 3px solid rgb(119, 111, 255)
                  <property name="spacing">
                   <number>0</number>
                  </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <widget class="QFrame" name="GraphPageFrame">
                    <property name="minimumSize">
@@ -4717,10 +4893,10 @@ border-bottom-left-radius:0px;
                       <widget class="QWebEngineView" name="GraphWeb" native="true">
                        <property name="geometry">
                         <rect>
-                         <x>10</x>
+                         <x>0</x>
                          <y>110</y>
-                         <width>880</width>
-                         <height>510</height>
+                         <width>1381</width>
+                         <height>741</height>
                         </rect>
                        </property>
                        <property name="font">
@@ -4911,43 +5087,6 @@ border-bottom: 3px solid rgb(119, 111, 255)
                <widget class="QWidget" name="EmptyPage"/>
               </widget>
              </item>
-             <item row="4" column="0">
-              <layout class="QHBoxLayout" name="WindowEdgeLayout">
-               <property name="spacing">
-                <number>0</number>
-               </property>
-               <item>
-                <widget class="QFrame" name="BottomWindowEdge">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>10</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>10</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Tahoma</family>
-                  </font>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>SizeVerCursor</cursorShape>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
              <item row="1" column="1">
               <widget class="QFrame" name="RightWindowEdge">
                <property name="minimumSize">
@@ -4978,27 +5117,19 @@ border-bottom: 3px solid rgb(119, 111, 255)
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
-              <widget class="QFrame" name="RightBottomWindowEdge">
-               <property name="minimumSize">
-                <size>
-                 <width>21</width>
-                 <height>21</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>21</width>
-                 <height>21</height>
-                </size>
-               </property>
+             <item row="0" column="0" colspan="2">
+              <widget class="QFrame" name="SearchBar">
                <property name="font">
                 <font>
                  <family>Tahoma</family>
                 </font>
                </property>
-               <property name="cursor">
-                <cursorShape>SizeFDiagCursor</cursorShape>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);
+border-top-left-radius:0px;
+border-top-right-radius:10px;
+border-bottom-right-radius:0px;
+border-bottom-left-radius:0px;</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -5006,6 +5137,192 @@ border-bottom: 3px solid rgb(119, 111, 255)
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,0,0,0">
+                <property name="spacing">
+                 <number>12</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>12</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="SearchBarLayout" stretch="0,0">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="SearchLOGO">
+                    <property name="minimumSize">
+                     <size>
+                      <width>18</width>
+                      <height>18</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>18</width>
+                      <height>18</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Tahoma</family>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">image: url(:/buttom/img/buttom/搜索_search.svg);</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="SearchBarLine">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>32</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Tahoma</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(255, 255, 255, 0);
+margin-left:12px;
+border:none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Search Type</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="SearchBarButton">
+                  <property name="font">
+                   <font>
+                    <family>Tahoma</family>
+                    <pointsize>11</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton:hover {
+border-left: 2px solid rgb(255, 255, 255)
+}
+QPushButton:pressed {
+background-color: transparent;
+background-color: rgba(225, 225, 225,150);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Search</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="SearchBarComboBox">
+                  <property name="minimumSize">
+                   <size>
+                    <width>40</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Tahoma</family>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QComboBox{
+	background-color: rgba(255, 255, 255, 0);
+text-align:center;
+padding:8px;
+border-radius:10px
+}
+QComboBox::drop-down{
+	
+	image: url(:/buttom/img/buttom/下_down.svg);
+	width:30px;
+}
+
+QComboBox:on{
+	color: rgba(25, 95, 254);
+	gridline-color: rgb(64, 53, 255);
+}
+QComboBox:off{
+	color:  rgb(0, 0, 0);
+}</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>36</width>
+                    <height>36</height>
+                   </size>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>images/logo.png</normaloff>images/logo.png</iconset>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="SearchBarRightLine">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Tahoma</family>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(241, 244, 249)</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>

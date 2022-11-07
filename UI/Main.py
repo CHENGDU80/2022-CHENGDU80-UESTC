@@ -39,6 +39,11 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.PageMaximizeButton.clicked.connect(self.windowMaximized)
         self.PageMinimizeButton.clicked.connect(self.windowMinimized)
 
+        # 设定LOGO
+        self.LOGOWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'LOGO.html'))
+        self.LOGOWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.LOGOWeb.settings().setAttribute(self.LOGOWeb.settings().ShowScrollBars, False)
+
     # 首页-函数设定
     def mainPageStart(self,):
         # 设置底端阴影效果
@@ -70,6 +75,12 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
         self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
         self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Simple_0.html'))
+        self.RadarWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Radar_Simple_0.html'))
+        self.FirstFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.SecondFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.ThirdFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.FourthFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.RadarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # 首页-ListWeb元素选择跳转
     def mainPageList(self):
@@ -85,28 +96,37 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
-        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Time_0.html'))
+        self.DisplayPage.setCurrentIndex(2)  # Bar页
+        self.barPageStart()
     def mainPageSecondButton(self):
-        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
+        self.DisplayPage.setCurrentIndex(3)  # Pie页
+        self.piePageStart()
     def mainPageThirdButton(self):
-        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
+        self.DisplayPage.setCurrentIndex(4)  # Graph页
+        self.graphPageStart()
     def mainPageFourthButton(self):
-        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
+        self.DisplayPage.setCurrentIndex(4)  # Graph页
+        self.graphPageStart()
 
     # searchPage页-函数设定
     def searchPageStart(self):
         self.SearchPageChooseList.itemClicked.connect(self.searchPageList)
+        self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_3D_0.html'))
+        self.SearchWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # searchPage页-ListWeb元素选择跳转
     def searchPageList(self):
         text = self.SearchPageChooseList.currentItem().text()
         if text == 'show the result':
             self.SearchWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+        self.SearchWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # barPage页-函数设定
     def barPageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.BarPageChooseList.itemClicked.connect(self.barPageList)
+        self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+        self.BarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # barPage页-ListWeb元素选择跳转
     def barPageList(self):
@@ -119,11 +139,14 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 4':
             self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+        self.BarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-函数设定
     def piePageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.PiePageChooseList.itemClicked.connect(self.piePageList)
+        self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+        self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-ListWeb元素选择跳转
     def piePageList(self):
@@ -136,17 +159,21 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 4':
             self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+        self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-函数设定
     def graphPageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.GraphPageChooseList.itemClicked.connect(self.graphPageList)
+        self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.GraphWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-ListWeb元素选择跳转
     def graphPageList(self):
         text = self.GraphPageChooseList.currentItem().text()
         if text == 'Graph 1':
             self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.GraphWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
     def mousePressEvent(self, event):
@@ -229,32 +256,32 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # 设置色块阴影颜色效果
     def effect_shadow_style0(self,widget):
         effect_shadow=QtWidgets.QGraphicsDropShadowEffect(self)
-        effect_shadow.setOffset(0,5)  # 偏移
+        effect_shadow.setOffset(0, 5)  # 偏移
         effect_shadow.setBlurRadius(12)  # 阴影半径
         effect_shadow.setColor(QtCore.Qt.gray)  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
     def effect_shadow_style1(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
-        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setBlurRadius(10)  # 阴影半径
         effect_shadow.setColor(QColor(162, 129, 247))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
     def effect_shadow_style2(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
-        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setBlurRadius(10)  # 阴影半径
         effect_shadow.setColor(QColor(253, 139, 133))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
     def effect_shadow_style3(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
-        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setBlurRadius(10)  # 阴影半径
         effect_shadow.setColor(QColor(243, 175, 189))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
     def effect_shadow_style4(self, widget):
         effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
         effect_shadow.setOffset(0, 8)  # 偏移
-        effect_shadow.setBlurRadius(48)  # 阴影半径
+        effect_shadow.setBlurRadius(10)  # 阴影半径
         effect_shadow.setColor(QColor(66, 226, 192))  # 阴影颜色
         widget.setGraphicsEffect(effect_shadow)
 
@@ -263,18 +290,18 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         text = self.IntroList.currentItem().text()
         if text == 'Mainpage':
             self.DisplayPage.setCurrentIndex(0)  # 主页
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
+            self.mainPageStart()
     def displayDetailsPage(self):
         text = self.DetailsList.currentItem().text()
         if text == 'Bar':
             self.DisplayPage.setCurrentIndex(2)  # Bar页
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+            self.barPageStart()
         if text == 'Pie':
             self.DisplayPage.setCurrentIndex(3)  # Pie页
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+            self.piePageStart()
         elif text == 'Graph':
             self.DisplayPage.setCurrentIndex(4)  # Graph页
-            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Circle_0.html'))
+            self.graphPageStart()
 
     # 搜索页面函数设定
     def displaySearchPage(self):
