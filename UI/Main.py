@@ -72,11 +72,11 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.FourthFrameButton.clicked.connect(self.mainPageFourthButton)
 
         # 首页大屏效果
-        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
-        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Line_Simple_0.html'))
-        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
-        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Simple_0.html'))
-        self.RadarWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Radar_Simple_0.html'))
+        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
+        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
+        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
+        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Radar_Simple_0.html'))
+        self.RadarWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_1.html'))
         self.FirstFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.SecondFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.ThirdFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
@@ -112,86 +112,85 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # userPage页-函数设定
     def userPageStart(self):
         self.UserPageChooseList.itemClicked.connect(self.userPageList)
-        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
+        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Radar_Simple_0.html'))
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
-        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Tree_Simple_0.html'))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # userPage页-ListWeb元素选择跳转
     def userPageList(self):
         text = self.UserPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
-            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
-
+            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Radar_Simple_0.html'))
+            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Tree_Simple_0.html'))
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # modelPage页-函数设定
     def modelPageStart(self):
         self.ModelPageChooseList.itemClicked.connect(self.userPageList)
-        self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Tree_Circle_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # modelPage页-ListWeb元素选择跳转
     def modelPageList(self):
         text = self.ModelPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Radar_Simple_0.html'))
+            self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Tree_Circle_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # barPage页-函数设定
     def barPageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.BarPageChooseList.itemClicked.connect(self.barPageList)
-        self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+        self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         self.BarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # barPage页-ListWeb元素选择跳转
     def barPageList(self):
         text = self.BarPageChooseList.currentItem().text()
         if text == 'Bar 1':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 2':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 3':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 4':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         self.BarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-函数设定
     def piePageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.PiePageChooseList.itemClicked.connect(self.piePageList)
-        self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+        self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
         self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-ListWeb元素选择跳转
     def piePageList(self):
         text = self.PiePageChooseList.currentItem().text()
         if text == 'Pie 1':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 2':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 3':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
         elif text == 'Pie 4':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
         self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-函数设定
     def graphPageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.GraphPageChooseList.itemClicked.connect(self.graphPageList)
-        self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+        self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Simple_0.html'))
         self.GraphWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-ListWeb元素选择跳转
     def graphPageList(self):
         text = self.GraphPageChooseList.currentItem().text()
         if text == 'Graph 1':
-            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+HTML_PATH+'Tree_Simple_0.html'))
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Simple_0.html'))
         self.GraphWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
@@ -312,10 +311,10 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.mainPageStart()
         if text == 'User Profile':
             self.DisplayPage.setCurrentIndex(1)  # 用户页面
-            self.mainPageStart()
+            self.userPageStart()
         if text == 'Model':
             self.DisplayPage.setCurrentIndex(2)  # 模型页面
-            self.mainPageStart()
+            self.modelPageStart()
         if text == 'Analysis':
             self.DisplayPage.setCurrentIndex(3)  # 分析页面
             self.mainPageStart()
@@ -349,7 +348,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.UserWeb.load(QUrl.fromLocalFile(importance))
         # self.UserWeb.load(QUrl.fromLocalFile(probability))
         # self.UserWeb.load(QUrl.fromLocalFile(al))
-        self.UserWeb.load(QUrl.fromLocalFile(ABS_PATH + HTML_PATH + 'Bar_3D_0.html'))
+        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH + PATH + 'Bar_3D_0.html'))
         # self.UserWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # 窗口最大化函数设定

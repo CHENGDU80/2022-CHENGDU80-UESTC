@@ -6989,13 +6989,13 @@ border-radius:12px</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QWidget" name="RadarWidget_2" native="true">
-                            <widget class="QWebEngineView" name="RadarWeb_2" native="true">
+                           <widget class="QWidget" name="UserTreeWidget" native="true">
+                            <widget class="QWebEngineView" name="UserTreeWeb" native="true">
                              <property name="geometry">
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>451</width>
+                               <width>971</width>
                                <height>361</height>
                               </rect>
                              </property>
@@ -7019,31 +7019,6 @@ QWebEngineView{
                              <property name="url" stdset="0">
                               <url>
                                <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
-                              </url>
-                             </property>
-                            </widget>
-                            <widget class="QWebEngineView" name="UserTreeWeb" native="true">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>971</width>
-                               <height>361</height>
-                              </rect>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>Tahoma</family>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">QWebEngineView#webEngineView3{
-	rgb(255, 255, 255)
-}</string>
-                             </property>
-                             <property name="url" stdset="0">
-                              <url>
-                               <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/enterprise_bar.html</string>
                               </url>
                              </property>
                             </widget>
@@ -7336,9 +7311,9 @@ border-radius:40px
                                  <property name="geometry">
                                   <rect>
                                    <x>100</x>
-                                   <y>20</y>
+                                   <y>10</y>
                                    <width>361</width>
-                                   <height>271</height>
+                                   <height>281</height>
                                   </rect>
                                  </property>
                                  <property name="text">

@@ -906,8 +906,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setSpacing(12)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.ScrollPic = QtWidgets.QWidget(self.ScrollTitle)
-        self.ScrollPic.setMinimumSize(QtCore.QSize(24, 24))
-        self.ScrollPic.setMaximumSize(QtCore.QSize(24, 24))
+        self.ScrollPic.setMinimumSize(QtCore.QSize(32, 32))
+        self.ScrollPic.setMaximumSize(QtCore.QSize(32, 32))
         self.ScrollPic.setSizeIncrement(QtCore.QSize(32, 0))
         font = QtGui.QFont()
         font.setFamily("Tahoma")
@@ -3223,14 +3223,14 @@ class Ui_MainWindow(object):
         self.formLayout_4.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.ScrollTitle_3)
         self.ScrollArea_2.setWidget(self.ScrollWodget_2)
         self.UserMessageLayout2.addWidget(self.ScrollArea_2)
-        self.RadarWidget_2 = QtWidgets.QWidget(self.verticalLayoutWidget)
-        self.RadarWidget_2.setObjectName("RadarWidget_2")
-        self.RadarWeb_2 = QtWebEngineWidgets.QWebEngineView(self.RadarWidget_2)
-        self.RadarWeb_2.setGeometry(QtCore.QRect(0, 0, 451, 361))
+        self.UserTreeWidget = QtWidgets.QWidget(self.verticalLayoutWidget)
+        self.UserTreeWidget.setObjectName("UserTreeWidget")
+        self.UserTreeWeb = QtWebEngineWidgets.QWebEngineView(self.UserTreeWidget)
+        self.UserTreeWeb.setGeometry(QtCore.QRect(0, 0, 971, 361))
         font = QtGui.QFont()
         font.setFamily("Tahoma")
-        self.RadarWeb_2.setFont(font)
-        self.RadarWeb_2.setStyleSheet("QWidget{\n"
+        self.UserTreeWeb.setFont(font)
+        self.UserTreeWeb.setStyleSheet("QWidget{\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    selection-background-color: rgba(255, 255, 255, 0);\n"
 "    border-radius:8px\n"
@@ -3240,19 +3240,9 @@ class Ui_MainWindow(object):
 "    selection-background-color: rgba(0, 0, 0, 0);\n"
 "\n"
 "}")
-        self.RadarWeb_2.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
-        self.RadarWeb_2.setObjectName("RadarWeb_2")
-        self.UserTreeWeb = QtWebEngineWidgets.QWebEngineView(self.RadarWidget_2)
-        self.UserTreeWeb.setGeometry(QtCore.QRect(0, 0, 971, 361))
-        font = QtGui.QFont()
-        font.setFamily("Tahoma")
-        self.UserTreeWeb.setFont(font)
-        self.UserTreeWeb.setStyleSheet("QWebEngineView#webEngineView3{\n"
-"    rgb(255, 255, 255)\n"
-"}")
-        self.UserTreeWeb.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/enterprise_bar.html"))
+        self.UserTreeWeb.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
         self.UserTreeWeb.setObjectName("UserTreeWeb")
-        self.UserMessageLayout2.addWidget(self.RadarWidget_2)
+        self.UserMessageLayout2.addWidget(self.UserTreeWidget)
         self.UserMessageLayout2.setStretch(0, 1)
         self.UserMessageLayout2.setStretch(1, 1)
         self.UserMessageLayout.addLayout(self.UserMessageLayout2)
@@ -3396,7 +3386,7 @@ class Ui_MainWindow(object):
 "")
         self.ModelGifWidget.setObjectName("ModelGifWidget")
         self.ModelGif = QtWidgets.QLabel(self.ModelGifWidget)
-        self.ModelGif.setGeometry(QtCore.QRect(100, 20, 361, 271))
+        self.ModelGif.setGeometry(QtCore.QRect(100, 10, 361, 281))
         self.ModelGif.setText("")
         self.ModelGif.setPixmap(QtGui.QPixmap("images/Loan.gif"))
         self.ModelGif.setScaledContents(True)
@@ -4411,7 +4401,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.IntroList.setCurrentRow(-1)
         self.DetailsList.setCurrentRow(-1)
-        self.DisplayPage.setCurrentIndex(2)
+        self.DisplayPage.setCurrentIndex(0)
         self.UserPageChooseList.setCurrentRow(-1)
         self.ModelPageChooseList.setCurrentRow(-1)
         self.BarPageChooseList.setCurrentRow(-1)

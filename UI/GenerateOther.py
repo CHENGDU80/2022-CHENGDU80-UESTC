@@ -8,7 +8,7 @@ def logo():
     liquid = Liquid(init_opts=opts.InitOpts(width='90px',height='90px'))
     liquid.add("lq", [0.3, 0.7], is_outline_show=False, shape=SymbolType.DIAMOND, color=[255,255,255])
     liquid.set_global_opts(title_opts=opts.TitleOpts(title=""))
-    liquid.render("./main/logo.html")
+    liquid.render(ABS_PATH + MAIN_PATH + "logo.html")
 
 
 if __name__ == '__main__':

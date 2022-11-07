@@ -1,0 +1,7 @@
+{"name": "consumption", "children": [
+ {"name": "consumption within a year", "children": [
+  {"name": "game", "value": 3938},
+  {"name": "travel", "value": 3812},
+  {"name": "car", "value": 3812},
+  {"name": "mom&baby", "value": 3812},
+  {"name": "living cost", "value": 3812}]}]}

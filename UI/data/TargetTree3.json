@@ -1,0 +1,15 @@
+{"name": "repayment willingness", "children": [
+ {"name": "payment history", "children": [
+  {"name": "type and credit limit for the latest month", "value": 3938},
+  {"name": "dates and duration for the latest month", "value": 3938},
+  {"name": "type and credit limit for the latest three months", "value": 3938},
+  {"name": "dates and duration for the latest three months", "value": 3812}]},
+ {"name": "credit products (used)", "children": [
+  {"name": "repayment amount", "value": 3938},
+  {"name": "due date", "value": 3938},
+  {"name": "payment frequency", "value": 3812}]},
+ {"name": "defaults", "children": [
+  {"name": "total times in the latest month", "value": 3938},
+  {"name": "total amount in the latest month", "value": 3938},
+  {"name": "total times in the latest three months", "value": 3938},
+  {"name": "total amount in the latest three months", "value": 3812}]}]}

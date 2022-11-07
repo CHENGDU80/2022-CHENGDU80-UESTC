@@ -92,22 +92,25 @@ def drawSimpleLine(x, y, width, height, path, file_name, file_id):
     line.render(path+file_name+str(file_id)+'.html')
 
 
-# 时间线状图渲染
-def drawTimeLine(x, y, width, height, path, file_name, file_id):
+# 时间树状图渲染
+def drawTimeTree(x, y, width, height, path, file_name, file_id):
+    subtree_name = ['connections', 'repayment willingness', 'repayment ability', 'consumption', 'personal information']
     tl = Timeline(init_opts=opts.InitOpts(width=width, height=height))
     for i in range(0, 5):
-        pie = Pie(init_opts=opts.InitOpts(width=width, height=height))
-        pie.add("商家A", [list(z) for z in zip(x, y)], rosetype="radius", radius=["30%", "55%"])
-        pie.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
-                            legend_opts=opts.LegendOpts(pos_right="0%"))
-        tl.add(pie, "{}年".format(i))
+        with open('./data/TargetTree'+str(i)+'.json', "r", encoding="utf-8") as f:
+            j = json.load(f)
+        tree=Tree(init_opts=opts.InitOpts(width=width, height=height))
+        tree.add("", [j], collapse_interval=2)
+        tree.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+                             legend_opts=opts.LegendOpts(pos_right="0%"))
+        tree.set_series_opts(label_opts=opts.LabelOpts(position='top'))
+        tl.add(tree, subtree_name[i])
     tl.render(path+file_name+str(file_id)+'.html')
-    tl.render("timeline_multi_axis.html")
 
 
 # 环形树状图渲染
 def drawCircleTree(x, y, width, height, path, file_name, file_id):
-    with open("./data/test.json","r",encoding="utf-8") as f:
+    with open("./data/TargetTree0.json","r",encoding="utf-8") as f:
         j=json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=width,height=height))
     tree.add("", [j], collapse_interval=2, layout="radial")
@@ -119,7 +122,7 @@ def drawCircleTree(x, y, width, height, path, file_name, file_id):
 
 # 简单树状图渲染
 def drawSimpleTree(x, y, width, height, path, file_name, file_id):
-    with open("./data/test.json","r",encoding="utf-8") as f:
+    with open("./data/TargetTree0.json","r",encoding="utf-8") as f:
         j=json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=width,height=height))
     tree.add("", [j], collapse_interval=2)
@@ -148,16 +151,18 @@ def drawSimpleRadar(x, y, width, height, path, file_name, file_id):
 
 # 生成主页元素
 def generateMain():
+    drawTimeTree(0, 0, MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Tree_Time_', 0)
+
     drawCircleTree(data['attribute'].tolist(),data['importance'].tolist(), MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH,
                    'Tree_Circle_',0)
-    drawSimpleTree(data['attribute'].tolist(),data['importance'].tolist(), MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH,
+    drawTimeTree(data['attribute'].tolist(),data['importance'].tolist(), MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH,
                    'Tree_Simple_',0)
     draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),data.values.tolist(),
               MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Bar_3D_', 0)
     drawSimpleRadar(data['attribute'].tolist(), data['importance'].tolist(), MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH,
                     'Radar_Simple_', 0)
     draw3DBar(data['type'].drop_duplicates().tolist(),data['attribute'].drop_duplicates().tolist(),data.values.tolist(),
-              MAIN_WIDTH_, MAIN_HEIGHT_, MAIN_PATH, 'Bar_3D_',0)
+              MAIN_WIDTH_, MAIN_HEIGHT_, MAIN_PATH, 'Bar_3D_',1)
 
 
 # 生成用户界面元素
@@ -175,13 +180,12 @@ def generateModel():
 
 
 if __name__ == '__main__':
+    data = pd.read_csv('./data/importance_.csv')
+    data.sort_index(axis=0, ascending=False, inplace=True)
 
     generateMain()
     generateUser()
     generateModel()
-
-    data = pd.read_csv('./data/importance_.csv')
-    data.sort_index(axis=0, ascending=False, inplace=True)
 
     # 簇的聚类情况
     cluster_data = np.load('./data/ids.npy')
