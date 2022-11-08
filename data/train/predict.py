@@ -94,6 +94,7 @@ writeDf = pd.concat([usrID, answerDate, writeDf], axis=1)
 # writeDf = pd.condat([],axis=1)
 print(Counter(labelDf["label"]))
 print(writeDf)
+writeDf.to_csv("Submission.csv", sep=",", index=False)
 exit()
 actualLabel = pd.read_csv(testLabelFilePath)["DEFAULT_LABEL"]
 print(Counter(actualLabel.values))

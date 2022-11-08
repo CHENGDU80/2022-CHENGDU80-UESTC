@@ -88,12 +88,14 @@ parser.add_argument('-eps', type=float, default=0.08)
 parser.add_argument('-min_samples', type=int, default=3)
 parser.add_argument('-reTrain', type=bool, default=True)
 parser.add_argument('-thrs', type=float, default=0.5)
+parser.add_argument('-num_models', type=int, default=50)
 
 args = parser.parse_args()
 epsNum = args.eps
 minSamples = args.min_samples
 reTrainFlag = args.reTrain
 thrs = args.thrs
+numModels = args.num_models
 
 constructedTrainFile = "./data/train/constructed_trainset.csv"
 constructedTestFile = "./data/test/constructed_testset.csv"
@@ -112,7 +114,7 @@ negTest, posTest, testDf = processFeature(testDf, testLabelDf)
 posModelBase = "./models/posModel_"
 negModelBase = "./models/negModel_"
 
-NUM_MODEL = 50
+NUM_MODEL = numModels
 modelRes = []
 if not os.path.exists("./models"):
     os.mkdir("./models")
@@ -134,14 +136,16 @@ for i in tqdm(range(NUM_MODEL)):
 
 modelLabel = []    
 modelResArray = np.array(modelRes)
-print(modelResArray.shape)
 modelScore = np.mean(np.abs(modelResArray), axis=0)
-print(modelScore.shape)
+print(np.mean(modelScore))
+countNeg = 0
 for score in modelScore:
     if score <= thrs:
         modelLabel.append(1)
+        countNeg += 1
     else:
         modelLabel.append(0)
+print(countNeg)
 testLabelDf = testLabelDf["DEFAULT_LABEL"]
 convertActualLabel = testLabelDf.apply(lambda x:1 if x == 0  else 0)
 
