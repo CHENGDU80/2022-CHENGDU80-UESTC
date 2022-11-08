@@ -6,8 +6,8 @@ from sklearn.cluster import DBSCAN
 from sklearn import preprocessing
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
-trainFile = r"../data/train/feature.csv"
-labelFile = r"../data/train/label.csv"
+trainFile = r"train/constrcted_trainset.csv"
+labelFile = r"train/label.csv"
 clusterFile = r"../data/cluster_out.csv"
 
 originDf = pd.read_csv(trainFile)

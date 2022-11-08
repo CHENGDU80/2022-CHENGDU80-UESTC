@@ -41,9 +41,9 @@ def ConstructDatasetwithAll1(filePath, outputPath, clusterDf, labelDf):
     
     originDf = pd.read_csv(filePath)
     constructDf = pd.DataFrame()
-    for column in originDf.columns:
-        if originDf[column].isnull().sum() > len(originDf) * 0.9:
-            originDf = originDf.drop(column, axis=1)
+    # for column in originDf.columns:
+    #     if originDf[column].isnull().sum() > len(originDf) * 0.9:
+    #         originDf = originDf.drop(column, axis=1)
     print(originDf.shape)
     originDf = originDf.fillna(0)
     index = labelDf.loc[labelDf["DEFAULT_LABEL"] == 0].index
@@ -68,28 +68,25 @@ def ConstructDatasetwithAll1(filePath, outputPath, clusterDf, labelDf):
 
 originTrainPath = "./train/feature.csv"
 trainLablePath = "./train/label.csv"
-enhancedTrainPath = "./train/enhanced_feature_3_1.csv"
-enhancedTrainLabelPath = "./train/enhanced_feature_label_3_1.csv"
 
 originTestPath = "./test/feature.csv"
 clusterPath = "./cluster_out.csv"
-constructedTrainPath = "./train/constructed_trainset_neg.csv"
+constructedTrainPath = "./train/constructed_trainset.csv"
 constructedTestPath = "./test/constructed_testset.csv"
 clusterDf = pd.read_csv(clusterPath)
 labelDf = pd.read_csv(trainLablePath)
 
-if not os.path.exists(enhancedTrainPath) and not os.path.exists(enhancedTrainLabelPath):
-    df = pd.read_csv(trainLablePath)
-    print(Counter(df["DEFAULT_LABEL"]))
-    trainDf = pd.read_csv(originTrainPath).drop("APPLICATION_ID", axis=1)
-    trainDf = trainDf.fillna(0)
-    smo = SMOTE(random_state=111, sampling_strategy = {1:23985})
-    newTrainDf, labelDf = smo.fit_resample(trainDf, df["DEFAULT_LABEL"])
-    print(Counter(labelDf))
-    print(newTrainDf)
-    print(labelDf)
-    newTrainDf.to_csv(enhancedTrainPath, index=False, sep=",")
-    labelDf.to_csv(enhancedTrainLabelPath, index=False, sep=",")
-ConstructDatasetwithAll1(originTrainPath, constructedTrainPath, clusterDf, labelDf)
-# ConstructDataset(enhancedTrainPath, constructedTrainPath, clusterDf)
-ConstructDataset(originTestPath, constructedTestPath, clusterDf)
+# if not os.path.exists(enhancedTrainPath) and not os.path.exists(enhancedTrainLabelPath):
+#     df = pd.read_csv(trainLablePath)
+#     print(Counter(df["DEFAULT_LABEL"]))
+#     trainDf = pd.read_csv(originTrainPath).drop("APPLICATION_ID", axis=1)
+#     trainDf = trainDf.fillna(0)
+#     smo = SMOTE(random_state=111, sampling_strategy = {1:23985})
+#     newTrainDf, labelDf = smo.fit_resample(trainDf, df["DEFAULT_LABEL"])
+#     print(Counter(labelDf))
+#     print(newTrainDf)
+#     print(labelDf)
+#     newTrainDf.to_csv(enhancedTrainPath, index=False, sep=",")
+#     labelDf.to_csv(enhancedTrainLabelPath, index=False, sep=",")
+#ConstructDatasetwithAll1(originTrainPath, constructedTrainPath, clusterDf, labelDf)
+ConstructDataset(originTrainPath, constructedTrainPath, clusterDf)
