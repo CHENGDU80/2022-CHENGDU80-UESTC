@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+import numpy as np
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtCore import Qt, QUrl, QCoreApplication
 from PyQt5.QtGui import QColor, QPixmap, QMovie
@@ -41,6 +42,8 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.barPageStart()
         self.piePageStart()
         self.graphPageStart()
+        self.treePageStart()
+        self.radarPageStart()
 
         # 窗口设定
         self.PageCloseButton.clicked.connect(QCoreApplication.instance().quit)
@@ -137,6 +140,17 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.UserName.setText(QtCore.QCoreApplication.translate("MainWindow", self.user_name[self.user_click%5]))
         self.UserName.setStyleSheet("background-color: rgb(22, 76, 140);\n""border-radius:6px")
 
+        # 用户特征属性切换
+        self.A1Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+        self.A2Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+        self.A3Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+        self.A4Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+        self.A5Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+        self.PersonalCredit.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,80))))
+        self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
+        self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
+        self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
+
         # 发送切换信号
         self.user_click = self.user_click + 1
 
@@ -161,6 +175,17 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.UserName.setPalette(QtGui.QPalette())
             self.UserName.setText(QtCore.QCoreApplication.translate("MainWindow",self.user_name[self.user_click % 5]))
             self.UserName.setStyleSheet("background-color: rgb(22, 76, 140);\n""border-radius:6px")
+
+            # 用户特征属性切换
+            self.A1Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+            self.A2Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+            self.A3Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+            self.A4Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+            self.A5Label.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,100))))
+            self.PersonalCredit.setText(QtCore.QCoreApplication.translate("MainWindow",str(np.random.randint(30,80))))
+            self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
+            self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
+            self.PersonalCredit1.setText(QtCore.QCoreApplication.translate("MainWindow",str(bool(np.random.randint(0,2)))))
 
 
     # modelPage页-函数设定
@@ -230,46 +255,92 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         if text == 'Bar 1':
             self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 2':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Complex_0.html'))
         elif text == 'Bar 3':
             self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
         elif text == 'Bar 4':
-            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Simple_0.html'))
+            self.BarWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Bar_Complex_0.html'))
         self.BarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-函数设定
     def piePageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.PiePageChooseList.itemClicked.connect(self.piePageList)
-        self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
+        self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Complex_0.html'))
         self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # piePage页-ListWeb元素选择跳转
     def piePageList(self):
         text = self.PiePageChooseList.currentItem().text()
         if text == 'Pie 1':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Complex_0.html'))
         elif text == 'Pie 2':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Complex_0.html'))
         elif text == 'Pie 3':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Complex_0.html'))
         elif text == 'Pie 4':
-            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Simple_0.html'))
+            self.PieWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Pie_Complex_0.html'))
         self.PieWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-函数设定
     def graphPageStart(self):
         # 设置piePage页选择列表的跳转函数
         self.GraphPageChooseList.itemClicked.connect(self.graphPageList)
-        self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Simple_0.html'))
+        self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Graph_Simple_0.html'))
         self.GraphWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # graphPage页-ListWeb元素选择跳转
     def graphPageList(self):
         text = self.GraphPageChooseList.currentItem().text()
         if text == 'Graph 1':
-            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Simple_0.html'))
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Graph_Simple_0.html'))
+        if text == 'Graph 2':
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Graph_Simple_0.html'))
+        if text == 'Graph 3':
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Graph_Simple_0.html'))
+        if text == 'Graph 4':
+            self.GraphWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Graph_Simple_0.html'))
         self.GraphWeb.page().setBackgroundColor(QColor(0,0,0,0))
+
+    # TreePage页-函数设定
+    def treePageStart(self):
+        # 设置piePage页选择列表的跳转函数
+        self.TreePageChooseList.itemClicked.connect(self.treePageList)
+        self.TreeWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Circle_0.html'))
+        self.TreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+
+    # TreePage页-ListWeb元素选择跳转
+    def treePageList(self):
+        text = self.TreePageChooseList.currentItem().text()
+        if text == 'Tree 1':
+            self.TreeWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Simple_0.html'))
+        if text == 'Tree 2':
+            self.TreeWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Circle_0.html'))
+        if text == 'Tree 3':
+            self.TreeWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Circle_0.html'))
+        if text == 'Tree 4':
+            self.TreeWeb.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Tree_Circle_0.html'))
+        self.TreeWeb.page().setBackgroundColor(QColor(0,0,0,0))
+
+    # RadarPage页-函数设定
+    def radarPageStart(self):
+        # 设置piePage页选择列表的跳转函数
+        self.RadarPageChooseList.itemClicked.connect(self.radarPageList)
+        self.RadarWeb_2.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Radar_Complex_0.html'))
+        self.RadarWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+
+    # RadarPage页-ListWeb元素选择跳转
+    def radarPageList(self):
+        text = self.RadarPageChooseList.currentItem().text()
+        if text == 'Radar 1':
+            self.RadarWeb_2.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Radar_Simple_0.html'))
+        if text == 'Radar 2':
+            self.RadarWeb_2.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Radar_Complex_0.html'))
+        if text == 'Radar 3':
+            self.RadarWeb_2.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Radar_Simple_0.html'))
+        if text == 'Radar 4':
+            self.RadarWeb_2.load(QUrl.fromLocalFile(ABS_PATH+PATH+'Radar_Complex_0.html'))
+        self.RadarWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # 窗口尺寸调整-按压鼠标获取窗体坐标函数
     def mousePressEvent(self, event):
@@ -408,15 +479,15 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.DisplayPage.setCurrentIndex(6)  # Graph页
             self.graphPageStart()
         elif text == 'Tree':
-            self.DisplayPage.setCurrentIndex(5)  # Tree页
+            self.DisplayPage.setCurrentIndex(7)  # Tree页
             self.graphPageStart()
         elif text == 'Radar':
-            self.DisplayPage.setCurrentIndex(4)  # Radar页
+            self.DisplayPage.setCurrentIndex(8)  # Radar页
             self.graphPageStart()
 
     # 搜索页面函数设定
     def displayUserPage(self):
-        text = self.UserBarLine.text()
+        text = self.SearchBarLine.text()
         self.DisplayPage.setCurrentIndex(1)  # User页
         self.entidChanged(text)
 

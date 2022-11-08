@@ -13,7 +13,7 @@ def drawSimpleBar(x, y, width, height, path, file_name, file_id):
     bar = Bar(init_opts=opts.InitOpts(width=width,height=height))
     bar.add_xaxis(x)
     bar.add_yaxis('Cluster Type', y, color='#518D79')
-    bar.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+    bar.set_global_opts(title_opts=opts.TitleOpts(title="Feature Importance"),
                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                         legend_opts=opts.LegendOpts(pos_right="0%"))
     bar.set_series_opts(label_opts=opts.LabelOpts(position='top'))
@@ -24,12 +24,8 @@ def drawSimpleBar(x, y, width, height, path, file_name, file_id):
 def drawComplexBar(x, y, width, height, path, file_name, file_id):
     bar = Bar(init_opts=opts.InitOpts(width=width,height=height))
     bar.add_xaxis(x)
-    bar.add_yaxis('Yaix0', y[0:2], stack='stack')
-    bar.add_yaxis('Yaix1', y[2:4], stack='stack')
-    bar.add_yaxis('Yaix2', y[4:6], stack='stack')
-    bar.add_yaxis('Yaix3', y[6:8], stack='stack')
-    bar.add_yaxis('Yaix4', y[8:10], stack='stack')
-    bar.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+    bar.add_yaxis('Yaix0', y, stack='stack')
+    bar.set_global_opts(title_opts=opts.TitleOpts(title="Feature Importance"),
                         datazoom_opts=opts.DataZoomOpts(is_show=True),
                         legend_opts=opts.LegendOpts(pos_right="0%"))
     bar.set_series_opts(label_opts=opts.LabelOpts(position='top'))
@@ -55,7 +51,7 @@ def draw3DBar(x, y, data, width, height, path, file_name, file_id):
 def drawComplexPie(x, y, width, height, path, file_name, file_id):
     pie = Pie(init_opts=opts.InitOpts(width=width,height=height))
     pie.add("",[list(Z) for Z in zip(x,y)])
-    pie.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+    pie.set_global_opts(title_opts=opts.TitleOpts(title="Importance Pie"),
                         legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
     pie.set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}", is_show=False))
     pie.render(path+file_name+str(file_id)+'.html')
@@ -75,7 +71,7 @@ def drawSimplePie(x, y, width, height, path, file_name, file_id):
                                             "b": {"fontSize": 16,"lineHeight": 33},
                                             "per": {"color": "#eee","backgroundColor": "#334455","padding": [2,4],
                                                     "borderRadius": 2}}))
-    pie.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+    pie.set_global_opts(title_opts=opts.TitleOpts(title="Importance Pie"),
                         legend_opts=opts.LegendOpts(pos_right="0%",orient='vertical'))
     pie.render(path+file_name+str(file_id)+'.html')
 
@@ -110,11 +106,11 @@ def drawTimeTree(x, y, width, height, path, file_name, file_id):
 
 # 环形树状图渲染
 def drawCircleTree(x, y, width, height, path, file_name, file_id):
-    with open("./data/TargetTree0.json","r",encoding="utf-8") as f:
+    with open(x,"r",encoding="utf-8") as f:
         j = json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=width,height=height))
     tree.add("", [j], collapse_interval=2, layout="radial")
-    tree.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
+    tree.set_global_opts(title_opts=opts.TitleOpts(title=y),
                          legend_opts=opts.LegendOpts(pos_right="0%"))
     tree.set_series_opts(label_opts=opts.LabelOpts(position='top'))
     tree.render(path+file_name+str(file_id)+'.html')
@@ -148,6 +144,25 @@ def drawSimpleRadar(x, y, width, height, path, file_name, file_id):
     radar.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
     radar.set_global_opts(legend_opts=opts.LegendOpts(pos_right="0%",selected_mode="single"),
                           title_opts=opts.TitleOpts(title="User Credit"),)
+    radar.render(path+file_name+str(file_id)+'.html')
+
+
+# 复杂雷达图渲染
+def drawComplexRadar(x, y, width, height, path, file_name, file_id):
+    value_bj = np.random.randint(10,80,[10,5]).tolist()
+    value_sh = np.random.randint(50,100,[10,5]).tolist()
+    c_schema=[
+        {"name": "A_1","max": 100,"min": 5},
+        {"name": "A_2","max": 100,"min": 5},
+        {"name": "A_3","max": 100,"min": 5},
+        {"name": "A_4","max": 100,"min": 5},
+        {"name": "A_5","max": 100,"min": 5}]
+    radar = Radar(init_opts=opts.InitOpts(width=width,height=height))
+    radar.add_schema(schema=c_schema,shape="circle")
+    radar.add("DisAgree",value_bj,color="#f9713c")
+    radar.add("Agree",value_sh,color="#b3e4a1")
+    radar.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+    radar.set_global_opts(title_opts=opts.TitleOpts(title="Customer Credit"))
     radar.render(path+file_name+str(file_id)+'.html')
 
 
@@ -227,8 +242,42 @@ def generateAnalysis(i):
     drawSimpleRadar(0, 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Radar_Simple_', i)
 
 
+# 生成分析界面附属元素
+def generateHtml(i):
+    # 生成柱状图
+    drawSimpleBar(importance_data['Feature'].tolist(), importance_data['Importance'].tolist(),
+                  WIDTH, HEIGHT, PATH, 'Bar_Simple_', i)
+    drawComplexBar(importance_data['Feature'].tolist(), importance_data['Importance'].tolist(),
+                   WIDTH, HEIGHT, PATH, 'Bar_Complex_', i)
+    draw3DBar(['A1','A2','A3','A4','A5'], range(1,5), data_3D,
+              WIDTH, HEIGHT, PATH, 'Bar_3D_', i)
+
+    # 生成饼状图
+    drawComplexPie(importance_data['Feature'].tolist(), importance_data['Importance'].tolist(),
+                   WIDTH, HEIGHT, PATH, 'Pie_Complex_', i)
+
+    # 生成图谱
+    drawSimpleGraph("./data/Graph0.json",0,WIDTH,HEIGHT,PATH,'Graph_Simple_',i)
+
+    # 生成树状图
+    drawSimpleTree("./data/UserTargetTree0.json", "User Feature Rate",
+                   WIDTH, HEIGHT, PATH, 'Tree_Simple_', i)
+    drawCircleTree("./data/UserTargetTree0.json", "User Feature Rate",
+                   WIDTH, HEIGHT, PATH, 'Tree_Circle_', i)
+
+    # 生成雷达图
+    drawSimpleRadar(0, 0, WIDTH, HEIGHT, PATH, 'Radar_Simple_', i)
+    drawComplexRadar(0, 0, WIDTH, HEIGHT, PATH, 'Radar_Complex_', i)
+
+
 if __name__ == '__main__':
+    # 簇的聚类情况
+    # cluster_data = np.load('./data/ids.npy')
+    # cluster_data_type = [np.sum(cluster_data == i) for i in range(31)]
+    # drawSimpleBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH, 'Cluster_Bar_', 0)
+    # drawComplexBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH,  'Cluster_Pie_', 0)
     # 指标重要性情况
+
     importance_data = pd.read_csv('./data/importances.csv')
     importance_data.sort_values(by='Feature', inplace=True)
     importance_data.index = range(len(importance_data))
@@ -240,16 +289,11 @@ if __name__ == '__main__':
                 data_3D.append(['A'+str(i), j, importance_data['Importance'][col] * 1000])
                 col = col + 1
 
-    # 簇的聚类情况
-    cluster_data = np.load('./data/ids.npy')
-    cluster_data_type = [np.sum(cluster_data == i) for i in range(31)]
-    drawSimpleBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH, 'Cluster_Bar_', 0)
-    drawComplexBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH,  'Cluster_Pie_', 0)
-
     # 生成各类型图表
-    i = 0
     for i in range(5):
         generateUser(i)
+    i = 0
+    generateHtml(i)
     generateMain(i)
     generateModel(i)
     generateAnalysis(i)
