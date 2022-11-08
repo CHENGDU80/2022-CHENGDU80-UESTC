@@ -214,6 +214,15 @@ def generateModel():
     drawStructure(0, 0, MODEL_WIDTH, MODEL_HEIGHT, MODEL_PATH, 'Model_Structure_', 0)
 
 
+# 生成分析界面元素
+def generateAnalysis():
+    drawSimpleGraph("./data/Graph0.json", 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Graph_Simple_',0)
+    drawTimeTree(0, "Target Tree", ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Tree_Time_',0)
+    draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),data.values.tolist(),
+              ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Bar_3D_', 0)
+    drawSimpleRadar(0, 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Radar_Simple_', 0)
+
+
 if __name__ == '__main__':
     data = pd.read_csv('./data/importance_.csv')
     data.sort_index(axis=0, ascending=False, inplace=True)
@@ -221,6 +230,7 @@ if __name__ == '__main__':
     generateMain()
     generateUser()
     generateModel()
+    generateAnalysis()
 
     # 簇的聚类情况
     cluster_data = np.load('./data/ids.npy')

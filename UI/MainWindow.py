@@ -3960,6 +3960,572 @@ class Ui_MainWindow(object):
         self.DisplayPage.addWidget(self.ModelPage)
         self.AnalysisPage = QtWidgets.QWidget()
         self.AnalysisPage.setObjectName("AnalysisPage")
+        self.AnalysisPageFrame = QtWidgets.QFrame(self.AnalysisPage)
+        self.AnalysisPageFrame.setGeometry(QtCore.QRect(0, 0, 1401, 851))
+        self.AnalysisPageFrame.setMinimumSize(QtCore.QSize(0, 0))
+        self.AnalysisPageFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.AnalysisPageFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.AnalysisPageFrame.setObjectName("AnalysisPageFrame")
+        self.horizontalLayout_44 = QtWidgets.QHBoxLayout(self.AnalysisPageFrame)
+        self.horizontalLayout_44.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_44.setSpacing(0)
+        self.horizontalLayout_44.setObjectName("horizontalLayout_44")
+        self.AnalysisPageBackgroundFrame = QtWidgets.QFrame(self.AnalysisPageFrame)
+        self.AnalysisPageBackgroundFrame.setStyleSheet("QFrame#AnalysisPageBackgroundFrame{border-top-left-radius:0px;\n"
+"border-top-right-radius:0px;\n"
+"border-bottom-right-radius:10px;\n"
+"border-bottom-left-radius:0px;\n"
+"    background-color: rgb(241, 244, 249);\n"
+"\n"
+"}")
+        self.AnalysisPageBackgroundFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.AnalysisPageBackgroundFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.AnalysisPageBackgroundFrame.setObjectName("AnalysisPageBackgroundFrame")
+        self.AnalysisPageTitle = QtWidgets.QLabel(self.AnalysisPageBackgroundFrame)
+        self.AnalysisPageTitle.setGeometry(QtCore.QRect(0, 10, 317, 33))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.AnalysisPageTitle.setFont(font)
+        self.AnalysisPageTitle.setObjectName("AnalysisPageTitle")
+        self.layoutWidget_5 = QtWidgets.QWidget(self.AnalysisPageBackgroundFrame)
+        self.layoutWidget_5.setGeometry(QtCore.QRect(0, 50, 781, 52))
+        self.layoutWidget_5.setObjectName("layoutWidget_5")
+        self.AnalysisPageChooseLayout = QtWidgets.QHBoxLayout(self.layoutWidget_5)
+        self.AnalysisPageChooseLayout.setContentsMargins(0, 0, 0, 0)
+        self.AnalysisPageChooseLayout.setSpacing(12)
+        self.AnalysisPageChooseLayout.setObjectName("AnalysisPageChooseLayout")
+        self.AnalysisPageChooseLayoutLable = QtWidgets.QLabel(self.layoutWidget_5)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.AnalysisPageChooseLayoutLable.setFont(font)
+        self.AnalysisPageChooseLayoutLable.setStyleSheet("")
+        self.AnalysisPageChooseLayoutLable.setObjectName("AnalysisPageChooseLayoutLable")
+        self.AnalysisPageChooseLayout.addWidget(self.AnalysisPageChooseLayoutLable)
+        self.UserPageChooseList_2 = QtWidgets.QListWidget(self.layoutWidget_5)
+        self.UserPageChooseList_2.setMinimumSize(QtCore.QSize(0, 0))
+        self.UserPageChooseList_2.setMaximumSize(QtCore.QSize(16777, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.UserPageChooseList_2.setFont(font)
+        self.UserPageChooseList_2.setTabletTracking(False)
+        self.UserPageChooseList_2.setStyleSheet("QListView {\n"
+"    border-radius: 20px;\n"
+"    color: rgba(106, 106, 106,200);\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"QListView::item{\n"
+"background-color: transparent;\n"
+"height:40px;\n"
+"}\n"
+"QListView::item:hover {\n"
+"\n"
+"}\n"
+"QListView::item:selected {\n"
+"    /*background-color: transparent;*/\n"
+"    color: rgb(16, 15, 35);\n"
+"border-bottom: 3px solid rgb(119, 111, 255)\n"
+"\n"
+"\n"
+"}\n"
+"")
+        self.UserPageChooseList_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.UserPageChooseList_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.UserPageChooseList_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.UserPageChooseList_2.setAutoScrollMargin(16)
+        self.UserPageChooseList_2.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.UserPageChooseList_2.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollPerItem)
+        self.UserPageChooseList_2.setHorizontalScrollMode(QtWidgets.QAbstractItemView.ScrollPerItem)
+        self.UserPageChooseList_2.setMovement(QtWidgets.QListView.Static)
+        self.UserPageChooseList_2.setFlow(QtWidgets.QListView.LeftToRight)
+        self.UserPageChooseList_2.setProperty("isWrapping", False)
+        self.UserPageChooseList_2.setResizeMode(QtWidgets.QListView.Adjust)
+        self.UserPageChooseList_2.setLayoutMode(QtWidgets.QListView.SinglePass)
+        self.UserPageChooseList_2.setViewMode(QtWidgets.QListView.ListMode)
+        self.UserPageChooseList_2.setModelColumn(0)
+        self.UserPageChooseList_2.setBatchSize(100)
+        self.UserPageChooseList_2.setProperty("IconSize", QtCore.QSize(128, 128))
+        self.UserPageChooseList_2.setObjectName("UserPageChooseList_2")
+        item = QtWidgets.QListWidgetItem()
+        self.UserPageChooseList_2.addItem(item)
+        self.AnalysisPageChooseLayout.addWidget(self.UserPageChooseList_2)
+        self.AnalysisLayout1 = QtWidgets.QWidget(self.AnalysisPageBackgroundFrame)
+        self.AnalysisLayout1.setGeometry(QtCore.QRect(0, 110, 1401, 371))
+        self.AnalysisLayout1.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
+        self.AnalysisLayout1.setObjectName("AnalysisLayout1")
+        self.MainPageLayout2_4 = QtWidgets.QHBoxLayout(self.AnalysisLayout1)
+        self.MainPageLayout2_4.setContentsMargins(5, 0, 5, 12)
+        self.MainPageLayout2_4.setSpacing(12)
+        self.MainPageLayout2_4.setObjectName("MainPageLayout2_4")
+        self.FirstFrame_2 = QtWidgets.QFrame(self.AnalysisLayout1)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrame_2.setFont(font)
+        self.FirstFrame_2.setStyleSheet("QFrame#FirstFrame_2{\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(162, 129, 247),  stop:1 rgb(119, 111, 252));\n"
+"border: 1px outset rgb(98, 91, 213);\n"
+"}\n"
+"")
+        self.FirstFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FirstFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FirstFrame_2.setObjectName("FirstFrame_2")
+        self.verticalLayout_27 = QtWidgets.QVBoxLayout(self.FirstFrame_2)
+        self.verticalLayout_27.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_27.setSpacing(0)
+        self.verticalLayout_27.setObjectName("verticalLayout_27")
+        self.FirstFrameButtonFrame_2 = QtWidgets.QFrame(self.FirstFrame_2)
+        self.FirstFrameButtonFrame_2.setMinimumSize(QtCore.QSize(50, 0))
+        self.FirstFrameButtonFrame_2.setMaximumSize(QtCore.QSize(16777215, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrameButtonFrame_2.setFont(font)
+        self.FirstFrameButtonFrame_2.setStyleSheet("border:none")
+        self.FirstFrameButtonFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FirstFrameButtonFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FirstFrameButtonFrame_2.setObjectName("FirstFrameButtonFrame_2")
+        self.horizontalLayout_46 = QtWidgets.QHBoxLayout(self.FirstFrameButtonFrame_2)
+        self.horizontalLayout_46.setContentsMargins(-1, 5, -1, -1)
+        self.horizontalLayout_46.setObjectName("horizontalLayout_46")
+        self.FirstFrameButton_2 = QtWidgets.QPushButton(self.FirstFrameButtonFrame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.FirstFrameButton_2.sizePolicy().hasHeightForWidth())
+        self.FirstFrameButton_2.setSizePolicy(sizePolicy)
+        self.FirstFrameButton_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.FirstFrameButton_2.setMaximumSize(QtCore.QSize(41677, 40))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.FirstFrameButton_2.setFont(font)
+        self.FirstFrameButton_2.setStyleSheet("QPushButton{\n"
+"    color: rgb(255, 255, 255);\n"
+"text-align:left;\n"
+"\n"
+"    border:0px outset rgb(255, 255, 255);\n"
+"    border-radius:8px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"\n"
+"border:2px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"\n"
+"border:4px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"")
+        self.FirstFrameButton_2.setIcon(icon12)
+        self.FirstFrameButton_2.setObjectName("FirstFrameButton_2")
+        self.horizontalLayout_46.addWidget(self.FirstFrameButton_2)
+        self.verticalLayout_27.addWidget(self.FirstFrameButtonFrame_2)
+        self.FirstFrameLine_2 = QtWidgets.QFrame(self.FirstFrame_2)
+        self.FirstFrameLine_2.setMaximumSize(QtCore.QSize(16777215, 1))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrameLine_2.setFont(font)
+        self.FirstFrameLine_2.setStyleSheet("background-color: rgba(255, 255, 255, 89);")
+        self.FirstFrameLine_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.FirstFrameLine_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.FirstFrameLine_2.setObjectName("FirstFrameLine_2")
+        self.verticalLayout_27.addWidget(self.FirstFrameLine_2)
+        self.FirstFrameDateFrame_2 = QtWidgets.QFrame(self.FirstFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrameDateFrame_2.setFont(font)
+        self.FirstFrameDateFrame_2.setStyleSheet("border:none")
+        self.FirstFrameDateFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FirstFrameDateFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FirstFrameDateFrame_2.setObjectName("FirstFrameDateFrame_2")
+        self.verticalLayout_39 = QtWidgets.QVBoxLayout(self.FirstFrameDateFrame_2)
+        self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_39.setSpacing(0)
+        self.verticalLayout_39.setObjectName("verticalLayout_39")
+        self.FirstFrameWebWidget_2 = QtWidgets.QWidget(self.FirstFrameDateFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrameWebWidget_2.setFont(font)
+        self.FirstFrameWebWidget_2.setObjectName("FirstFrameWebWidget_2")
+        self.FirstFrameWeb_2 = QtWebEngineWidgets.QWebEngineView(self.FirstFrameWebWidget_2)
+        self.FirstFrameWeb_2.setGeometry(QtCore.QRect(0, 0, 691, 301))
+        self.FirstFrameWeb_2.setMinimumSize(QtCore.QSize(50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FirstFrameWeb_2.setFont(font)
+        self.FirstFrameWeb_2.setStyleSheet("QWidget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    selection-background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius:8px\n"
+"}\n"
+"QWebEngineView{\n"
+"    background-color: rgba(0, 0, 0, 0);\n"
+"    selection-background-color: rgba(0, 0, 0, 0);\n"
+"\n"
+"}")
+        self.FirstFrameWeb_2.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
+        self.FirstFrameWeb_2.setObjectName("FirstFrameWeb_2")
+        self.verticalLayout_39.addWidget(self.FirstFrameWebWidget_2)
+        self.verticalLayout_27.addWidget(self.FirstFrameDateFrame_2)
+        self.verticalLayout_27.setStretch(0, 1)
+        self.MainPageLayout2_4.addWidget(self.FirstFrame_2)
+        self.SecondFrame_2 = QtWidgets.QFrame(self.AnalysisLayout1)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrame_2.setFont(font)
+        self.SecondFrame_2.setStyleSheet("QFrame#SecondFrame_2{\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(253, 139, 133),  stop:1 rgb(248, 194, 152));\n"
+"border: 1px outset rgb(252, 194, 149)\n"
+"}\n"
+"")
+        self.SecondFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.SecondFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.SecondFrame_2.setObjectName("SecondFrame_2")
+        self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.SecondFrame_2)
+        self.verticalLayout_40.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_40.setSpacing(0)
+        self.verticalLayout_40.setObjectName("verticalLayout_40")
+        self.SecondFrameButtonFrame_2 = QtWidgets.QFrame(self.SecondFrame_2)
+        self.SecondFrameButtonFrame_2.setMinimumSize(QtCore.QSize(0, 50))
+        self.SecondFrameButtonFrame_2.setMaximumSize(QtCore.QSize(16777215, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrameButtonFrame_2.setFont(font)
+        self.SecondFrameButtonFrame_2.setStyleSheet("border:none")
+        self.SecondFrameButtonFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.SecondFrameButtonFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.SecondFrameButtonFrame_2.setObjectName("SecondFrameButtonFrame_2")
+        self.horizontalLayout_47 = QtWidgets.QHBoxLayout(self.SecondFrameButtonFrame_2)
+        self.horizontalLayout_47.setContentsMargins(-1, 5, -1, -1)
+        self.horizontalLayout_47.setObjectName("horizontalLayout_47")
+        self.SecondFrameButton_2 = QtWidgets.QPushButton(self.SecondFrameButtonFrame_2)
+        self.SecondFrameButton_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.SecondFrameButton_2.setMaximumSize(QtCore.QSize(41677, 40))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.SecondFrameButton_2.setFont(font)
+        self.SecondFrameButton_2.setStyleSheet("QPushButton{\n"
+"    color: rgb(255, 255, 255);\n"
+"text-align:left;\n"
+"\n"
+"    border:0px outset rgb(255, 255, 255);\n"
+"    border-radius:8px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"\n"
+"border:2px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"\n"
+"border:4px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"")
+        self.SecondFrameButton_2.setIcon(icon13)
+        self.SecondFrameButton_2.setObjectName("SecondFrameButton_2")
+        self.horizontalLayout_47.addWidget(self.SecondFrameButton_2)
+        self.verticalLayout_40.addWidget(self.SecondFrameButtonFrame_2)
+        self.SecondFrameLine_2 = QtWidgets.QFrame(self.SecondFrame_2)
+        self.SecondFrameLine_2.setMaximumSize(QtCore.QSize(16777215, 1))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrameLine_2.setFont(font)
+        self.SecondFrameLine_2.setStyleSheet("background-color: rgba(255, 255, 255, 89);")
+        self.SecondFrameLine_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.SecondFrameLine_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.SecondFrameLine_2.setObjectName("SecondFrameLine_2")
+        self.verticalLayout_40.addWidget(self.SecondFrameLine_2)
+        self.SecondFrameDateFrame_2 = QtWidgets.QFrame(self.SecondFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrameDateFrame_2.setFont(font)
+        self.SecondFrameDateFrame_2.setStyleSheet("border:none")
+        self.SecondFrameDateFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.SecondFrameDateFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.SecondFrameDateFrame_2.setObjectName("SecondFrameDateFrame_2")
+        self.verticalLayout_41 = QtWidgets.QVBoxLayout(self.SecondFrameDateFrame_2)
+        self.verticalLayout_41.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_41.setSpacing(0)
+        self.verticalLayout_41.setObjectName("verticalLayout_41")
+        self.SecondFrameWebWidget_2 = QtWidgets.QWidget(self.SecondFrameDateFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrameWebWidget_2.setFont(font)
+        self.SecondFrameWebWidget_2.setObjectName("SecondFrameWebWidget_2")
+        self.SecondFrameWeb_2 = QtWebEngineWidgets.QWebEngineView(self.SecondFrameWebWidget_2)
+        self.SecondFrameWeb_2.setGeometry(QtCore.QRect(0, 0, 691, 301))
+        self.SecondFrameWeb_2.setMinimumSize(QtCore.QSize(50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.SecondFrameWeb_2.setFont(font)
+        self.SecondFrameWeb_2.setStyleSheet("QWidget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    selection-background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius:8px\n"
+"}\n"
+"QWebEngineView{\n"
+"    background-color: rgba(0, 0, 0, 0);\n"
+"    selection-background-color: rgba(0, 0, 0, 0);\n"
+"\n"
+"}")
+        self.SecondFrameWeb_2.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
+        self.SecondFrameWeb_2.setObjectName("SecondFrameWeb_2")
+        self.verticalLayout_41.addWidget(self.SecondFrameWebWidget_2)
+        self.verticalLayout_40.addWidget(self.SecondFrameDateFrame_2)
+        self.verticalLayout_40.setStretch(1, 1)
+        self.verticalLayout_40.setStretch(2, 10)
+        self.MainPageLayout2_4.addWidget(self.SecondFrame_2)
+        self.MainPageLayout2_4.setStretch(0, 1)
+        self.MainPageLayout2_4.setStretch(1, 1)
+        self.AnalysisLayout2 = QtWidgets.QWidget(self.AnalysisPageBackgroundFrame)
+        self.AnalysisLayout2.setGeometry(QtCore.QRect(0, 490, 1401, 371))
+        self.AnalysisLayout2.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
+        self.AnalysisLayout2.setObjectName("AnalysisLayout2")
+        self.MainPageLayout2_6 = QtWidgets.QHBoxLayout(self.AnalysisLayout2)
+        self.MainPageLayout2_6.setContentsMargins(5, 0, 5, 12)
+        self.MainPageLayout2_6.setSpacing(12)
+        self.MainPageLayout2_6.setObjectName("MainPageLayout2_6")
+        self.ThirdFrame_2 = QtWidgets.QFrame(self.AnalysisLayout2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrame_2.setFont(font)
+        self.ThirdFrame_2.setStyleSheet("QFrame#ThirdFrame_2{\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(243, 175, 189),  stop:1 rgb(155, 118, 218));\n"
+"border: 1px outset rgb(153, 117, 219)\n"
+"}\n"
+"")
+        self.ThirdFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ThirdFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ThirdFrame_2.setObjectName("ThirdFrame_2")
+        self.verticalLayout_50 = QtWidgets.QVBoxLayout(self.ThirdFrame_2)
+        self.verticalLayout_50.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_50.setSpacing(0)
+        self.verticalLayout_50.setObjectName("verticalLayout_50")
+        self.ThirdFrameButtonFrame_3 = QtWidgets.QFrame(self.ThirdFrame_2)
+        self.ThirdFrameButtonFrame_3.setMinimumSize(QtCore.QSize(0, 50))
+        self.ThirdFrameButtonFrame_3.setMaximumSize(QtCore.QSize(16777215, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrameButtonFrame_3.setFont(font)
+        self.ThirdFrameButtonFrame_3.setStyleSheet("border:none")
+        self.ThirdFrameButtonFrame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ThirdFrameButtonFrame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ThirdFrameButtonFrame_3.setObjectName("ThirdFrameButtonFrame_3")
+        self.horizontalLayout_52 = QtWidgets.QHBoxLayout(self.ThirdFrameButtonFrame_3)
+        self.horizontalLayout_52.setContentsMargins(-1, 5, -1, -1)
+        self.horizontalLayout_52.setObjectName("horizontalLayout_52")
+        self.ThirdFrameButton_3 = QtWidgets.QPushButton(self.ThirdFrameButtonFrame_3)
+        self.ThirdFrameButton_3.setMinimumSize(QtCore.QSize(0, 40))
+        self.ThirdFrameButton_3.setMaximumSize(QtCore.QSize(41677, 40))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ThirdFrameButton_3.setFont(font)
+        self.ThirdFrameButton_3.setStyleSheet("QPushButton{\n"
+"    color: rgb(255, 255, 255);\n"
+"text-align:left;\n"
+"\n"
+"    border:0px outset rgb(255, 255, 255);\n"
+"    border-radius:8px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"\n"
+"border:2px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"\n"
+"border:4px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"")
+        self.ThirdFrameButton_3.setIcon(icon14)
+        self.ThirdFrameButton_3.setObjectName("ThirdFrameButton_3")
+        self.horizontalLayout_52.addWidget(self.ThirdFrameButton_3)
+        self.verticalLayout_50.addWidget(self.ThirdFrameButtonFrame_3)
+        self.ThirdFrameLine_3 = QtWidgets.QFrame(self.ThirdFrame_2)
+        self.ThirdFrameLine_3.setMaximumSize(QtCore.QSize(16777215, 1))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrameLine_3.setFont(font)
+        self.ThirdFrameLine_3.setStyleSheet("background-color: rgba(255, 255, 255, 89);")
+        self.ThirdFrameLine_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.ThirdFrameLine_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.ThirdFrameLine_3.setObjectName("ThirdFrameLine_3")
+        self.verticalLayout_50.addWidget(self.ThirdFrameLine_3)
+        self.ThirdFrameDateFrame_3 = QtWidgets.QFrame(self.ThirdFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrameDateFrame_3.setFont(font)
+        self.ThirdFrameDateFrame_3.setStyleSheet("border:none")
+        self.ThirdFrameDateFrame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ThirdFrameDateFrame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ThirdFrameDateFrame_3.setObjectName("ThirdFrameDateFrame_3")
+        self.verticalLayout_51 = QtWidgets.QVBoxLayout(self.ThirdFrameDateFrame_3)
+        self.verticalLayout_51.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_51.setSpacing(0)
+        self.verticalLayout_51.setObjectName("verticalLayout_51")
+        self.ThirdFrameWebWidget_3 = QtWidgets.QWidget(self.ThirdFrameDateFrame_3)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrameWebWidget_3.setFont(font)
+        self.ThirdFrameWebWidget_3.setObjectName("ThirdFrameWebWidget_3")
+        self.ThirdFrameWeb_2 = QtWebEngineWidgets.QWebEngineView(self.ThirdFrameWebWidget_3)
+        self.ThirdFrameWeb_2.setGeometry(QtCore.QRect(0, 0, 691, 301))
+        self.ThirdFrameWeb_2.setMinimumSize(QtCore.QSize(50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.ThirdFrameWeb_2.setFont(font)
+        self.ThirdFrameWeb_2.setStyleSheet("QWidget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    selection-background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius:8px\n"
+"}\n"
+"QWebEngineView{\n"
+"    background-color: rgba(0, 0, 0, 0);\n"
+"    selection-background-color: rgba(0, 0, 0, 0);\n"
+"\n"
+"}")
+        self.ThirdFrameWeb_2.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
+        self.ThirdFrameWeb_2.setObjectName("ThirdFrameWeb_2")
+        self.verticalLayout_51.addWidget(self.ThirdFrameWebWidget_3)
+        self.verticalLayout_50.addWidget(self.ThirdFrameDateFrame_3)
+        self.verticalLayout_50.setStretch(1, 1)
+        self.verticalLayout_50.setStretch(2, 10)
+        self.MainPageLayout2_6.addWidget(self.ThirdFrame_2)
+        self.FourthFrame_2 = QtWidgets.QFrame(self.AnalysisLayout2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrame_2.setFont(font)
+        self.FourthFrame_2.setStyleSheet("QFrame#FourthFrame_2{\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"background-color: qradialgradient(cx:0, cy:0, radius:1, fx:0.1, fy:0.1, stop:0 rgb(66, 226, 192),  stop:1 rgb(62, 154, 193));\n"
+"border: 1px outset rgb(72, 158, 204)\n"
+"}\n"
+"")
+        self.FourthFrame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FourthFrame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FourthFrame_2.setObjectName("FourthFrame_2")
+        self.verticalLayout_52 = QtWidgets.QVBoxLayout(self.FourthFrame_2)
+        self.verticalLayout_52.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_52.setSpacing(0)
+        self.verticalLayout_52.setObjectName("verticalLayout_52")
+        self.FourthFrameButtonFrame_3 = QtWidgets.QFrame(self.FourthFrame_2)
+        self.FourthFrameButtonFrame_3.setMinimumSize(QtCore.QSize(0, 50))
+        self.FourthFrameButtonFrame_3.setMaximumSize(QtCore.QSize(16777215, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrameButtonFrame_3.setFont(font)
+        self.FourthFrameButtonFrame_3.setStyleSheet("border:none")
+        self.FourthFrameButtonFrame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FourthFrameButtonFrame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FourthFrameButtonFrame_3.setObjectName("FourthFrameButtonFrame_3")
+        self.horizontalLayout_53 = QtWidgets.QHBoxLayout(self.FourthFrameButtonFrame_3)
+        self.horizontalLayout_53.setContentsMargins(-1, 5, -1, -1)
+        self.horizontalLayout_53.setObjectName("horizontalLayout_53")
+        self.FourthFrameButton_3 = QtWidgets.QPushButton(self.FourthFrameButtonFrame_3)
+        self.FourthFrameButton_3.setMinimumSize(QtCore.QSize(0, 40))
+        self.FourthFrameButton_3.setMaximumSize(QtCore.QSize(41677, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.FourthFrameButton_3.setFont(font)
+        self.FourthFrameButton_3.setStyleSheet("QPushButton{\n"
+"    color: rgb(255, 255, 255);\n"
+"text-align:left;\n"
+"\n"
+"    border:0px outset rgb(255, 255, 255);\n"
+"    border-radius:8px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"\n"
+"border:2px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"\n"
+"border:4px outset rgba(36, 36, 36,0);\n"
+"}\n"
+"")
+        self.FourthFrameButton_3.setIcon(icon15)
+        self.FourthFrameButton_3.setObjectName("FourthFrameButton_3")
+        self.horizontalLayout_53.addWidget(self.FourthFrameButton_3)
+        self.verticalLayout_52.addWidget(self.FourthFrameButtonFrame_3)
+        self.FourthFrameLine_3 = QtWidgets.QFrame(self.FourthFrame_2)
+        self.FourthFrameLine_3.setMaximumSize(QtCore.QSize(16777215, 1))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrameLine_3.setFont(font)
+        self.FourthFrameLine_3.setStyleSheet("background-color: rgba(255, 255, 255, 89);")
+        self.FourthFrameLine_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.FourthFrameLine_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.FourthFrameLine_3.setObjectName("FourthFrameLine_3")
+        self.verticalLayout_52.addWidget(self.FourthFrameLine_3)
+        self.FourthFrameDateFrame_3 = QtWidgets.QFrame(self.FourthFrame_2)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrameDateFrame_3.setFont(font)
+        self.FourthFrameDateFrame_3.setStyleSheet("border:none")
+        self.FourthFrameDateFrame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.FourthFrameDateFrame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.FourthFrameDateFrame_3.setObjectName("FourthFrameDateFrame_3")
+        self.verticalLayout_53 = QtWidgets.QVBoxLayout(self.FourthFrameDateFrame_3)
+        self.verticalLayout_53.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_53.setSpacing(0)
+        self.verticalLayout_53.setObjectName("verticalLayout_53")
+        self.FourthFrameWebWidget_3 = QtWidgets.QWidget(self.FourthFrameDateFrame_3)
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrameWebWidget_3.setFont(font)
+        self.FourthFrameWebWidget_3.setObjectName("FourthFrameWebWidget_3")
+        self.FourthFrameWeb_2 = QtWebEngineWidgets.QWebEngineView(self.FourthFrameWebWidget_3)
+        self.FourthFrameWeb_2.setGeometry(QtCore.QRect(0, 0, 691, 301))
+        self.FourthFrameWeb_2.setMinimumSize(QtCore.QSize(50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Tahoma")
+        self.FourthFrameWeb_2.setFont(font)
+        self.FourthFrameWeb_2.setStyleSheet("QWidget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    selection-background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius:8px\n"
+"}\n"
+"QWebEngineView{\n"
+"    background-color: rgba(0, 0, 0, 0);\n"
+"    selection-background-color: rgba(0, 0, 0, 0);\n"
+"\n"
+"}")
+        self.FourthFrameWeb_2.setProperty("url", QtCore.QUrl("file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html"))
+        self.FourthFrameWeb_2.setObjectName("FourthFrameWeb_2")
+        self.verticalLayout_53.addWidget(self.FourthFrameWebWidget_3)
+        self.verticalLayout_52.addWidget(self.FourthFrameDateFrame_3)
+        self.verticalLayout_52.setStretch(0, 1)
+        self.verticalLayout_52.setStretch(1, 1)
+        self.verticalLayout_52.setStretch(2, 10)
+        self.MainPageLayout2_6.addWidget(self.FourthFrame_2)
+        self.MainPageLayout2_6.setStretch(0, 1)
+        self.MainPageLayout2_6.setStretch(1, 1)
+        self.horizontalLayout_44.addWidget(self.AnalysisPageBackgroundFrame)
         self.DisplayPage.addWidget(self.AnalysisPage)
         self.BarPage = QtWidgets.QWidget()
         self.BarPage.setObjectName("BarPage")
@@ -4336,17 +4902,6 @@ class Ui_MainWindow(object):
         self.WindowEdgeLayout = QtWidgets.QHBoxLayout()
         self.WindowEdgeLayout.setSpacing(0)
         self.WindowEdgeLayout.setObjectName("WindowEdgeLayout")
-        self.BottomWindowEdge = QtWidgets.QFrame(self.ChangePage)
-        self.BottomWindowEdge.setMinimumSize(QtCore.QSize(0, 10))
-        self.BottomWindowEdge.setMaximumSize(QtCore.QSize(16777215, 10))
-        font = QtGui.QFont()
-        font.setFamily("Tahoma")
-        self.BottomWindowEdge.setFont(font)
-        self.BottomWindowEdge.setCursor(QtGui.QCursor(QtCore.Qt.SizeVerCursor))
-        self.BottomWindowEdge.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.BottomWindowEdge.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.BottomWindowEdge.setObjectName("BottomWindowEdge")
-        self.WindowEdgeLayout.addWidget(self.BottomWindowEdge)
         self.gridLayout.addLayout(self.WindowEdgeLayout, 3, 0, 1, 1)
         self.SearchBar = QtWidgets.QFrame(self.ChangePage)
         font = QtGui.QFont()
@@ -4463,9 +5018,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.IntroList.setCurrentRow(-1)
         self.DetailsList.setCurrentRow(-1)
-        self.DisplayPage.setCurrentIndex(1)
+        self.DisplayPage.setCurrentIndex(0)
         self.UserPageChooseList.setCurrentRow(-1)
         self.ModelPageChooseList.setCurrentRow(-1)
+        self.UserPageChooseList_2.setCurrentRow(-1)
         self.BarPageChooseList.setCurrentRow(-1)
         self.PiePageChooseList.setCurrentRow(-1)
         self.GraphPageChooseList.setCurrentRow(-1)
@@ -4481,7 +5037,7 @@ class Ui_MainWindow(object):
         item = self.IntroList.item(0)
         item.setText(_translate("MainWindow", "Mainpage"))
         item = self.IntroList.item(1)
-        item.setText(_translate("MainWindow", "User Profile"))
+        item.setText(_translate("MainWindow", "User"))
         item = self.IntroList.item(2)
         item.setText(_translate("MainWindow", "Model"))
         item = self.IntroList.item(3)
@@ -4553,7 +5109,7 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.UserPageChooseList.isSortingEnabled()
         self.UserPageChooseList.setSortingEnabled(False)
         item = self.UserPageChooseList.item(0)
-        item.setText(_translate("MainWindow", "show the result"))
+        item.setText(_translate("MainWindow", "show the analysis of current user"))
         self.UserPageChooseList.setSortingEnabled(__sortingEnabled)
         self.UserName.setText(_translate("MainWindow", "UserID 8f14d6843d638c949859518f53983344"))
         self.UserBefore.setText(_translate("MainWindow", "..."))
@@ -4596,12 +5152,12 @@ class Ui_MainWindow(object):
         self.ScrollTitle_4.setText(_translate("MainWindow", "User Profile Choose"))
         self.ScrollTitle_4.setPlaceholderText(_translate("MainWindow", "Search"))
         self.ModelPageTitle.setText(_translate("MainWindow", "Model Page"))
-        self.ModelPageChooseLayoutLable.setText(_translate("MainWindow", "Choose a model"))
+        self.ModelPageChooseLayoutLable.setText(_translate("MainWindow", "Choose a user"))
         self.ModelPageChooseList.setSortingEnabled(False)
         __sortingEnabled = self.ModelPageChooseList.isSortingEnabled()
         self.ModelPageChooseList.setSortingEnabled(False)
         item = self.ModelPageChooseList.item(0)
-        item.setText(_translate("MainWindow", "show the result"))
+        item.setText(_translate("MainWindow", "show the model process of current user"))
         self.ModelPageChooseList.setSortingEnabled(__sortingEnabled)
         self.label_53.setText(_translate("MainWindow", "Ability"))
         self.label_54.setText(_translate("MainWindow", "0.83"))
@@ -4622,6 +5178,18 @@ class Ui_MainWindow(object):
         self.label_39.setText(_translate("MainWindow", "was setup"))
         self.pushButton_12.setText(_translate("MainWindow", "  Cashback program"))
         self.label_40.setText(_translate("MainWindow", "activated"))
+        self.AnalysisPageTitle.setText(_translate("MainWindow", "Analysis Page"))
+        self.AnalysisPageChooseLayoutLable.setText(_translate("MainWindow", "Analysis for user group"))
+        self.UserPageChooseList_2.setSortingEnabled(False)
+        __sortingEnabled = self.UserPageChooseList_2.isSortingEnabled()
+        self.UserPageChooseList_2.setSortingEnabled(False)
+        item = self.UserPageChooseList_2.item(0)
+        item.setText(_translate("MainWindow", "show the analysis of all users"))
+        self.UserPageChooseList_2.setSortingEnabled(__sortingEnabled)
+        self.FirstFrameButton_2.setText(_translate("MainWindow", "Konwledge Graph"))
+        self.SecondFrameButton_2.setText(_translate("MainWindow", "Target Tree"))
+        self.ThirdFrameButton_3.setText(_translate("MainWindow", "3D Bar"))
+        self.FourthFrameButton_3.setText(_translate("MainWindow", "Person Radar"))
         self.BarPageTitle.setText(_translate("MainWindow", "BarPage"))
         self.BarPageChooseLayoutLable.setText(_translate("MainWindow", "Choose your data"))
         self.BarPageChooseList.setSortingEnabled(False)

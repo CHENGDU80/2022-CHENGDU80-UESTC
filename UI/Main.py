@@ -31,6 +31,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.mainPageStart()
         self.userPageStart()
         self.modelPageStart()
+        self.analysisPageStart()
         self.barPageStart()
         self.piePageStart()
         self.graphPageStart()
@@ -83,18 +84,6 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.FourthFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.RadarWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
-    # 首页-ListWeb元素选择跳转
-    def mainPageList(self):
-        text = self.MainPageChooseList.currentItem().text()
-        if text == 'Last 120 second':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Bar_Complex_0.html'))
-        elif text == 'Last 30 minute':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Bar_Simple_0.html'))
-        elif text == 'Last 24 hours':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Pie_Complex_0.html'))
-        elif text == 'Last 5 days':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Pie_Simple_0.html'))
-
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
         self.DisplayPage.setCurrentIndex(2)  # Bar页
@@ -111,7 +100,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # userPage页-函数设定
     def userPageStart(self):
-        self.UserPageChooseList.itemClicked.connect(self.userPageList)
+        # self.UserPageChooseList.itemClicked.connect(self.userPageList)
         self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_0.html'))
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
@@ -128,7 +117,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
     # modelPage页-函数设定
     def modelPageStart(self):
-        self.ModelPageChooseList.itemClicked.connect(self.userPageList)
+        # self.ModelPageChooseList.itemClicked.connect(self.userPageList)
         self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
@@ -138,6 +127,24 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         if text == 'show the result':
             self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
+
+    # analysisPage页-函数设定
+    def analysisPageStart(self):
+        # 设置底端阴影效果
+        self.effect_shadow_style1(self.FirstFrame_2)
+        self.effect_shadow_style2(self.SecondFrame_2)
+        self.effect_shadow_style3(self.ThirdFrame_2)
+        self.effect_shadow_style4(self.FourthFrame_2)
+
+        # 显示web组件
+        self.FirstFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Graph_Simple_0.html'))
+        self.SecondFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Tree_Time_0.html'))
+        self.ThirdFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Bar_3D_0.html'))
+        self.FourthFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Radar_Simple_0.html'))
+        self.FirstFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.SecondFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.ThirdFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.FourthFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # barPage页-函数设定
     def barPageStart(self):
@@ -309,7 +316,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         if text == 'Mainpage':
             self.DisplayPage.setCurrentIndex(0)  # 主页
             self.mainPageStart()
-        if text == 'User Profile':
+        if text == 'User':
             self.DisplayPage.setCurrentIndex(1)  # 用户页面
             self.userPageStart()
         if text == 'Model':
@@ -317,7 +324,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
             self.modelPageStart()
         if text == 'Analysis':
             self.DisplayPage.setCurrentIndex(3)  # 分析页面
-            self.mainPageStart()
+            self.analysisPageStart()
     def displayDetailsPage(self):
         text = self.DetailsList.currentItem().text()
         if text == 'Bar':
@@ -329,6 +336,12 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         elif text == 'Graph':
             self.DisplayPage.setCurrentIndex(6)  # Graph页
             self.graphPageStart()
+        elif text == 'Tree':
+            self.DisplayPage.setCurrentIndex(5)  # Tree页
+            self.graphPageStart()
+        elif text == 'Radar':
+            self.DisplayPage.setCurrentIndex(4)  # Radar页
+            self.graphPageStart()
 
     # 搜索页面函数设定
     def displayUserPage(self):
@@ -337,6 +350,8 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.entidChanged(text)
 
     def entidChanged(self, text):
+        self.DisplayPage.setCurrentIndex(1)  # 用户页面
+        self.userPageStart()
         # entid = int(text)
         # extract = data[data['entid'] == entid]
         # ype = extract['CaseType'].tolist()[0]
@@ -348,7 +363,7 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.UserWeb.load(QUrl.fromLocalFile(importance))
         # self.UserWeb.load(QUrl.fromLocalFile(probability))
         # self.UserWeb.load(QUrl.fromLocalFile(al))
-        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH + PATH + 'Bar_3D_0.html'))
+        # self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH + PATH + 'Bar_3D_0.html'))
         # self.UserWeb.setStyleSheet('image:url(./images/102673201.png)')
 
     # 窗口最大化函数设定

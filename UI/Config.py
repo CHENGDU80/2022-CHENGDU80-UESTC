@@ -23,8 +23,9 @@ MODEL_WIDTH = '800px'  # 826px
 MODEL_HEIGHT = '700px'  # 743px
 
 # 分析页面的Web组件尺寸
-ANALYSIS_WIDTH = '315px'
-ANALYSIS_HEIGHT = '310px'
+ANALYSIS_WIDTH = '680px'  # 691px
+ANALYSIS_HEIGHT = '280px'  # 301px
+
 
 # 图表系列的Web组件尺寸
 WIDTH = '1300px'  # '1381px'
@@ -35,5 +36,6 @@ PATH = './htmls/'
 MAIN_PATH = './htmls/main/'
 USER_PATH = './htmls/user/'
 MODEL_PATH = './htmls/model/'
+ANALYSIS_PATH = './htmls/analysis/'
 
 # HTML_PATH = './htmls_main/'
