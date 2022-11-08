@@ -812,7 +812,7 @@ background-color: rgb(241, 244, 249)
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="MainPage">
                 <widget class="QFrame" name="MainPageFrame">
@@ -935,7 +935,7 @@ border-bottom-left-radius:0px;
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>400</width>
+                              <width>390</width>
                               <height>616</height>
                              </rect>
                             </property>
@@ -4398,7 +4398,7 @@ border-radius:6px</string>
                                        <string/>
                                       </property>
                                       <property name="pixmap">
-                                       <pixmap>images/人物头像.png</pixmap>
+                                       <pixmap>images/人物头像0.png</pixmap>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>

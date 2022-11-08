@@ -1,9 +1,9 @@
 import sys
 import pandas as pd
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtCore import Qt, QUrl, QCoreApplication
-from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
+from PyQt5.QtGui import QColor, QPixmap, QMovie
+from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox, QFileDialog
 
 from MainWindow import Ui_MainWindow
 from Config import *
@@ -21,6 +21,12 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
         # 设定窗口移动尺寸变化变量
         self.evn = 0
+
+        # 设定用户界面鼠标点击变量
+        self.user_click = 0
+        self.user_name =['UserID: c4e0d49d5bf94efa446e03ecf84ba5', 'UserID: ee0eed4ad96f4f5d6dc30d56bdf94',
+                         'UserID: a9815449c0a385ee0d53305b8cca95c6', 'UserID: f9dd0d609cee4360e110d56cc35afd9',
+                         'UserID: de5e19a5ea36e8f4b9f4cf5bdd953']
 
         # 设置页面切换响应事件
         self.IntroList.itemClicked.connect(self.displayIntroPage)
@@ -106,6 +112,30 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
+        # 切换用户界面按钮
+        self.UserNext.clicked.connect(self.userSwitch)
+        self.UserBefore.clicked.connect(self.userSwitch)
+        self.UserAgree.clicked.connect(self.userSwitch)
+        self.UserDisagree.clicked.connect(self.userSwitch)
+
+    # userPage页-用户界面切换
+    def userSwitch(self):
+        # 用户属性切换
+        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_'+str(self.user_click%5)+'.html'))
+        self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_'+str(self.user_click%5)+'.html'))
+        self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+
+        # 用户头像与信息切换
+        self.UserPic.setPixmap(QtGui.QPixmap('images/人物头像'+str(self.user_click%5)+'.png'))
+        self.UserPic.setAlignment(QtCore.Qt.AlignCenter)
+        self.UserName.setPalette(QtGui.QPalette())
+        self.UserName.setText(QtCore.QCoreApplication.translate("MainWindow", self.user_name[self.user_click%5]))
+        self.UserName.setStyleSheet("background-color: rgb(22, 76, 140);\n""border-radius:6px")
+
+        # 发送切换信号
+        self.user_click = self.user_click + 1
+
     # userPage页-ListWeb元素选择跳转
     def userPageList(self):
         text = self.UserPageChooseList.currentItem().text()
@@ -120,6 +150,10 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         # self.ModelPageChooseList.itemClicked.connect(self.userPageList)
         self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
+        self.Gif = QMovie()
+        self.Gif.setFileName("images/Loan.gif")
+        self.ModelGif.setMovie(self.Gif)
+        self.Gif.start()
 
     # modelPage页-ListWeb元素选择跳转
     def modelPageList(self):

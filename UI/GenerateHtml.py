@@ -41,7 +41,7 @@ def draw3DBar(x, y, data, width, height, path, file_name, file_id):
     bar = Bar3D(init_opts=opts.InitOpts(width=width,height=height))
     bar.add(series_name="", data=data, xaxis3d_opts=opts.Axis3DOpts(type_="category",data=x),
             yaxis3d_opts=opts.Axis3DOpts(type_="category",data=y), zaxis3d_opts=opts.Axis3DOpts(type_="value"),)
-    bar.set_global_opts(visualmap_opts=opts.VisualMapOpts(max_=400,
+    bar.set_global_opts(visualmap_opts=opts.VisualMapOpts(max_=100,
                                                           range_color=["#313695", "#4575b4", "#74add1", "#abd9e9",
                                                                        "#e0f3f8", "#ffffbf", "#fee090", "#fdae61",
                                                                        "#f46d43", "#d73027", "#a50026", ], ),
@@ -111,7 +111,7 @@ def drawTimeTree(x, y, width, height, path, file_name, file_id):
 # 环形树状图渲染
 def drawCircleTree(x, y, width, height, path, file_name, file_id):
     with open("./data/TargetTree0.json","r",encoding="utf-8") as f:
-        j=json.load(f)
+        j = json.load(f)
     tree = Tree(init_opts=opts.InitOpts(width=width,height=height))
     tree.add("", [j], collapse_interval=2, layout="radial")
     tree.set_global_opts(title_opts=opts.TitleOpts(title="Title"),
@@ -123,7 +123,8 @@ def drawCircleTree(x, y, width, height, path, file_name, file_id):
 # 简单树状图渲染
 def drawSimpleTree(x, y, width, height, path, file_name, file_id):
     with open(x,"r",encoding="utf-8") as f:
-        j=json.load(f)
+        j = json.load(f)
+
     tree = Tree(init_opts=opts.InitOpts(width=width,height=height))
     tree.add("", [j], collapse_interval=2)
     tree.set_global_opts(title_opts=opts.TitleOpts(title=y),
@@ -134,7 +135,8 @@ def drawSimpleTree(x, y, width, height, path, file_name, file_id):
 
 # 简单雷达图渲染
 def drawSimpleRadar(x, y, width, height, path, file_name, file_id):
-    x = [[88, 64, 37, 52, 94]]
+    # x = [[88, 64, 37, 52, 94]]
+    x = [np.random.randint(30,100,5).tolist()]
     radar = Radar(init_opts=opts.InitOpts(width=width,height=height))
     radar.add_schema(schema=[
                 opts.RadarIndicatorItem(name="A_1", max_=100),
@@ -194,43 +196,48 @@ def drawStructure(x, y, width, height, path, file_name, file_id):
 
 
 # 生成主页元素
-def generateMain():
-    drawSimpleGraph("./data/Graph0.json", 0, MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Graph_Simple_',0)
-    drawTimeTree(0, "Target Tree", MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Tree_Time_',0)
-    draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),data.values.tolist(),
-              MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Bar_3D_', 0)
-    drawSimpleRadar(0, 0, MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Radar_Simple_', 0)
-    drawStructure(0, 0, MAIN_WIDTH_, MAIN_HEIGHT_, MAIN_PATH, 'Main_Structure_', 0)
+def generateMain(i):
+    drawSimpleGraph("./data/Graph0.json", 0, MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Graph_Simple_',i)
+    drawTimeTree(0, "Target Tree", MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Tree_Time_',i)
+    draw3DBar(['A1','A2','A3','A4','A5'], range(1,5), data_3D,
+              MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Bar_3D_', i)
+    drawSimpleRadar(0, 0, MAIN_WIDTH, MAIN_HEIGHT, MAIN_PATH, 'Main_Radar_Simple_', i)
+    drawStructure(0, 0, MAIN_WIDTH_, MAIN_HEIGHT_, MAIN_PATH, 'Main_Structure_', i)
 
 
 # 生成用户界面元素
-def generateUser():
-    drawSimpleRadar(0, 0, USER_WIDTH, USER_HEIGHT, USER_PATH, 'User_Radar_Simple_', 0)
-    drawSimpleTree("./data/UserTargetTree0.json", "User Feature Rate", USER_WIDTH_, USER_HEIGHT_, USER_PATH, 'User_Tree_Simple_', 0)
+def generateUser(i):
+    drawSimpleRadar(0, 0, USER_WIDTH, USER_HEIGHT, USER_PATH, 'User_Radar_Simple_', i)
+    drawSimpleTree("./data/UserTargetTree0.json", "User Feature Rate",
+                   USER_WIDTH_, USER_HEIGHT_, USER_PATH, 'User_Tree_Simple_', i)
 
 
 # 生成模型界面元素
-def generateModel():
-    drawStructure(0, 0, MODEL_WIDTH, MODEL_HEIGHT, MODEL_PATH, 'Model_Structure_', 0)
+def generateModel(i):
+    drawStructure(0, 0, MODEL_WIDTH, MODEL_HEIGHT, MODEL_PATH, 'Model_Structure_', i)
 
 
 # 生成分析界面元素
-def generateAnalysis():
-    drawSimpleGraph("./data/Graph0.json", 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Graph_Simple_',0)
-    drawTimeTree(0, "Target Tree", ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Tree_Time_',0)
-    draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),data.values.tolist(),
-              ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Bar_3D_', 0)
-    drawSimpleRadar(0, 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Radar_Simple_', 0)
+def generateAnalysis(i):
+    drawSimpleGraph("./data/Graph0.json", 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Graph_Simple_',i)
+    drawTimeTree(0, "Target Tree", ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Tree_Time_',i)
+    draw3DBar(['A1','A2','A3','A4','A5'], range(1,5), data_3D,
+              ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Bar_3D_', i)
+    drawSimpleRadar(0, 0, ANALYSIS_WIDTH, ANALYSIS_HEIGHT, ANALYSIS_PATH, 'Analysis_Radar_Simple_', i)
 
 
 if __name__ == '__main__':
-    data = pd.read_csv('./data/importance_.csv')
-    data.sort_index(axis=0, ascending=False, inplace=True)
-
-    generateMain()
-    generateUser()
-    generateModel()
-    generateAnalysis()
+    # 指标重要性情况
+    importance_data = pd.read_csv('./data/importances.csv')
+    importance_data.sort_values(by='Feature', inplace=True)
+    importance_data.index = range(len(importance_data))
+    data_3D = []
+    col = 0
+    while col < len(importance_data):
+        for i in range(1,6):
+            for j in range(1,5):
+                data_3D.append(['A'+str(i), j, importance_data['Importance'][col] * 1000])
+                col = col + 1
 
     # 簇的聚类情况
     cluster_data = np.load('./data/ids.npy')
@@ -238,23 +245,10 @@ if __name__ == '__main__':
     drawSimpleBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH, 'Cluster_Bar_', 0)
     drawComplexBar([i for i in range(31)], cluster_data_type, WIDTH, HEIGHT, PATH,  'Cluster_Pie_', 0)
 
-    # # 生成柱状图
-    # drawSimpleBar(data['attribute'].tolist(), data['importance'].tolist(), 'Bar_Simple_', 0)
-    # drawComplexBar(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:11].tolist(), 'Bar_Complex_', 0)
-    # draw3DBar(data['type'].drop_duplicates().tolist(), data['attribute'].drop_duplicates().tolist(),
-    #           data.values.tolist(), 'Bar_3D_', 0)
-    #
-    # # 生成饼状图
-    # drawComplexPie(data['attribute'].tolist(), data['importance'].tolist(), 'Pie_Complex_', 0)
-    # drawSimplePie(data['attribute'].iloc[0:2].tolist(), data['importance'].iloc[0:2].tolist(), 'Pie_Simple_', 0)
-    #
-    # # 生成折线图
-    # drawSimpleLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Simple_', 0)
-    # drawTimeLine(data['attribute'].tolist(), data['importance'].tolist(), 'Line_Time_', 0)
-    #
-    # # 生成树状图
-    # drawCircleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Circle_', 0)
-    # drawSimpleTree(data['attribute'].tolist(), data['importance'].tolist(), 'Tree_Simple_', 0)
-    #
-    # # 生成雷达图
-    # drawSimpleRadar(data['attribute'].tolist(), data['importance'].tolist(), 'Radar_Simple_', 0)
+    # 生成各类型图表
+    i = 0
+    for i in range(5):
+        generateUser(i)
+    generateMain(i)
+    generateModel(i)
+    generateAnalysis(i)
