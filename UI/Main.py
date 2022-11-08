@@ -519,7 +519,6 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def windowMinimized(self):
         desktop = QApplication.desktop()
         desktopRect = desktop.availableGeometry()
-        desktopRect.width()
         rect = QtCore.QRect(int((desktopRect.width()-WINDOW_WIDTH)/2), int((desktopRect.height()-WINDOW_HEIGHT)/2),
                             WINDOW_WIDTH, WINDOW_HEIGHT)
         self.setGeometry(rect)

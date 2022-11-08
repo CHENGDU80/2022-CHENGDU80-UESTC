@@ -812,7 +812,7 @@ background-color: rgb(241, 244, 249)
                 </font>
                </property>
                <property name="currentIndex">
-                <number>8</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="MainPage">
                 <widget class="QFrame" name="MainPageFrame">
@@ -10978,7 +10978,7 @@ border-bottom: 3px solid rgb(119, 111, 255)
               </widget>
              </item>
              <item row="3" column="0">
-              <layout class="QHBoxLayout" name="WindowEdgeLayout">
+              <layout class="QHBoxLayout" name="BottomWindowEdge">
                <property name="spacing">
                 <number>0</number>
                </property>
