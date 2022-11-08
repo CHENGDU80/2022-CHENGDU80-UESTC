@@ -10,8 +10,8 @@ from sklearn.metrics import roc_auc_score
 from collections import Counter
 
 def calAUC(y_labels, y_scores):
-    pos_sample_ids = [i for i in range(len(y_labels)) if y_labels[i] == 1]
-    neg_sample_ids = [i for i in range(len(y_labels)) if y_labels[i] == 0]
+    pos_sample_ids = [i for i in range(len(y_labels)) if y_labels[i] == 0]
+    neg_sample_ids = [i for i in range(len(y_labels)) if y_labels[i] == 1]
     sum_indicator_value = 0
     fault = 0
     for i in pos_sample_ids:
@@ -26,13 +26,32 @@ def calAUC(y_labels, y_scores):
     auc = sum_indicator_value/(len(pos_sample_ids) * len(neg_sample_ids))
     return auc
 
+def predict(posResDf, negResDf, resLabel, resScore, testDf):
+    for index in range(len(testDf)):
+        posRow = posResDf.loc[index]
+        negRow = negResDf.loc[index]
+        score = 0.2 * posRow.max() + 0.8 * (1 - negRow.max())
+        score = posRow.max()
+        if score <= thrs:
+            resLabel.append(1)
+        else:
+            resLabel.append(0)
+        resScore.append(score)
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-thrs', type=float, default=0.5)
 
 args = parser.parse_args()
 thrs = args.thrs
 
-testFilePath = "../data/test/constructed_testset.csv"
+answerFile = "feature.csv"
+answerDate = "sample_submission.csv"
+answerDf = pd.read_csv(answerFile)
+usrID = answerDf["APPLICATION_ID"]
+answerDate = pd.read_csv(answerDate)["APPLICATION_DATE"]
+
+# testFilePath = "../data/test/constructed_testset.csv"
+testFilePath = "constructed_testset.csv"
 testLabelFilePath = "../data/test/label.csv"
 posModelPath = "posModel.csv"
 negModelPath = "negModel.csv"
@@ -55,22 +74,27 @@ negResDf = pd.DataFrame(negCosData)
 # exit()
 resLabel = []
 resScore = []
-count = 0
-for index in range(len(testDf)):
-    posRow = posResDf.loc[index]
-    negRow = negResDf.loc[index]
-    score = (posRow.max() + (1 - negRow.max())) / 2
-    score = posRow.max()
-    if score <= thrs:
-        count += 1
-        resLabel.append(1)
-        resScore.append(score)
-    else:
-        resLabel.append(0)
-        resScore.append(score)
-print(count)
+predict(posResDf, negResDf, resLabel, resScore, testDf)
+# for index in range(len(testDf)):
+#     posRow = posResDf.loc[index]
+#     negRow = negResDf.loc[index]
+#     score = 0.2 * posRow.max() + 0.8 * (1 - negRow.max())
+#     score = posRow.max()
+#     if score <= thrs:
+#         resLabel.append(1)
+#     else:
+#         resLabel.append(0)
+#     resScore.append(score)
 # print(np.array(resScore).mean())
 resLabel = np.array(resLabel)
+labelDf = pd.DataFrame(resLabel, columns=["label"])
+writeDf = pd.DataFrame(resScore, columns=["0"])
+writeDf["1"] = writeDf.apply(lambda col: 1-col["0"], axis=1)
+writeDf = pd.concat([usrID, answerDate, writeDf], axis=1)
+# writeDf = pd.condat([],axis=1)
+print(Counter(labelDf["label"]))
+print(writeDf)
+exit()
 actualLabel = pd.read_csv(testLabelFilePath)["DEFAULT_LABEL"]
 print(Counter(actualLabel.values))
 # 直接调库会有问题，0为正例1为反例

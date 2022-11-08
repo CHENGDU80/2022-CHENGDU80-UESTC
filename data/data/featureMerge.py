@@ -46,7 +46,7 @@ def ConstructDatasetwithAll1(filePath, outputPath, clusterDf, labelDf):
     #         originDf = originDf.drop(column, axis=1)
     print(originDf.shape)
     originDf = originDf.fillna(0)
-    index = labelDf.loc[labelDf["DEFAULT_LABEL"] == 0].index
+    index = labelDf.loc[labelDf["DEFAULT_LABEL"] == 1].index
     originDf = originDf.drop(index)
     print(originDf.shape)
     if "APPLICATION_ID" in originDf.columns:
@@ -69,10 +69,10 @@ def ConstructDatasetwithAll1(filePath, outputPath, clusterDf, labelDf):
 originTrainPath = "./train/feature.csv"
 trainLablePath = "./train/label.csv"
 
-originTestPath = "./test/feature.csv"
+originTestPath = "../train/feature.csv"
 clusterPath = "./cluster_out.csv"
 constructedTrainPath = "./train/constructed_trainset.csv"
-constructedTestPath = "./test/constructed_testset.csv"
+constructedTestPath = "../train/constructed_testset.csv"
 clusterDf = pd.read_csv(clusterPath)
 labelDf = pd.read_csv(trainLablePath)
 
@@ -88,5 +88,6 @@ labelDf = pd.read_csv(trainLablePath)
 #     print(labelDf)
 #     newTrainDf.to_csv(enhancedTrainPath, index=False, sep=",")
 #     labelDf.to_csv(enhancedTrainLabelPath, index=False, sep=",")
-#ConstructDatasetwithAll1(originTrainPath, constructedTrainPath, clusterDf, labelDf)
-ConstructDataset(originTrainPath, constructedTrainPath, clusterDf)
+ConstructDatasetwithAll1(originTrainPath, constructedTrainPath, clusterDf, labelDf)
+# ConstructDataset(enhancedTrainPath, constructedTrainPath, clusterDf)
+ConstructDataset(originTestPath, constructedTestPath, clusterDf)
