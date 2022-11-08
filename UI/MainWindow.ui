@@ -812,7 +812,7 @@ background-color: rgb(241, 244, 249)
                 </font>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="MainPage">
                 <widget class="QFrame" name="MainPageFrame">
@@ -935,7 +935,7 @@ border-bottom-left-radius:0px;
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>390</width>
+                              <width>400</width>
                               <height>616</height>
                              </rect>
                             </property>
@@ -2221,6 +2221,684 @@ QWebEngineView{
                            <property name="horizontalSpacing">
                             <number>2</number>
                            </property>
+                           <item row="0" column="0">
+                            <layout class="QHBoxLayout" name="horizontalLayout_33"/>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QFrame" name="frame_11">
+                             <property name="styleSheet">
+                              <string notr="true">#QFrame{
+	background-color: rgb(215, 187, 167);
+border:0px solid red;
+	color: rgb(12, 20, 36);
+border-radius:30px
+}</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="0,0,0,0,0">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QFrame" name="frame_25">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_28">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">
+
+QFrame{
+padding:8px;
+image: url(:/svg/img/svg/闪电-实.png);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_31">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>71</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_23">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_29">
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>A_1</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_37">
+                                    <item>
+                                     <widget class="QLabel" name="label_30">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>83</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_31</zorder>
+                                <zorder>frame_28</zorder>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_32">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_33">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">
+
+
+
+QFrame{
+padding:8px;
+image: url(:/svg/img/svg/对比.png);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_34">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>71</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_24">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_31">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>32</height>
+                                     </size>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>A_2</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_38">
+                                    <item>
+                                     <widget class="QLabel" name="label_32">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>76</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QWidget" name="widget_8" native="true">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>16</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">image: url(:/buttom/img/buttom/下-小_down-small.svg);</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_34</zorder>
+                                <zorder>frame_33</zorder>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_38">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_39">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">
+
+
+
+
+
+QFrame{
+padding:8px;
+image: url(:/svg/img/svg/箭头_页面_向上.png);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_40">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>71</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_26">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_35">
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>A_3</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_40">
+                                    <item>
+                                     <widget class="QLabel" name="label_36">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>99</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QWidget" name="widget_10" native="true">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>16</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_40</zorder>
+                                <zorder>frame_39</zorder>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_26">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_29">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+padding:8px;
+image: url(:/buttom_white/img/buttom_white/API 应用_api-app.svg);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_35">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>71</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_25">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_33">
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>A_4</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_39">
+                                    <item>
+                                     <widget class="QLabel" name="label_34">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>83</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QWidget" name="widget_9" native="true">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>16</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_35</zorder>
+                                <zorder>frame_29</zorder>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_27">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>131</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <widget class="QFrame" name="frame_30">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>19</x>
+                                   <y>4</y>
+                                   <width>40</width>
+                                   <height>41</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+padding:8px;
+image: url(:/buttom_white/img/buttom_white/16宫格_grid-sixteen.svg);
+	background-color: rgb(255, 81, 45);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                </widget>
+                                <widget class="QFrame" name="frame_36">
+                                 <property name="geometry">
+                                  <rect>
+                                   <x>5</x>
+                                   <y>26</y>
+                                   <width>71</width>
+                                   <height>101</height>
+                                  </rect>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_29">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>24</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="label_37">
+                                    <property name="font">
+                                     <font>
+                                      <family>Tahoma</family>
+                                      <pointsize>11</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>A_5</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_48">
+                                    <item>
+                                     <widget class="QLabel" name="label_41">
+                                      <property name="font">
+                                       <font>
+                                        <family>Tahoma</family>
+                                        <pointsize>20</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>64</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QWidget" name="widget_11" native="true">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>16</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                                <zorder>frame_36</zorder>
+                                <zorder>frame_30</zorder>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
                            <item row="1" column="1">
                             <widget class="QFrame" name="frame_4">
                              <property name="styleSheet">
@@ -2264,7 +2942,7 @@ border-radius:30px
                                  </font>
                                 </property>
                                 <property name="text">
-                                 <string>Performance</string>
+                                 <string>Model Performance</string>
                                 </property>
                                 <property name="textFormat">
                                  <enum>Qt::AutoText</enum>
@@ -2354,7 +3032,7 @@ border-radius:30px
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>88%</string>
+                                     <string>76%</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignCenter</set>
@@ -2387,7 +3065,7 @@ border-radius:30px
                                </layout>
                               </item>
                               <item>
-                               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                               <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="2,1">
                                 <property name="spacing">
                                  <number>8</number>
                                 </property>
@@ -2405,7 +3083,7 @@ border-radius:30px
 color: rgb(255, 255, 255);</string>
                                   </property>
                                   <property name="text">
-                                   <string>  Spendings course</string>
+                                   <string>  Repayment Ability</string>
                                   </property>
                                   <property name="icon">
                                    <iconset resource="resources.qrc">
@@ -2433,14 +3111,14 @@ color: rgb(255, 255, 255);</string>
                                    </font>
                                   </property>
                                   <property name="text">
-                                   <string>was taken</string>
+                                   <string>True</string>
                                   </property>
                                  </widget>
                                 </item>
                                </layout>
                               </item>
                               <item>
-                               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,1">
                                 <property name="spacing">
                                  <number>8</number>
                                 </property>
@@ -2458,7 +3136,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                   </property>
                                   <property name="text">
-                                   <string>  Deposit programs</string>
+                                   <string>  Repayment Willingness</string>
                                   </property>
                                   <property name="icon">
                                    <iconset resource="resources.qrc">
@@ -2486,14 +3164,14 @@ color: rgb(255, 255, 255);</string>
                                    </font>
                                   </property>
                                   <property name="text">
-                                   <string>was setup</string>
+                                   <string>True</string>
                                   </property>
                                  </widget>
                                 </item>
                                </layout>
                               </item>
                               <item>
-                               <layout class="QHBoxLayout" name="horizontalLayout_24">
+                               <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="2,1">
                                 <property name="spacing">
                                  <number>8</number>
                                 </property>
@@ -2511,7 +3189,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                   </property>
                                   <property name="text">
-                                   <string>  Cashback program</string>
+                                   <string>Consumption</string>
                                   </property>
                                   <property name="icon">
                                    <iconset resource="resources.qrc">
@@ -2539,577 +3217,11 @@ color: rgb(255, 255, 255);</string>
                                    </font>
                                   </property>
                                   <property name="text">
-                                   <string>activated</string>
+                                   <string>True</string>
                                   </property>
                                  </widget>
                                 </item>
                                </layout>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item row="0" column="0">
-                            <layout class="QHBoxLayout" name="horizontalLayout_33"/>
-                           </item>
-                           <item row="0" column="1">
-                            <widget class="QFrame" name="frame_11">
-                             <property name="styleSheet">
-                              <string notr="true">#QFrame{
-	background-color: rgb(215, 187, 167);
-border:0px solid red;
-	color: rgb(12, 20, 36);
-border-radius:30px
-}</string>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="0,1,1,0">
-                              <property name="spacing">
-                               <number>0</number>
-                              </property>
-                              <property name="leftMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="topMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="rightMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="bottomMargin">
-                               <number>0</number>
-                              </property>
-                              <item>
-                               <widget class="QFrame" name="frame_25">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <widget class="QFrame" name="frame_28">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>19</x>
-                                   <y>4</y>
-                                   <width>40</width>
-                                   <height>41</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">
-
-QFrame{
-padding:8px;
-image: url(:/svg/img/svg/闪电-实.png);
-	background-color: rgb(255, 81, 45);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                </widget>
-                                <widget class="QFrame" name="frame_31">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>5</x>
-                                   <y>26</y>
-                                   <width>111</width>
-                                   <height>101</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_23">
-                                  <property name="spacing">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>24</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="label_29">
-                                    <property name="font">
-                                     <font>
-                                      <family>Tahoma</family>
-                                      <pointsize>11</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
-                                    </property>
-                                    <property name="text">
-                                     <string>Ability</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_37">
-                                    <item>
-                                     <widget class="QLabel" name="label_30">
-                                      <property name="font">
-                                       <font>
-                                        <family>Tahoma</family>
-                                        <pointsize>20</pointsize>
-                                        <weight>75</weight>
-                                        <bold>true</bold>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>0.83</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QWidget" name="widget_7" native="true">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                 </layout>
-                                </widget>
-                                <zorder>frame_31</zorder>
-                                <zorder>frame_28</zorder>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_32">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <widget class="QFrame" name="frame_33">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>19</x>
-                                   <y>4</y>
-                                   <width>40</width>
-                                   <height>41</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">
-
-
-
-QFrame{
-padding:8px;
-image: url(:/svg/img/svg/对比.png);
-	background-color: rgb(255, 81, 45);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                </widget>
-                                <widget class="QFrame" name="frame_34">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>5</x>
-                                   <y>26</y>
-                                   <width>111</width>
-                                   <height>101</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_24">
-                                  <property name="spacing">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>24</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="label_31">
-                                    <property name="maximumSize">
-                                     <size>
-                                      <width>16777215</width>
-                                      <height>32</height>
-                                     </size>
-                                    </property>
-                                    <property name="font">
-                                     <font>
-                                      <family>Tahoma</family>
-                                      <pointsize>11</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
-                                    </property>
-                                    <property name="text">
-                                     <string>Willingness</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_38">
-                                    <item>
-                                     <widget class="QLabel" name="label_32">
-                                      <property name="font">
-                                       <font>
-                                        <family>Tahoma</family>
-                                        <pointsize>20</pointsize>
-                                        <weight>75</weight>
-                                        <bold>true</bold>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>0.76</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QWidget" name="widget_8" native="true">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">image: url(:/buttom/img/buttom/下-小_down-small.svg);</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                 </layout>
-                                </widget>
-                                <zorder>frame_34</zorder>
-                                <zorder>frame_33</zorder>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_38">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <widget class="QFrame" name="frame_39">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>19</x>
-                                   <y>4</y>
-                                   <width>40</width>
-                                   <height>41</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">
-
-
-
-
-
-QFrame{
-padding:8px;
-image: url(:/svg/img/svg/箭头_页面_向上.png);
-	background-color: rgb(255, 81, 45);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                </widget>
-                                <widget class="QFrame" name="frame_40">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>5</x>
-                                   <y>26</y>
-                                   <width>111</width>
-                                   <height>101</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_26">
-                                  <property name="spacing">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>24</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="label_35">
-                                    <property name="font">
-                                     <font>
-                                      <family>Tahoma</family>
-                                      <pointsize>11</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
-                                    </property>
-                                    <property name="text">
-                                     <string>Pending</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_40">
-                                    <item>
-                                     <widget class="QLabel" name="label_36">
-                                      <property name="font">
-                                       <font>
-                                        <family>Tahoma</family>
-                                        <pointsize>20</pointsize>
-                                        <weight>75</weight>
-                                        <bold>true</bold>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>0.99</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QWidget" name="widget_10" native="true">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                 </layout>
-                                </widget>
-                                <zorder>frame_40</zorder>
-                                <zorder>frame_39</zorder>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_26">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>121</width>
-                                  <height>131</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <widget class="QFrame" name="frame_29">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>19</x>
-                                   <y>4</y>
-                                   <width>40</width>
-                                   <height>41</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">
-
-QFrame{
-padding:8px;
-image: url(:/svg/img/svg/闪电-实.png);
-	background-color: rgb(255, 81, 45);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                </widget>
-                                <widget class="QFrame" name="frame_35">
-                                 <property name="geometry">
-                                  <rect>
-                                   <x>5</x>
-                                   <y>26</y>
-                                   <width>111</width>
-                                   <height>101</height>
-                                  </rect>
-                                 </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_25">
-                                  <property name="spacing">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>24</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="label_33">
-                                    <property name="font">
-                                     <font>
-                                      <family>Tahoma</family>
-                                      <pointsize>11</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
-                                    </property>
-                                    <property name="text">
-                                     <string>Ability</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_39">
-                                    <item>
-                                     <widget class="QLabel" name="label_34">
-                                      <property name="font">
-                                       <font>
-                                        <family>Tahoma</family>
-                                        <pointsize>20</pointsize>
-                                        <weight>75</weight>
-                                        <bold>true</bold>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>0.83</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QWidget" name="widget_9" native="true">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                 </layout>
-                                </widget>
-                                <zorder>frame_35</zorder>
-                                <zorder>frame_29</zorder>
-                               </widget>
                               </item>
                              </layout>
                             </widget>
@@ -4316,7 +4428,7 @@ border-bottom: 3px solid rgb(119, 111, 255)
                        <height>878</height>
                       </rect>
                      </property>
-                     <layout class="QVBoxLayout" name="UserShowPage" stretch="1,2">
+                     <layout class="QVBoxLayout" name="UserShowPage" stretch="3,4">
                       <item>
                        <layout class="QHBoxLayout" name="UserAttributeLayout" stretch="1">
                         <item>
@@ -4398,7 +4510,7 @@ border-radius:6px</string>
                                        <string/>
                                       </property>
                                       <property name="pixmap">
-                                       <pixmap>images/人物头像0.png</pixmap>
+                                       <pixmap>../../../.designer/backup/images/人物头像0.png</pixmap>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -4799,6 +4911,625 @@ background-color: rgba(0, 0, 0, 100);
                             <property name="horizontalSpacing">
                              <number>2</number>
                             </property>
+                            <item row="0" column="1">
+                             <widget class="QFrame" name="frame_13">
+                              <property name="styleSheet">
+                               <string notr="true">#QFrame{
+	background-color: rgb(215, 187, 167);
+border:0px solid red;
+	color: rgb(12, 20, 36);
+border-radius:30px
+}</string>
+                              </property>
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_62" stretch="0,0,0,0,0">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="frame_52">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>60</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>121</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <widget class="QFrame" name="frame_53">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>19</x>
+                                    <y>4</y>
+                                    <width>40</width>
+                                    <height>41</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+padding:8px;
+image: url(:/svg/img/svg/对比.png);
+	background-color: rgb(22, 76, 140);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                 <widget class="QFrame" name="frame_54">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>5</x>
+                                    <y>26</y>
+                                    <width>80</width>
+                                    <height>101</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_32">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>24</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="label_47">
+                                     <property name="maximumSize">
+                                      <size>
+                                       <width>16777215</width>
+                                       <height>32</height>
+                                      </size>
+                                     </property>
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <pointsize>11</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>A_1</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_64">
+                                     <item>
+                                      <widget class="QLabel" name="A1Label">
+                                       <property name="font">
+                                        <font>
+                                         <family>Tahoma</family>
+                                         <pointsize>20</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>76</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                 <zorder>frame_54</zorder>
+                                 <zorder>frame_53</zorder>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_49">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>60</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>121</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <widget class="QFrame" name="frame_50">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>19</x>
+                                    <y>4</y>
+                                    <width>40</width>
+                                    <height>41</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">
+
+QFrame{
+padding:8px;
+image: url(:/svg/img/svg/闪电-实.png);
+	background-color: rgb(22, 76, 140);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                 <widget class="QFrame" name="frame_51">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>5</x>
+                                    <y>26</y>
+                                    <width>80</width>
+                                    <height>101</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_31">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>24</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="label_45">
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <pointsize>11</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>A_2</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_63">
+                                     <item>
+                                      <widget class="QLabel" name="A2Label">
+                                       <property name="font">
+                                        <font>
+                                         <family>Tahoma</family>
+                                         <pointsize>20</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>82</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                 <zorder>frame_51</zorder>
+                                 <zorder>frame_50</zorder>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_55">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>60</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>121</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <widget class="QFrame" name="frame_56">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>19</x>
+                                    <y>4</y>
+                                    <width>40</width>
+                                    <height>41</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+padding:8px;
+image: url(:/svg/img/svg/箭头_页面_向上.png);
+	background-color: rgb(22, 76, 140);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                 <widget class="QFrame" name="frame_57">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>5</x>
+                                    <y>26</y>
+                                    <width>80</width>
+                                    <height>101</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_33">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>24</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="label_49">
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <pointsize>11</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>A_3</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_65">
+                                     <item>
+                                      <widget class="QLabel" name="A3Label">
+                                       <property name="font">
+                                        <font>
+                                         <family>Tahoma</family>
+                                         <pointsize>20</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>99</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                 <zorder>frame_57</zorder>
+                                 <zorder>frame_56</zorder>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_58">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>60</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>121</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <widget class="QFrame" name="frame_59">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>19</x>
+                                    <y>4</y>
+                                    <width>40</width>
+                                    <height>41</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+padding:8px;
+image: url(:/buttom_white/img/buttom_white/API 应用_api-app.svg);
+	background-color: rgb(22, 76, 140);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                 <widget class="QFrame" name="frame_60">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>5</x>
+                                    <y>26</y>
+                                    <width>80</width>
+                                    <height>101</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_34">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>24</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="label_51">
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <pointsize>11</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>A_4</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_66">
+                                     <item>
+                                      <widget class="QLabel" name="A4Label">
+                                       <property name="font">
+                                        <font>
+                                         <family>Tahoma</family>
+                                         <pointsize>20</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>83</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                 <zorder>frame_60</zorder>
+                                 <zorder>frame_59</zorder>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_67">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>60</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>121</width>
+                                   <height>131</height>
+                                  </size>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <widget class="QFrame" name="frame_78">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>19</x>
+                                    <y>4</y>
+                                    <width>40</width>
+                                    <height>41</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+padding:8px;
+image: url(:/buttom_white/img/buttom_white/16宫格_grid-sixteen.svg);
+	background-color: rgb(22, 76, 140);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                 </widget>
+                                 <widget class="QFrame" name="frame_79">
+                                  <property name="geometry">
+                                   <rect>
+                                    <x>5</x>
+                                    <y>26</y>
+                                    <width>80</width>
+                                    <height>101</height>
+                                   </rect>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255);
+border:0px solid red;
+border-radius:10px
+}</string>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_45">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>24</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="label_68">
+                                     <property name="maximumSize">
+                                      <size>
+                                       <width>16777215</width>
+                                       <height>32</height>
+                                      </size>
+                                     </property>
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <pointsize>11</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>A_5</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_78">
+                                     <item>
+                                      <widget class="QLabel" name="A5Label">
+                                       <property name="font">
+                                        <font>
+                                         <family>Tahoma</family>
+                                         <pointsize>20</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>76</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                 <zorder>frame_79</zorder>
+                                 <zorder>frame_78</zorder>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item row="1" column="1">
                              <widget class="QFrame" name="frame_6">
                               <property name="styleSheet">
@@ -4815,7 +5546,7 @@ border-radius:30px
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_11">
+                              <layout class="QVBoxLayout" name="verticalLayout_11" stretch="1,1,1,1,1">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -5068,7 +5799,7 @@ border-radius:30px
                                   </font>
                                  </property>
                                  <property name="text">
-                                  <string>Performance</string>
+                                  <string>Personal Credit</string>
                                  </property>
                                  <property name="textFormat">
                                   <enum>Qt::AutoText</enum>
@@ -5117,69 +5848,7 @@ border-radius:30px
                                       <string notr="true">color: rgb(255, 255, 255);</string>
                                      </property>
                                      <property name="text">
-                                      <string>Accuracy</string>
-                                     </property>
-                                     <property name="alignment">
-                                      <set>Qt::AlignCenter</set>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                  </layout>
-                                 </item>
-                                 <item>
-                                  <widget class="Line" name="line_3">
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>1</width>
-                                     <height>16777215</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgba(255, 255, 255,100);</string>
-                                   </property>
-                                   <property name="orientation">
-                                    <enum>Qt::Vertical</enum>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <layout class="QVBoxLayout" name="verticalLayout_14">
-                                   <property name="spacing">
-                                    <number>0</number>
-                                   </property>
-                                   <item>
-                                    <widget class="QLabel" name="label_20">
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>24</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
-                                      </font>
-                                     </property>
-                                     <property name="text">
-                                      <string>88%</string>
-                                     </property>
-                                     <property name="alignment">
-                                      <set>Qt::AlignCenter</set>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <widget class="QLabel" name="label_21">
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>10</pointsize>
-                                       <weight>50</weight>
-                                       <bold>false</bold>
-                                      </font>
-                                     </property>
-                                     <property name="styleSheet">
-                                      <string notr="true">color: rgb(255, 255, 255);</string>
-                                     </property>
-                                     <property name="text">
-                                      <string>AUC</string>
+                                      <string>Score</string>
                                      </property>
                                      <property name="alignment">
                                       <set>Qt::AlignCenter</set>
@@ -5191,7 +5860,7 @@ border-radius:30px
                                 </layout>
                                </item>
                                <item>
-                                <layout class="QHBoxLayout" name="horizontalLayout_59">
+                                <layout class="QHBoxLayout" name="horizontalLayout_59" stretch="2,1">
                                  <property name="spacing">
                                   <number>8</number>
                                  </property>
@@ -5209,7 +5878,7 @@ border-radius:30px
 color: rgb(255, 255, 255);</string>
                                    </property>
                                    <property name="text">
-                                    <string>  Spendings course</string>
+                                    <string>  Repayment Ability</string>
                                    </property>
                                    <property name="icon">
                                     <iconset resource="resources.qrc">
@@ -5237,14 +5906,14 @@ color: rgb(255, 255, 255);</string>
                                     </font>
                                    </property>
                                    <property name="text">
-                                    <string>was taken</string>
+                                    <string>True</string>
                                    </property>
                                   </widget>
                                  </item>
                                 </layout>
                                </item>
                                <item>
-                                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                                <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="2,1">
                                  <property name="spacing">
                                   <number>8</number>
                                  </property>
@@ -5262,7 +5931,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                    </property>
                                    <property name="text">
-                                    <string>  Deposit programs</string>
+                                    <string>  Repayment Willingness</string>
                                    </property>
                                    <property name="icon">
                                     <iconset resource="resources.qrc">
@@ -5290,14 +5959,14 @@ color: rgb(255, 255, 255);</string>
                                     </font>
                                    </property>
                                    <property name="text">
-                                    <string>was setup</string>
+                                    <string>True</string>
                                    </property>
                                   </widget>
                                  </item>
                                 </layout>
                                </item>
                                <item>
-                                <layout class="QHBoxLayout" name="horizontalLayout_60">
+                                <layout class="QHBoxLayout" name="horizontalLayout_60" stretch="2,1">
                                  <property name="spacing">
                                   <number>8</number>
                                  </property>
@@ -5315,7 +5984,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                    </property>
                                    <property name="text">
-                                    <string>  Cashback program</string>
+                                    <string>Consumption</string>
                                    </property>
                                    <property name="icon">
                                     <iconset resource="resources.qrc">
@@ -5343,565 +6012,11 @@ color: rgb(255, 255, 255);</string>
                                     </font>
                                    </property>
                                    <property name="text">
-                                    <string>activated</string>
+                                    <string>True</string>
                                    </property>
                                   </widget>
                                  </item>
                                 </layout>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <layout class="QHBoxLayout" name="horizontalLayout_61"/>
-                            </item>
-                            <item row="0" column="1">
-                             <widget class="QFrame" name="frame_13">
-                              <property name="styleSheet">
-                               <string notr="true">#QFrame{
-	background-color: rgb(215, 187, 167);
-border:0px solid red;
-	color: rgb(12, 20, 36);
-border-radius:30px
-}</string>
-                              </property>
-                              <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
-                              </property>
-                              <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
-                              </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_62" stretch="0,1,1,0">
-                               <property name="spacing">
-                                <number>0</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="frame_49">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <widget class="QFrame" name="frame_50">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>19</x>
-                                    <y>4</y>
-                                    <width>40</width>
-                                    <height>41</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">
-
-QFrame{
-padding:8px;
-image: url(:/svg/img/svg/闪电-实.png);
-	background-color: rgb(22, 76, 140);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                 </widget>
-                                 <widget class="QFrame" name="frame_51">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>5</x>
-                                    <y>26</y>
-                                    <width>111</width>
-                                    <height>101</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                  <layout class="QVBoxLayout" name="verticalLayout_31">
-                                   <property name="spacing">
-                                    <number>0</number>
-                                   </property>
-                                   <property name="topMargin">
-                                    <number>24</number>
-                                   </property>
-                                   <item>
-                                    <widget class="QLabel" name="label_45">
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>11</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
-                                      </font>
-                                     </property>
-                                     <property name="text">
-                                      <string>Ability</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <layout class="QHBoxLayout" name="horizontalLayout_63">
-                                     <item>
-                                      <widget class="QLabel" name="label_46">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>20</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>0.83</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QWidget" name="widget_21" native="true">
-                                       <property name="maximumSize">
-                                        <size>
-                                         <width>16777215</width>
-                                         <height>16</height>
-                                        </size>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                  </layout>
-                                 </widget>
-                                 <zorder>frame_51</zorder>
-                                 <zorder>frame_50</zorder>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="frame_52">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <widget class="QFrame" name="frame_53">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>19</x>
-                                    <y>4</y>
-                                    <width>40</width>
-                                    <height>41</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-padding:8px;
-image: url(:/svg/img/svg/对比.png);
-	background-color: rgb(22, 76, 140);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                 </widget>
-                                 <widget class="QFrame" name="frame_54">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>5</x>
-                                    <y>26</y>
-                                    <width>111</width>
-                                    <height>101</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                  <layout class="QVBoxLayout" name="verticalLayout_32">
-                                   <property name="spacing">
-                                    <number>0</number>
-                                   </property>
-                                   <property name="topMargin">
-                                    <number>24</number>
-                                   </property>
-                                   <item>
-                                    <widget class="QLabel" name="label_47">
-                                     <property name="maximumSize">
-                                      <size>
-                                       <width>16777215</width>
-                                       <height>32</height>
-                                      </size>
-                                     </property>
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>11</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
-                                      </font>
-                                     </property>
-                                     <property name="text">
-                                      <string>Willingness</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <layout class="QHBoxLayout" name="horizontalLayout_64">
-                                     <item>
-                                      <widget class="QLabel" name="label_48">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>20</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>0.76</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QWidget" name="widget_22" native="true">
-                                       <property name="maximumSize">
-                                        <size>
-                                         <width>16777215</width>
-                                         <height>16</height>
-                                        </size>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">image: url(:/buttom/img/buttom/下-小_down-small.svg);</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                  </layout>
-                                 </widget>
-                                 <zorder>frame_54</zorder>
-                                 <zorder>frame_53</zorder>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="frame_55">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <widget class="QFrame" name="frame_56">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>19</x>
-                                    <y>4</y>
-                                    <width>40</width>
-                                    <height>41</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-padding:8px;
-image: url(:/svg/img/svg/箭头_页面_向上.png);
-	background-color: rgb(22, 76, 140);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                 </widget>
-                                 <widget class="QFrame" name="frame_57">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>5</x>
-                                    <y>26</y>
-                                    <width>111</width>
-                                    <height>101</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                  <layout class="QVBoxLayout" name="verticalLayout_33">
-                                   <property name="spacing">
-                                    <number>0</number>
-                                   </property>
-                                   <property name="topMargin">
-                                    <number>24</number>
-                                   </property>
-                                   <item>
-                                    <widget class="QLabel" name="label_49">
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>11</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
-                                      </font>
-                                     </property>
-                                     <property name="text">
-                                      <string>Pending</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <layout class="QHBoxLayout" name="horizontalLayout_65">
-                                     <item>
-                                      <widget class="QLabel" name="label_50">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>20</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>0.99</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QWidget" name="widget_23" native="true">
-                                       <property name="maximumSize">
-                                        <size>
-                                         <width>16777215</width>
-                                         <height>16</height>
-                                        </size>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                  </layout>
-                                 </widget>
-                                 <zorder>frame_57</zorder>
-                                 <zorder>frame_56</zorder>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="frame_58">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>121</width>
-                                   <height>131</height>
-                                  </size>
-                                 </property>
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <widget class="QFrame" name="frame_59">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>19</x>
-                                    <y>4</y>
-                                    <width>40</width>
-                                    <height>41</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-padding:8px;
-image: url(:/svg/img/svg/闪电-实.png);
-	background-color: rgb(22, 76, 140);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                 </widget>
-                                 <widget class="QFrame" name="frame_60">
-                                  <property name="geometry">
-                                   <rect>
-                                    <x>5</x>
-                                    <y>26</y>
-                                    <width>111</width>
-                                    <height>101</height>
-                                   </rect>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                  </property>
-                                  <property name="frameShape">
-                                   <enum>QFrame::StyledPanel</enum>
-                                  </property>
-                                  <property name="frameShadow">
-                                   <enum>QFrame::Raised</enum>
-                                  </property>
-                                  <layout class="QVBoxLayout" name="verticalLayout_34">
-                                   <property name="spacing">
-                                    <number>0</number>
-                                   </property>
-                                   <property name="topMargin">
-                                    <number>24</number>
-                                   </property>
-                                   <item>
-                                    <widget class="QLabel" name="label_51">
-                                     <property name="font">
-                                      <font>
-                                       <family>Tahoma</family>
-                                       <pointsize>11</pointsize>
-                                       <weight>75</weight>
-                                       <bold>true</bold>
-                                      </font>
-                                     </property>
-                                     <property name="text">
-                                      <string>Ability</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <layout class="QHBoxLayout" name="horizontalLayout_66">
-                                     <item>
-                                      <widget class="QLabel" name="label_52">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>20</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>0.83</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QWidget" name="widget_24" native="true">
-                                       <property name="maximumSize">
-                                        <size>
-                                         <width>16777215</width>
-                                         <height>16</height>
-                                        </size>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                  </layout>
-                                 </widget>
-                                 <zorder>frame_60</zorder>
-                                 <zorder>frame_59</zorder>
-                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -5964,7 +6079,7 @@ border-radius:10px
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>400</width>
+                               <width>390</width>
                                <height>616</height>
                               </rect>
                              </property>
@@ -7121,7 +7236,39 @@ border-radius:12px</string>
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>971</width>
+                               <width>481</width>
+                               <height>361</height>
+                              </rect>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Tahoma</family>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QWidget{
+	background-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	border-radius:8px
+}
+QWebEngineView{
+	background-color: rgba(0, 0, 0, 0);
+	selection-background-color: rgba(0, 0, 0, 0);
+
+}</string>
+                             </property>
+                             <property name="url" stdset="0">
+                              <url>
+                               <string>file:///C:/Users/10542/Desktop/UESTC/UI/htmls/TimeLine_0.html</string>
+                              </url>
+                             </property>
+                            </widget>
+                            <widget class="QWebEngineView" name="UserTreeWeb_2" native="true">
+                             <property name="geometry">
+                              <rect>
+                               <x>490</x>
+                               <y>0</y>
+                               <width>481</width>
                                <height>361</height>
                               </rect>
                              </property>
@@ -7436,9 +7583,9 @@ border-radius:40px
                                 <widget class="QLabel" name="ModelGif">
                                  <property name="geometry">
                                   <rect>
-                                   <x>100</x>
+                                   <x>110</x>
                                    <y>10</y>
-                                   <width>361</width>
+                                   <width>341</width>
                                    <height>281</height>
                                   </rect>
                                  </property>
@@ -7446,7 +7593,7 @@ border-radius:40px
                                   <string/>
                                  </property>
                                  <property name="pixmap">
-                                  <pixmap>images/Loan.gif</pixmap>
+                                  <pixmap>../../../.designer/backup/images/Loan.gif</pixmap>
                                  </property>
                                  <property name="scaledContents">
                                   <bool>true</bool>
@@ -7470,7 +7617,7 @@ border-radius:30px
                                 <property name="frameShadow">
                                  <enum>QFrame::Raised</enum>
                                 </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_73" stretch="0,1,1,0">
+                                <layout class="QHBoxLayout" name="horizontalLayout_73" stretch="0,1">
                                  <property name="spacing">
                                   <number>0</number>
                                  </property>
@@ -7496,7 +7643,7 @@ border-radius:30px
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>121</width>
+                                     <width>180</width>
                                      <height>131</height>
                                     </size>
                                    </property>
@@ -7536,7 +7683,7 @@ border-radius:10px
                                      <rect>
                                       <x>5</x>
                                       <y>26</y>
-                                      <width>111</width>
+                                      <width>161</width>
                                       <height>101</height>
                                      </rect>
                                     </property>
@@ -7571,7 +7718,7 @@ border-radius:10px
                                         </font>
                                        </property>
                                        <property name="text">
-                                        <string>Ability</string>
+                                        <string>Precision</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -7588,20 +7735,7 @@ border-radius:10px
                                           </font>
                                          </property>
                                          <property name="text">
-                                          <string>0.83</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                       <item>
-                                        <widget class="QWidget" name="widget_25" native="true">
-                                         <property name="maximumSize">
-                                          <size>
-                                           <width>16777215</width>
-                                           <height>16</height>
-                                          </size>
-                                         </property>
-                                         <property name="styleSheet">
-                                          <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
+                                          <string>96%</string>
                                          </property>
                                         </widget>
                                        </item>
@@ -7617,7 +7751,7 @@ border-radius:10px
                                   <widget class="QFrame" name="frame_64">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>121</width>
+                                     <width>180</width>
                                      <height>131</height>
                                     </size>
                                    </property>
@@ -7663,7 +7797,7 @@ border-radius:10px
                                      <rect>
                                       <x>5</x>
                                       <y>26</y>
-                                      <width>111</width>
+                                      <width>161</width>
                                       <height>101</height>
                                      </rect>
                                     </property>
@@ -7704,7 +7838,7 @@ border-radius:10px
                                         </font>
                                        </property>
                                        <property name="text">
-                                        <string>Willingness</string>
+                                        <string>AUC</string>
                                        </property>
                                       </widget>
                                      </item>
@@ -7721,20 +7855,7 @@ border-radius:10px
                                           </font>
                                          </property>
                                          <property name="text">
-                                          <string>0.76</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                       <item>
-                                        <widget class="QWidget" name="widget_26" native="true">
-                                         <property name="maximumSize">
-                                          <size>
-                                           <width>16777215</width>
-                                           <height>16</height>
-                                          </size>
-                                         </property>
-                                         <property name="styleSheet">
-                                          <string notr="true">image: url(:/buttom/img/buttom/下-小_down-small.svg);</string>
+                                          <string>76%</string>
                                          </property>
                                         </widget>
                                        </item>
@@ -7744,260 +7865,6 @@ border-radius:10px
                                    </widget>
                                    <zorder>frame_66</zorder>
                                    <zorder>frame_65</zorder>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="frame_67">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>121</width>
-                                     <height>131</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>121</width>
-                                     <height>131</height>
-                                    </size>
-                                   </property>
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <widget class="QFrame" name="frame_68">
-                                    <property name="geometry">
-                                     <rect>
-                                      <x>19</x>
-                                      <y>4</y>
-                                      <width>40</width>
-                                      <height>41</height>
-                                     </rect>
-                                    </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">QFrame{
-padding:8px;
-image: url(:/svg/img/svg/箭头_页面_向上.png);
-	background-color: rgb(99, 181, 231);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                    </property>
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
-                                    </property>
-                                   </widget>
-                                   <widget class="QFrame" name="frame_69">
-                                    <property name="geometry">
-                                     <rect>
-                                      <x>5</x>
-                                      <y>26</y>
-                                      <width>111</width>
-                                      <height>101</height>
-                                     </rect>
-                                    </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                    </property>
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
-                                    </property>
-                                    <layout class="QVBoxLayout" name="verticalLayout_37">
-                                     <property name="spacing">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>24</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="label_57">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>11</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>Pending</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <layout class="QHBoxLayout" name="horizontalLayout_76">
-                                       <item>
-                                        <widget class="QLabel" name="label_58">
-                                         <property name="font">
-                                          <font>
-                                           <family>Tahoma</family>
-                                           <pointsize>20</pointsize>
-                                           <weight>75</weight>
-                                           <bold>true</bold>
-                                          </font>
-                                         </property>
-                                         <property name="text">
-                                          <string>0.99</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                       <item>
-                                        <widget class="QWidget" name="widget_27" native="true">
-                                         <property name="maximumSize">
-                                          <size>
-                                           <width>16777215</width>
-                                           <height>16</height>
-                                          </size>
-                                         </property>
-                                         <property name="styleSheet">
-                                          <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                      </layout>
-                                     </item>
-                                    </layout>
-                                   </widget>
-                                   <zorder>frame_69</zorder>
-                                   <zorder>frame_68</zorder>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="frame_70">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>121</width>
-                                     <height>131</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>121</width>
-                                     <height>131</height>
-                                    </size>
-                                   </property>
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <widget class="QFrame" name="frame_71">
-                                    <property name="geometry">
-                                     <rect>
-                                      <x>19</x>
-                                      <y>4</y>
-                                      <width>40</width>
-                                      <height>41</height>
-                                     </rect>
-                                    </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">QFrame{
-padding:8px;
-image: url(:/svg/img/svg/闪电-实.png);
-	background-color: rgb(99, 181, 231);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                    </property>
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
-                                    </property>
-                                   </widget>
-                                   <widget class="QFrame" name="frame_72">
-                                    <property name="geometry">
-                                     <rect>
-                                      <x>5</x>
-                                      <y>26</y>
-                                      <width>111</width>
-                                      <height>101</height>
-                                     </rect>
-                                    </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">QFrame{
-	background-color: rgb(255, 255, 255);
-border:0px solid red;
-border-radius:10px
-}</string>
-                                    </property>
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
-                                    </property>
-                                    <layout class="QVBoxLayout" name="verticalLayout_38">
-                                     <property name="spacing">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>24</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="label_59">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>11</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>Ability</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <layout class="QHBoxLayout" name="horizontalLayout_77">
-                                       <item>
-                                        <widget class="QLabel" name="label_60">
-                                         <property name="font">
-                                          <font>
-                                           <family>Tahoma</family>
-                                           <pointsize>20</pointsize>
-                                           <weight>75</weight>
-                                           <bold>true</bold>
-                                          </font>
-                                         </property>
-                                         <property name="text">
-                                          <string>0.83</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                       <item>
-                                        <widget class="QWidget" name="widget_28" native="true">
-                                         <property name="maximumSize">
-                                          <size>
-                                           <width>16777215</width>
-                                           <height>16</height>
-                                          </size>
-                                         </property>
-                                         <property name="styleSheet">
-                                          <string notr="true">image: url(:/buttom/img/buttom/上-小_up-small.svg);</string>
-                                         </property>
-                                        </widget>
-                                       </item>
-                                      </layout>
-                                     </item>
-                                    </layout>
-                                   </widget>
-                                   <zorder>frame_72</zorder>
-                                   <zorder>frame_71</zorder>
                                   </widget>
                                  </item>
                                 </layout>
@@ -8019,7 +7886,7 @@ border-radius:30px
                                 <property name="frameShadow">
                                  <enum>QFrame::Raised</enum>
                                 </property>
-                                <layout class="QVBoxLayout" name="verticalLayout_28">
+                                <layout class="QVBoxLayout" name="verticalLayout_28" stretch="1,2,2,2,2">
                                  <property name="spacing">
                                   <number>5</number>
                                  </property>
@@ -8037,6 +7904,12 @@ border-radius:30px
                                  </property>
                                  <item>
                                   <widget class="QLabel" name="label_25">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
                                    <property name="palette">
                                     <palette>
                                      <active>
@@ -8272,7 +8145,7 @@ border-radius:30px
                                     </font>
                                    </property>
                                    <property name="text">
-                                    <string>Performance</string>
+                                    <string>Model Process</string>
                                    </property>
                                    <property name="textFormat">
                                     <enum>Qt::AutoText</enum>
@@ -8281,118 +8154,6 @@ border-radius:30px
                                     <set>Qt::AlignCenter</set>
                                    </property>
                                   </widget>
-                                 </item>
-                                 <item>
-                                  <layout class="QHBoxLayout" name="horizontalLayout_69">
-                                   <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_29">
-                                     <property name="spacing">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="label_26">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>24</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>96%</string>
-                                       </property>
-                                       <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QLabel" name="label_27">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>10</pointsize>
-                                         <weight>50</weight>
-                                         <bold>false</bold>
-                                        </font>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">color: rgb(255, 255, 255);</string>
-                                       </property>
-                                       <property name="text">
-                                        <string>Accuracy</string>
-                                       </property>
-                                       <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                   <item>
-                                    <widget class="Line" name="line_4">
-                                     <property name="maximumSize">
-                                      <size>
-                                       <width>1</width>
-                                       <height>16777215</height>
-                                      </size>
-                                     </property>
-                                     <property name="styleSheet">
-                                      <string notr="true">background-color: rgba(255, 255, 255,100);</string>
-                                     </property>
-                                     <property name="orientation">
-                                      <enum>Qt::Vertical</enum>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_30">
-                                     <property name="spacing">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="label_28">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>24</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>88%</string>
-                                       </property>
-                                       <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QLabel" name="label_37">
-                                       <property name="font">
-                                        <font>
-                                         <family>Tahoma</family>
-                                         <pointsize>10</pointsize>
-                                         <weight>50</weight>
-                                         <bold>false</bold>
-                                        </font>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">color: rgb(255, 255, 255);</string>
-                                       </property>
-                                       <property name="text">
-                                        <string>AUC</string>
-                                       </property>
-                                       <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </item>
-                                  </layout>
                                  </item>
                                  <item>
                                   <layout class="QHBoxLayout" name="horizontalLayout_70">
@@ -8413,11 +8174,11 @@ border-radius:30px
 color: rgb(255, 255, 255);</string>
                                      </property>
                                      <property name="text">
-                                      <string>  Spendings course</string>
+                                      <string>   Data Cleaning</string>
                                      </property>
                                      <property name="icon">
                                       <iconset resource="resources.qrc">
-                                       <normaloff>:/svg/img/svg/箭头_页面_向上.png</normaloff>:/svg/img/svg/箭头_页面_向上.png</iconset>
+                                       <normaloff>:/buttom_white/img/buttom_white/吸尘器_vacuum-cleaner.svg</normaloff>:/buttom_white/img/buttom_white/吸尘器_vacuum-cleaner.svg</iconset>
                                      </property>
                                      <property name="iconSize">
                                       <size>
@@ -8441,7 +8202,62 @@ color: rgb(255, 255, 255);</string>
                                       </font>
                                      </property>
                                      <property name="text">
-                                      <string>was taken</string>
+                                      <string>Statistical analysis;Data cleaning;
+Data completion</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </item>
+                                 <item>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_72">
+                                   <property name="spacing">
+                                    <number>8</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QPushButton" name="pushButton_13">
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">border:none;
+color: rgb(255, 255, 255);</string>
+                                     </property>
+                                     <property name="text">
+                                      <string>Key Feature Extract</string>
+                                     </property>
+                                     <property name="icon">
+                                      <iconset resource="resources.qrc">
+                                       <normaloff>:/svg/img/svg/箭头_页面_向上.png</normaloff>:/svg/img/svg/箭头_页面_向上.png</iconset>
+                                     </property>
+                                     <property name="iconSize">
+                                      <size>
+                                       <width>24</width>
+                                       <height>24</height>
+                                      </size>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_63">
+                                     <property name="maximumSize">
+                                      <size>
+                                       <width>16777215</width>
+                                       <height>32</height>
+                                      </size>
+                                     </property>
+                                     <property name="font">
+                                      <font>
+                                       <family>Tahoma</family>
+                                      </font>
+                                     </property>
+                                     <property name="text">
+                                      <string>Similarity calculation;Kmeans clustering;
+PCA;Random forest</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -8466,7 +8282,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                      </property>
                                      <property name="text">
-                                      <string>  Deposit programs</string>
+                                      <string>Integrated Learning</string>
                                      </property>
                                      <property name="icon">
                                       <iconset resource="resources.qrc">
@@ -8494,7 +8310,8 @@ color: rgb(255, 255, 255);</string>
                                       </font>
                                      </property>
                                      <property name="text">
-                                      <string>was setup</string>
+                                      <string>SVM;DBSCAN-positive;
+DBSCAN-negative</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -8519,7 +8336,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                                      </property>
                                      <property name="text">
-                                      <string>  Cashback program</string>
+                                      <string>Anomaly Dectection</string>
                                      </property>
                                      <property name="icon">
                                       <iconset resource="resources.qrc">
@@ -8547,7 +8364,8 @@ color: rgb(255, 255, 255);</string>
                                       </font>
                                      </property>
                                      <property name="text">
-                                      <string>activated</string>
+                                      <string>Anomaly detection;Cluster analysis;
+Index calculation</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -10764,7 +10582,7 @@ background-color: rgba(225, 225, 225,150);
                  <widget class="QComboBox" name="SearchBarComboBox">
                   <property name="minimumSize">
                    <size>
-                    <width>40</width>
+                    <width>32</width>
                     <height>32</height>
                    </size>
                   </property>

@@ -210,6 +210,7 @@ def generateUser(i):
     drawSimpleRadar(0, 0, USER_WIDTH, USER_HEIGHT, USER_PATH, 'User_Radar_Simple_', i)
     drawSimpleTree("./data/UserTargetTree0.json", "User Feature Rate",
                    USER_WIDTH_, USER_HEIGHT_, USER_PATH, 'User_Tree_Simple_', i)
+    drawTimeTree(0, "User Target Tree", USER_WIDTH_, USER_HEIGHT_, USER_PATH, 'User_Time_Simple_', i)
 
 
 # 生成模型界面元素

@@ -111,6 +111,8 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.UserTreeWeb_2.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Time_Simple_'+str(self.user_click%5)+'.html'))
+        self.UserTreeWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
         # 切换用户界面按钮
         self.UserNext.clicked.connect(self.userSwitch)
@@ -125,6 +127,8 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_'+str(self.user_click%5)+'.html'))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.UserTreeWeb_2.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Time_Simple_'+str(self.user_click%5)+'.html'))
+        self.UserTreeWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
         # 用户头像与信息切换
         self.UserPic.setPixmap(QtGui.QPixmap('images/人物头像'+str(self.user_click%5)+'.png'))
@@ -139,15 +143,29 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # userPage页-ListWeb元素选择跳转
     def userPageList(self):
         text = self.UserPageChooseList.currentItem().text()
-        if text == 'show the result':
-            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_0.html'))
-            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
-        self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
-        self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        if text == 'show the analysis of current user':
+            # 用户属性切换
+            self.UserRardaWeb.load(
+                QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_'+str(self.user_click % 5)+'.html'))
+            self.UserRardaWeb.page().setBackgroundColor(QColor(0,0,0,0))
+            self.UserTreeWeb.load(
+                QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_'+str(self.user_click % 5)+'.html'))
+            self.UserTreeWeb.page().setBackgroundColor(QColor(0,0,0,0))
+            self.UserTreeWeb_2.load(
+                QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Time_Simple_'+str(self.user_click % 5)+'.html'))
+            self.UserTreeWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+
+            # 用户头像与信息切换
+            self.UserPic.setPixmap(QtGui.QPixmap('images/人物头像'+str(self.user_click % 5)+'.png'))
+            self.UserPic.setAlignment(QtCore.Qt.AlignCenter)
+            self.UserName.setPalette(QtGui.QPalette())
+            self.UserName.setText(QtCore.QCoreApplication.translate("MainWindow",self.user_name[self.user_click % 5]))
+            self.UserName.setStyleSheet("background-color: rgb(22, 76, 140);\n""border-radius:6px")
+
 
     # modelPage页-函数设定
     def modelPageStart(self):
-        # self.ModelPageChooseList.itemClicked.connect(self.userPageList)
+        self.ModelPageChooseList.itemClicked.connect(self.userPageList)
         self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
         self.Gif = QMovie()
@@ -158,9 +176,14 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # modelPage页-ListWeb元素选择跳转
     def modelPageList(self):
         text = self.ModelPageChooseList.currentItem().text()
-        if text == 'show the result':
+        if text == 'show the model process of current user':
             self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
-        self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
+            self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
+            self.Gif=QMovie()
+            self.Gif.setFileName("images/Loan.gif")
+            self.ModelGif.setMovie(self.Gif)
+            self.Gif.start()
+
 
     # analysisPage页-函数设定
     def analysisPageStart(self):
@@ -172,13 +195,27 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
 
         # 显示web组件
         self.FirstFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Graph_Simple_0.html'))
-        self.SecondFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Tree_Time_0.html'))
-        self.ThirdFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Bar_3D_0.html'))
-        self.FourthFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Radar_Simple_0.html'))
         self.FirstFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.SecondFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Tree_Time_0.html'))
         self.SecondFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.ThirdFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Bar_3D_0.html'))
         self.ThirdFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
-        self.FourthFrameWeb_2.page().setBackgroundColor(QColor(0, 0, 0, 0))
+        self.FourthFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Radar_Simple_0.html'))
+        self.FourthFrameWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+
+    # modelPage页-ListWeb元素选择跳转
+    def analysisPageList(self):
+        text = self.AnalysisPageChooseLayout.currentItem().text()
+        if text == 'show the analysis of all users':
+            self.FirstFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Graph_Simple_0.html'))
+            self.FirstFrameWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+            self.SecondFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Tree_Time_0.html'))
+            self.SecondFrameWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+            self.ThirdFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Bar_3D_0.html'))
+            self.ThirdFrameWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+            self.FourthFrameWeb_2.load(QUrl.fromLocalFile(ABS_PATH+ANALYSIS_PATH+'Analysis_Radar_Simple_0.html'))
+            self.FourthFrameWeb_2.page().setBackgroundColor(QColor(0,0,0,0))
+
 
     # barPage页-函数设定
     def barPageStart(self):

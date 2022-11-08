@@ -15,7 +15,7 @@ MAIN_HEIGHT_ = '340px'  # 361px
 # 用户页面的Web组件尺寸
 USER_WIDTH = '410px'  # 438px
 USER_HEIGHT = '330px'  # 365px
-USER_WIDTH_ = '950px'  # 971px
+USER_WIDTH_ = '450px'  # 481px
 USER_HEIGHT_ = '340px'  # 361px
 
 # 模型页面的Web组件尺寸
@@ -25,7 +25,6 @@ MODEL_HEIGHT = '700px'  # 743px
 # 分析页面的Web组件尺寸
 ANALYSIS_WIDTH = '680px'  # 691px
 ANALYSIS_HEIGHT = '280px'  # 301px
-
 
 # 图表系列的Web组件尺寸
 WIDTH = '1300px'  # '1381px'
