@@ -14,7 +14,7 @@ originDf = pd.read_csv(trainFile)
 labelDf = pd.read_csv(labelFile)
 
 for column in originDf.columns:
-    if originDf[column].isnull().sum() > len(originDf) * 0.9:
+    if originDf[column].isnull().sum() > len(originDf) * 0.5:
         originDf = originDf.drop(column, axis=1)
 print(originDf.shape)
 originDf = originDf.fillna(0)
