@@ -1,0 +1,3 @@
+[{"name": "SVM", "symbolSize": 30},
+{"name": "DBSCAN-positive", "symbolSize": 30},
+{"name": "DBSCAN-negative", "symbolSize": 30}]

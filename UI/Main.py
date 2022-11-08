@@ -72,11 +72,11 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
         self.FourthFrameButton.clicked.connect(self.mainPageFourthButton)
 
         # 首页大屏效果
-        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Circle_0.html'))
-        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Tree_Simple_0.html'))
-        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_0.html'))
-        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Radar_Simple_0.html'))
-        self.RadarWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_3D_1.html'))
+        self.FirstFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Graph_Simple_0.html'))
+        self.SecondFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Tree_Time_0.html'))
+        self.ThirdFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Bar_3D_0.html'))
+        self.FourthFrameWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Radar_Simple_0.html'))
+        self.RadarWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Structure_0.html'))
         self.FirstFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.SecondFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.ThirdFrameWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
@@ -87,13 +87,13 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     def mainPageList(self):
         text = self.MainPageChooseList.currentItem().text()
         if text == 'Last 120 second':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_Complex_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Bar_Complex_0.html'))
         elif text == 'Last 30 minute':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Bar_Simple_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Bar_Simple_0.html'))
         elif text == 'Last 24 hours':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Complex_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Pie_Complex_0.html'))
         elif text == 'Last 5 days':
-            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Pie_Simple_0.html'))
+            self.MainWeb.load(QUrl.fromLocalFile(ABS_PATH+MAIN_PATH+'Main_Pie_Simple_0.html'))
 
     # 首页-Button元素选择跳转
     def mainPageFirstButton(self):
@@ -112,31 +112,31 @@ class MyMainForm(QMainWindow, Ui_MainWindow):
     # userPage页-函数设定
     def userPageStart(self):
         self.UserPageChooseList.itemClicked.connect(self.userPageList)
-        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Radar_Simple_0.html'))
+        self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_0.html'))
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
-        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Tree_Simple_0.html'))
+        self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # userPage页-ListWeb元素选择跳转
     def userPageList(self):
         text = self.UserPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Radar_Simple_0.html'))
-            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'Tree_Simple_0.html'))
+            self.UserRardaWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Radar_Simple_0.html'))
+            self.UserTreeWeb.load(QUrl.fromLocalFile(ABS_PATH+USER_PATH+'User_Tree_Simple_0.html'))
         self.UserRardaWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
         self.UserTreeWeb.page().setBackgroundColor(QColor(0, 0, 0, 0))
 
     # modelPage页-函数设定
     def modelPageStart(self):
         self.ModelPageChooseList.itemClicked.connect(self.userPageList)
-        self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Tree_Circle_0.html'))
+        self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # modelPage页-ListWeb元素选择跳转
     def modelPageList(self):
         text = self.ModelPageChooseList.currentItem().text()
         if text == 'show the result':
-            self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Tree_Circle_0.html'))
+            self.ModelStructureWeb.load(QUrl.fromLocalFile(ABS_PATH+MODEL_PATH+'Model_Structure_0.html'))
         self.ModelStructureWeb.page().setBackgroundColor(QColor(0,0,0,0))
 
     # barPage页-函数设定

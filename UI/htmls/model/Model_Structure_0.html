@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="195cf792118b4aaca6faa56abbbac5a2" class="chart-container" style="width:800px; height:700px;"></div>
+    <script>
+        var chart_195cf792118b4aaca6faa56abbbac5a2 = echarts.init(
+            document.getElementById('195cf792118b4aaca6faa56abbbac5a2'), 'white', {renderer: 'canvas'});
+        var option_195cf792118b4aaca6faa56abbbac5a2 = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "graph",
+                "layout": "force",
+                "symbolSize": 10,
+                "circular": {
+                    "rotateLabel": false
+                },
+                "force": {
+                    "repulsion": 8000,
+                    "edgeLength": 50,
+                    "gravity": 0.2
+                },
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                },
+                "roam": true,
+                "draggable": false,
+                "focusNodeAdjacency": true,
+                "data": [
+                    {
+                        "name": "Anomaly detection",
+                        "symbolSize": 30
+                    },
+                    {
+                        "name": "Cluster analysis",
+                        "symbolSize": 30
+                    },
+                    {
+                        "name": "Index calculation",
+                        "symbolSize": 30
+                    },
+                    {
+                        "name": "Output",
+                        "symbolSize": 70
+                    },
+                    {
+                        "name": "Input",
+                        "symbolSize": 70
+                    }
+                ],
+                "edgeLabel": {
+                    "show": false,
+                    "position": "top",
+                    "margin": 8
+                },
+                "edgeSymbol": [
+                    null,
+                    null
+                ],
+                "edgeSymbolSize": 10,
+                "links": [
+                    {
+                        "source": "Anomaly detection",
+                        "target": "Input"
+                    },
+                    {
+                        "source": "Anomaly detection",
+                        "target": "Output"
+                    },
+                    {
+                        "source": "Cluster analysis",
+                        "target": "Input"
+                    },
+                    {
+                        "source": "Cluster analysis",
+                        "target": "Output"
+                    },
+                    {
+                        "source": "Index calculation",
+                        "target": "Input"
+                    },
+                    {
+                        "source": "Index calculation",
+                        "target": "Output"
+                    }
+                ]
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "orient": "horizontal",
+            "autoPlay": false,
+            "controlPosition": "left",
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "bottom": "-5px",
+            "data": [
+                "Data cleaning",
+                "Key feature extract",
+                "Integrated learning",
+                "Anomaly detection"
+            ]
+        }
+    },
+    "options": [
+        {
+            "legend": [
+                {
+                    "data": [],
+                    "selected": {},
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "graph",
+                    "layout": "force",
+                    "symbolSize": 10,
+                    "circular": {
+                        "rotateLabel": false
+                    },
+                    "force": {
+                        "repulsion": 8000,
+                        "edgeLength": 50,
+                        "gravity": 0.2
+                    },
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    },
+                    "roam": true,
+                    "draggable": false,
+                    "focusNodeAdjacency": true,
+                    "data": [
+                        {
+                            "name": "Statistical analysis",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Data cleaning",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Data completion",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Output",
+                            "symbolSize": 70
+                        },
+                        {
+                            "name": "Input",
+                            "symbolSize": 70
+                        }
+                    ],
+                    "edgeLabel": {
+                        "show": false,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "edgeSymbol": [
+                        null,
+                        null
+                    ],
+                    "edgeSymbolSize": 10,
+                    "links": [
+                        {
+                            "source": "Statistical analysis",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Statistical analysis",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "Data cleaning",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Data cleaning",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "Data completion",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Data completion",
+                            "target": "Output"
+                        }
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Data cleaning",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [],
+                    "selected": {},
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "graph",
+                    "layout": "force",
+                    "symbolSize": 10,
+                    "circular": {
+                        "rotateLabel": false
+                    },
+                    "force": {
+                        "repulsion": 8000,
+                        "edgeLength": 50,
+                        "gravity": 0.2
+                    },
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    },
+                    "roam": true,
+                    "draggable": false,
+                    "focusNodeAdjacency": true,
+                    "data": [
+                        {
+                            "name": "Similarity calculation",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Kmeans clustering",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "PCA",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Random forest",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Output",
+                            "symbolSize": 70
+                        },
+                        {
+                            "name": "Input",
+                            "symbolSize": 70
+                        }
+                    ],
+                    "edgeLabel": {
+                        "show": false,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "edgeSymbol": [
+                        null,
+                        null
+                    ],
+                    "edgeSymbolSize": 10,
+                    "links": [
+                        {
+                            "source": "Similarity calculation",
+                            "target": "Kmeans clustering"
+                        },
+                        {
+                            "source": "PCA",
+                            "target": "Kmeans clustering"
+                        },
+                        {
+                            "source": "PCA",
+                            "target": "Random forest"
+                        },
+                        {
+                            "source": "PCA",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "Input",
+                            "target": "Similarity calculation"
+                        },
+                        {
+                            "source": "Input",
+                            "target": "Random forest"
+                        }
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Key feature extract",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [],
+                    "selected": {},
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "graph",
+                    "layout": "force",
+                    "symbolSize": 10,
+                    "circular": {
+                        "rotateLabel": false
+                    },
+                    "force": {
+                        "repulsion": 8000,
+                        "edgeLength": 50,
+                        "gravity": 0.2
+                    },
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    },
+                    "roam": true,
+                    "draggable": false,
+                    "focusNodeAdjacency": true,
+                    "data": [
+                        {
+                            "name": "SVM",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "DBSCAN-positive",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "DBSCAN-negative",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Output",
+                            "symbolSize": 70
+                        },
+                        {
+                            "name": "Input",
+                            "symbolSize": 70
+                        }
+                    ],
+                    "edgeLabel": {
+                        "show": false,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "edgeSymbol": [
+                        null,
+                        null
+                    ],
+                    "edgeSymbolSize": 10,
+                    "links": [
+                        {
+                            "source": "SVM",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "SVM",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "DBSCAN-positive",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "DBSCAN-positive",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "DBSCAN-negative",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "DBSCAN-negative",
+                            "target": "Output"
+                        }
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Integrated learning",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [],
+                    "selected": {},
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "series": [
+                {
+                    "type": "graph",
+                    "layout": "force",
+                    "symbolSize": 10,
+                    "circular": {
+                        "rotateLabel": false
+                    },
+                    "force": {
+                        "repulsion": 8000,
+                        "edgeLength": 50,
+                        "gravity": 0.2
+                    },
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "lineStyle": {
+                        "show": true,
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    },
+                    "roam": true,
+                    "draggable": false,
+                    "focusNodeAdjacency": true,
+                    "data": [
+                        {
+                            "name": "Anomaly detection",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Cluster analysis",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Index calculation",
+                            "symbolSize": 30
+                        },
+                        {
+                            "name": "Output",
+                            "symbolSize": 70
+                        },
+                        {
+                            "name": "Input",
+                            "symbolSize": 70
+                        }
+                    ],
+                    "edgeLabel": {
+                        "show": false,
+                        "position": "top",
+                        "margin": 8
+                    },
+                    "edgeSymbol": [
+                        null,
+                        null
+                    ],
+                    "edgeSymbolSize": 10,
+                    "links": [
+                        {
+                            "source": "Anomaly detection",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Anomaly detection",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "Cluster analysis",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Cluster analysis",
+                            "target": "Output"
+                        },
+                        {
+                            "source": "Index calculation",
+                            "target": "Input"
+                        },
+                        {
+                            "source": "Index calculation",
+                            "target": "Output"
+                        }
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "Anomaly detection",
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        }
+    ]
+};
+        chart_195cf792118b4aaca6faa56abbbac5a2.setOption(option_195cf792118b4aaca6faa56abbbac5a2);
+    </script>
+</body>
+</html>

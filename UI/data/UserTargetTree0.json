@@ -1,0 +1,38 @@
+{
+ "name": "credit rating",
+ "children": [
+  {
+   "name": "A_1", "children": [
+    {"name": "B_13", "value": 0.9231},
+    {"name": "B_11", "value": 0.3812},
+    {"name": "B_17", "value": 0.6714},
+    {"name": "B_7", "value": 0.743}]
+  },
+   {
+   "name": "A_2", "children": [
+    {"name": "B_4", "value": 0.9231},
+    {"name": "B_19", "value": 0.3812},
+    {"name": "B_2", "value": 0.6714},
+    {"name": "B_5", "value": 0.743}]
+  },
+      {
+   "name": "A_3", "children": [
+    {"name": "B_0", "value": 0.9231},
+    {"name": "B_14", "value": 0.3812},
+    {"name": "B_3", "value": 0.6714},
+    {"name": "B_12", "value": 0.743}]
+  },
+      {
+   "name": "A_4", "children": [
+    {"name": "B_9", "value": 0.9231},
+    {"name": "B_16", "value": 0.3812},
+    {"name": "B_18", "value": 0.6714},
+    {"name": "B_8", "value": 0.743}]
+  },
+      {
+   "name": "A_5", "children": [
+    {"name": "B_1", "value": 0.9231},
+    {"name": "B_6", "value": 0.3812},
+    {"name": "B_10", "value": 0.6714},
+    {"name": "B_15", "value": 0.743}]
+  }]}

@@ -466,10 +466,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll1Pic.setFont(font)
-        self.Scroll1Pic.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll1Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "color: rgb(255, 0, 0);\n"
-"\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll1Pic.setObjectName("Scroll1Pic")
@@ -536,8 +536,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll2Pic.setFont(font)
-        self.Scroll2Pic.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll2Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll2Pic.setObjectName("Scroll2Pic")
@@ -604,8 +606,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll3Pic.setFont(font)
-        self.Scroll3Pic.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll3Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll3Pic.setObjectName("Scroll3Pic")
@@ -672,8 +676,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll4Pic.setFont(font)
-        self.Scroll4Pic.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll4Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll4Pic.setObjectName("Scroll4Pic")
@@ -731,8 +738,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll5Pic.setFont(font)
-        self.Scroll5Pic.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll5Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll5Pic.setObjectName("Scroll5Pic")
@@ -786,8 +796,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll6Pic.setFont(font)
-        self.Scroll6Pic.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll6Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll6Pic.setObjectName("Scroll6Pic")
@@ -841,8 +854,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll7Pic.setFont(font)
-        self.Scroll7Pic.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll7Pic.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll7Pic.setObjectName("Scroll7Pic")
@@ -912,17 +927,48 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.ScrollPic.setFont(font)
-        self.ScrollPic.setStyleSheet("image: url(:/buttom/img/buttom/人像卡片下_people-bottom-card.svg);")
+        self.ScrollPic.setStyleSheet("image:url(:/buttom/img/buttom/人像卡片下_people-bottom-card.svg)\n"
+"")
         self.ScrollPic.setObjectName("ScrollPic")
         self.horizontalLayout_6.addWidget(self.ScrollPic)
         self.ScrollTitle_2 = QtWidgets.QLineEdit(self.ScrollTitle)
         self.ScrollTitle_2.setMinimumSize(QtCore.QSize(0, 32))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
+        self.ScrollTitle_2.setPalette(palette)
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.ScrollTitle_2.setFont(font)
+        self.ScrollTitle_2.setAutoFillBackground(False)
         self.ScrollTitle_2.setStyleSheet("border:none;")
         self.ScrollTitle_2.setObjectName("ScrollTitle_2")
         self.horizontalLayout_6.addWidget(self.ScrollTitle_2)
@@ -2761,9 +2807,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll1Pic_2.setFont(font)
-        self.Scroll1Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll1Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll1Pic_2.setObjectName("Scroll1Pic_2")
@@ -2830,8 +2877,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll2Pic_2.setFont(font)
-        self.Scroll2Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll2Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll2Pic_2.setObjectName("Scroll2Pic_2")
@@ -2898,8 +2947,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll3Pic_2.setFont(font)
-        self.Scroll3Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll3Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll3Pic_2.setObjectName("Scroll3Pic_2")
@@ -2966,8 +3017,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll4Pic_2.setFont(font)
-        self.Scroll4Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll4Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll4Pic_2.setObjectName("Scroll4Pic_2")
@@ -3025,8 +3079,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll5Pic_2.setFont(font)
-        self.Scroll5Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll5Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll5Pic_2.setObjectName("Scroll5Pic_2")
@@ -3080,8 +3137,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll6Pic_2.setFont(font)
-        self.Scroll6Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/开心_emotion-happy.svg);\n"
+        self.Scroll6Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);\n"
+"\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(82, 210, 98);\n"
 "\n"
 "border-radius:32px")
         self.Scroll6Pic_2.setObjectName("Scroll6Pic_2")
@@ -3135,8 +3195,10 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Tahoma")
         self.Scroll7Pic_2.setFont(font)
-        self.Scroll7Pic_2.setStyleSheet("image: url(:/buttom/img/buttom/生气_angry-face.svg);\n"
+        self.Scroll7Pic_2.setStyleSheet("image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);\n"
 "border:3px solid rgb(255, 255, 255);\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(230, 71, 40);\n"
 "\n"
 "border-radius:32px")
         self.Scroll7Pic_2.setObjectName("Scroll7Pic_2")
@@ -3200,8 +3262,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.setSpacing(12)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.ScrollPic_2 = QtWidgets.QWidget(self.ScrollTitle_3)
-        self.ScrollPic_2.setMinimumSize(QtCore.QSize(24, 24))
-        self.ScrollPic_2.setMaximumSize(QtCore.QSize(24, 24))
+        self.ScrollPic_2.setMinimumSize(QtCore.QSize(32, 32))
+        self.ScrollPic_2.setMaximumSize(QtCore.QSize(32, 32))
         self.ScrollPic_2.setSizeIncrement(QtCore.QSize(32, 0))
         font = QtGui.QFont()
         font.setFamily("Tahoma")
@@ -4401,7 +4463,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.IntroList.setCurrentRow(-1)
         self.DetailsList.setCurrentRow(-1)
-        self.DisplayPage.setCurrentIndex(0)
+        self.DisplayPage.setCurrentIndex(1)
         self.UserPageChooseList.setCurrentRow(-1)
         self.ModelPageChooseList.setCurrentRow(-1)
         self.BarPageChooseList.setCurrentRow(-1)

@@ -9,12 +9,12 @@ WINDOW_HEIGHT = 960
 # 主页的Web组件尺寸
 MAIN_WIDTH = '315px'  # 325px
 MAIN_HEIGHT = '310px'  # 316px
-MAIN_WIDTH_ = '315px'  # 451px
-MAIN_HEIGHT_ = '310px'  # 361px
+MAIN_WIDTH_ = '430px'  # 451px
+MAIN_HEIGHT_ = '340px'  # 361px
 
 # 用户页面的Web组件尺寸
 USER_WIDTH = '410px'  # 438px
-USER_HEIGHT = '340px'  # 365px
+USER_HEIGHT = '330px'  # 365px
 USER_WIDTH_ = '950px'  # 971px
 USER_HEIGHT_ = '340px'  # 361px
 

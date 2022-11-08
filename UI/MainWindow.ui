@@ -812,7 +812,7 @@ background-color: rgb(241, 244, 249)
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="MainPage">
                 <widget class="QFrame" name="MainPageFrame">
@@ -999,10 +999,10 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
 color: rgb(255, 0, 0);
-
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                   </property>
@@ -1159,8 +1159,10 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                   </property>
@@ -1317,8 +1319,10 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                   </property>
@@ -1475,8 +1479,11 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                   </property>
@@ -1606,8 +1613,11 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                   </property>
@@ -1734,8 +1744,11 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                   </property>
@@ -1862,8 +1875,10 @@ border-radius:28px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                   <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                   </property>
@@ -2032,7 +2047,8 @@ border-radius:12px</string>
                                    </font>
                                   </property>
                                   <property name="styleSheet">
-                                   <string notr="true">image: url(:/buttom/img/buttom/人像卡片下_people-bottom-card.svg);</string>
+                                   <string notr="true">image:url(:/buttom/img/buttom/人像卡片下_people-bottom-card.svg)
+</string>
                                   </property>
                                  </widget>
                                 </item>
@@ -2044,6 +2060,97 @@ border-radius:12px</string>
                                     <height>32</height>
                                    </size>
                                   </property>
+                                  <property name="palette">
+                                   <palette>
+                                    <active>
+                                     <colorrole role="Button">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Base">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Window">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                    </active>
+                                    <inactive>
+                                     <colorrole role="Button">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Base">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Window">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                    </inactive>
+                                    <disabled>
+                                     <colorrole role="Button">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Base">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                     <colorrole role="Window">
+                                      <brush brushstyle="SolidPattern">
+                                       <color alpha="255">
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>255</blue>
+                                       </color>
+                                      </brush>
+                                     </colorrole>
+                                    </disabled>
+                                   </palette>
+                                  </property>
                                   <property name="font">
                                    <font>
                                     <family>Tahoma</family>
@@ -2051,6 +2158,9 @@ border-radius:12px</string>
                                     <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
+                                  </property>
+                                  <property name="autoFillBackground">
+                                   <bool>false</bool>
                                   </property>
                                   <property name="styleSheet">
                                    <string notr="true">border:none;</string>
@@ -5918,9 +6028,10 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
 color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                    </property>
@@ -6077,8 +6188,10 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                    </property>
@@ -6235,8 +6348,10 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                    </property>
@@ -6393,8 +6508,11 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                    </property>
@@ -6524,8 +6642,11 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                    </property>
@@ -6652,8 +6773,11 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/开心_emotion-happy.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/张嘴笑_grinning-face-with-open-mouth.svg);
+
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(82, 210, 98);
 
 border-radius:32px</string>
                                    </property>
@@ -6780,8 +6904,10 @@ border-radius:28px</string>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">image: url(:/buttom/img/buttom/生气_angry-face.svg);
+                                    <string notr="true">image: url(:/buttom_white/img/buttom_white/生气_angry-face.svg);
 border:3px solid rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+background-color: rgb(230, 71, 40);
 
 border-radius:32px</string>
                                    </property>
@@ -6928,14 +7054,14 @@ border-radius:12px</string>
                                   <widget class="QWidget" name="ScrollPic_2" native="true">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>24</width>
-                                     <height>24</height>
+                                     <width>32</width>
+                                     <height>32</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
                                     <size>
-                                     <width>24</width>
-                                     <height>24</height>
+                                     <width>32</width>
+                                     <height>32</height>
                                     </size>
                                    </property>
                                    <property name="sizeIncrement">

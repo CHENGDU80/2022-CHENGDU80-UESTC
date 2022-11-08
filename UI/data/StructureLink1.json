@@ -1,0 +1,6 @@
+[{"source": "Similarity calculation", "target": "Kmeans clustering"},
+  {"source": "PCA", "target": "Kmeans clustering"},
+  {"source": "PCA", "target": "Random forest"},
+  {"source": "PCA", "target": "Output"},
+  {"source": "Input", "target": "Similarity calculation"},
+  {"source": "Input", "target": "Random forest"}]

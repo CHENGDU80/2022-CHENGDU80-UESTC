@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="92ac37e1014e406bb33109c75a5126cd" class="chart-container" style="width:400px; height:300px;"></div>
+    <div id="da6fffc7673a4fdaa412ea2213308025" class="chart-container" style="width:410px; height:330px;"></div>
     <script>
-        var chart_92ac37e1014e406bb33109c75a5126cd = echarts.init(
-            document.getElementById('92ac37e1014e406bb33109c75a5126cd'), 'white', {renderer: 'canvas'});
-        var option_92ac37e1014e406bb33109c75a5126cd = {
+        var chart_da6fffc7673a4fdaa412ea2213308025 = echarts.init(
+            document.getElementById('da6fffc7673a4fdaa412ea2213308025'), 'white', {renderer: 'canvas'});
+        var option_da6fffc7673a4fdaa412ea2213308025 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -49,15 +49,14 @@
     "series": [
         {
             "type": "radar",
-            "name": "Judgment",
+            "name": "Credit Rating",
             "data": [
                 [
-                    4300,
-                    10000,
-                    28000,
-                    35000,
-                    50000,
-                    19000
+                    88,
+                    64,
+                    37,
+                    52,
+                    94
                 ]
             ],
             "label": {
@@ -89,10 +88,10 @@
     "legend": [
         {
             "data": [
-                "Judgment"
+                "Credit Rating"
             ],
             "selected": {
-                "Judgment": true
+                "Credit Rating": true
             },
             "selectedMode": "single",
             "show": true,
@@ -123,27 +122,24 @@
     "radar": {
         "indicator": [
             {
-                "max": 6500
+                "name": "A_1",
+                "max": 100
             },
             {
-                "name": "First",
-                "max": 16000
+                "name": "A_2",
+                "max": 100
             },
             {
-                "name": "First",
-                "max": 30000
+                "name": "A_3",
+                "max": 100
             },
             {
-                "name": "First",
-                "max": 38000
+                "name": "A_4",
+                "max": 100
             },
             {
-                "name": "First",
-                "max": 52000
-            },
-            {
-                "name": "First",
-                "max": 25000
+                "name": "A_5",
+                "max": 100
             }
         ],
         "name": {
@@ -173,13 +169,13 @@
     },
     "title": [
         {
-            "text": "Radar-\u5355\u4f8b\u6a21\u5f0f",
+            "text": "User Credit",
             "padding": 5,
             "itemGap": 10
         }
     ]
 };
-        chart_92ac37e1014e406bb33109c75a5126cd.setOption(option_92ac37e1014e406bb33109c75a5126cd);
+        chart_da6fffc7673a4fdaa412ea2213308025.setOption(option_da6fffc7673a4fdaa412ea2213308025);
     </script>
 </body>
 </html>
