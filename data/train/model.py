@@ -93,6 +93,8 @@ parser.add_argument('-min_samples', type=int, default=3)
 parser.add_argument('-reTrain', type=bool, default=True)
 parser.add_argument('-thrs', type=float, default=0.5)
 parser.add_argument('-num_models', type=int, default=50)
+parser.add_argument('-train_set', type=str, default="../data/train/feature.csv")
+parser.add_argument('-train_label', type=str, default="../data/train/label.csv")
 
 args = parser.parse_args()
 epsNum = args.eps
@@ -100,12 +102,19 @@ minSamples = args.min_samples
 reTrainFlag = args.reTrain
 thrs = args.thrs
 numModels = args.num_models
+trainSet = args.train_set
+trainLabel = args.train_label
 
-constructedTrainFile = "./data/train/constructed_trainset.csv"
-constructedTestFile = "./data/test/constructed_testset.csv"
+print("Threshold: " + str(thrs))
+print("eps: " + str(epsNum))
+print("Minimal Samples: " + str(minSamples))
+print("reTrain Flag: " + reTrainFlag)
+print("Model Nums: " + str(numModels))
+print("Train Set: " + trainSet)
+print("Train Label: " + trainLabel)
 
-featureFile = "../data/train/feature.csv"
-trainLabel = "../data/train/label.csv"
+# trainSet = "../data/train/feature.csv"
+# trainLabel = "../data/train/label.csv"
 testFile = "../data/test/feature.csv"
 testLabel = "../data/test/label.csv"
 submissionTestFile = "feature.csv"
@@ -116,7 +125,7 @@ submissionUsrInfo = pd.read_csv(submissionUsrInfo)
 usrId = submissionUsrInfo["APPLICATION_ID"]
 dateDf = submissionUsrInfo["APPLICATION_DATE"]
 
-featureDf = pd.read_csv(featureFile)
+featureDf = pd.read_csv(trainSet)
 trainLabelDf = pd.read_csv(trainLabel)
 testDf = pd.read_csv(testFile)
 testLabelDf = pd.read_csv(testLabel)
@@ -150,6 +159,12 @@ for i in tqdm(range(NUM_MODEL)):
         joblib.dump(svm_trainer, modelResultFile)
         
         # resLabel = svm_trainer.predict(testDf)
+        resScore = svm_trainer.predict_proba(testDf)
+        partialResScore = resScore[:, 0]
+        modelRes.append(partialResScore)
+        modelFullRes.append(resScore)
+    else:
+        svm_trainer = joblib.load(modelResultFile)
         resScore = svm_trainer.predict_proba(testDf)
         partialResScore = resScore[:, 0]
         modelRes.append(partialResScore)

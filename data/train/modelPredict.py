@@ -27,9 +27,9 @@ def processFeature(originDf, labelDf):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-thrs', type=float, default=0.5)
-parser.add_argument("-testset", type=str, default="feature.csv")
-parser.add_argument("-testlabel", type=str, default="../data/test/label.csv")
-parser.add_argument('-num_models', type=int, default=20)
+parser.add_argument("-test_set", type=str, default="feature.csv")
+parser.add_argument("-test_label", type=str, default="../data/test/label.csv")
+parser.add_argument('-num_models', type=int, default=50)
 
 args = parser.parse_args()
 thrs = args.thrs
