@@ -2,9 +2,11 @@ import pandas as pd
 import numpy as np
 import argparse
 import os
+import joblib
 
 from collections import Counter
 from sklearn.cluster import DBSCAN
+from sklearn.svm import SVC
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 from sklearn.metrics import accuracy_score
@@ -77,10 +79,12 @@ def processFeature(originDf, labelDf):
     originColumns = originDf.columns
     originDf = pd.DataFrame(normalize(originDf), columns=originColumns)
     
-    index = labelDf.loc[labelDf["DEFAULT_LABEL"] == 1].index
-    posDf = originDf.drop(index)
-    index = labelDf.loc[labelDf["DEFAULT_LABEL"] == 0].index
-    negDf = originDf.drop(index)
+    posIndex = labelDf.loc[labelDf["DEFAULT_LABEL"] == 1].index
+    negIndex = labelDf.loc[labelDf["DEFAULT_LABEL"] == 0].index
+    posDf = originDf.drop(posIndex)
+    posDf["Label"] = 0
+    negDf = originDf.drop(negIndex)
+    negDf["Label"] = 1
     return negDf, posDf, originDf
 
 parser = argparse.ArgumentParser()
@@ -104,6 +108,14 @@ featureFile = "../data/train/feature.csv"
 trainLabel = "../data/train/label.csv"
 testFile = "../data/test/feature.csv"
 testLabel = "../data/test/label.csv"
+submissionTestFile = "feature.csv"
+submissionUsrInfo = "sample_submission.csv"
+
+submissionTestDf = pd.read_csv(submissionTestFile)
+submissionUsrInfo = pd.read_csv(submissionUsrInfo)
+usrId = submissionUsrInfo["APPLICATION_ID"]
+dateDf = submissionUsrInfo["APPLICATION_DATE"]
+
 featureDf = pd.read_csv(featureFile)
 trainLabelDf = pd.read_csv(trainLabel)
 testDf = pd.read_csv(testFile)
@@ -113,29 +125,55 @@ negTest, posTest, testDf = processFeature(testDf, testLabelDf)
 
 posModelBase = "./models/posModel_"
 negModelBase = "./models/negModel_"
+modelBase = "./models/Model_tmp_"
 
 NUM_MODEL = numModels
 modelRes = []
+modelFullRes = []
 if not os.path.exists("./models"):
     os.mkdir("./models")
 for i in tqdm(range(NUM_MODEL)):
     modelPosData = posTrain.sample(frac=(1 / NUM_MODEL))
     modelNegData = negTrain.sample(frac=1, replace=True)
-    posResultFile = posModelBase + str(i) + ".csv"
-    negResultFile = negModelBase + str(i) + ".csv"
+    modelData = pd.concat([modelPosData, modelNegData], axis = 0, ignore_index=True, join="inner")
+    labels = modelData["Label"]
+    modelData = modelData.drop("Label", axis=1)
+    # exit()
+    posResultFile = posModelBase + str(i) + ".m"
+    negResultFile = negModelBase + str(i) + ".m"
+    modelResultFile = modelBase + str(i) + ".m"
     if reTrainFlag:
-        db = DBSCAN(eps=epsNum, min_samples=minSamples, metric="cosine")
-        posIds = db.fit(modelPosData).labels_
-        negIds = db.fit(modelNegData).labels_
-        posModelDf = SaveModel(posIds, posResultFile, modelPosData)
-        negModelDf = SaveModel(negIds, negResultFile, modelNegData)
-    else:
-        posModelDf = pd.read_csv(posResultFile).drop("Unnamed: 0", axis=1)
-        negModelDf = pd.read_csv(negResultFile).drop("Unnamed: 0", axis=1)
-    modelRes.append(ModelForward(posModelDf, negModelDf, testDf))
+        # print(testDf.head(5))
+        # exit()
+        svm_trainer = SVC(C=1, kernel='rbf', gamma='auto', coef0=0.0, tol=1e-3, probability = True)
+        svm_trainer.fit(modelData, labels)
+        joblib.dump(svm_trainer, modelResultFile)
+        
+        # resLabel = svm_trainer.predict(testDf)
+        resScore = svm_trainer.predict_proba(testDf)
+        partialResScore = resScore[:, 0]
+        modelRes.append(partialResScore)
+        modelFullRes.append(resScore)
+        # print(resScore.shape)
+        # print(resScore)
+        # exit()
+    #     db = DBSCAN(eps=epsNum, min_samples=minSamples, metric="cosine")
+    #     posIds = db.fit(modelPosData).labels_
+    #     negIds = db.fit(modelNegData).labels_
+    #     posModelDf = SaveModel(posIds, posResultFile, modelPosData)
+    #     negModelDf = SaveModel(negIds, negResultFile, modelNegData)
+    # else:
+    #     posModelDf = pd.read_csv(posResultFile).drop("Unnamed: 0", axis=1)
+    #     negModelDf = pd.read_csv(negResultFile).drop("Unnamed: 0", axis=1)
+    # modelRes.append(ModelForward(posModelDf, negModelDf, testDf))
 
-modelLabel = []    
+# modelFullRes = np.array(modelFullRes)
+# resScoreDf = pd.DataFrame(modelFullRes.transpose(), columns=["0", "1"])
+# print(resScoreDf.head(5))
+modelLabel = []
 modelResArray = np.array(modelRes)
+print(modelResArray.shape)
+# exit()
 modelScore = np.mean(np.abs(modelResArray), axis=0)
 print(np.mean(modelScore))
 countNeg = 0
