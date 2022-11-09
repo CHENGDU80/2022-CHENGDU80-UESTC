@@ -11,6 +11,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.decomposition import PCA
 from tqdm import tqdm
 
 def calAUC(y_labels, y_scores):
@@ -78,6 +79,11 @@ def processFeature(originDf, labelDf):
     originDf = originDf.fillna(0)
     originColumns = originDf.columns
     originDf = pd.DataFrame(normalize(originDf), columns=originColumns)
+    pca = PCA(n_components=200)
+    originDf = pca.fit_transform(originDf)
+    originDf = pd.DataFrame(originDf)
+    # print(originDf.head(5))
+    # exit()
     
     posIndex = labelDf.loc[labelDf["DEFAULT_LABEL"] == 1].index
     negIndex = labelDf.loc[labelDf["DEFAULT_LABEL"] == 0].index
@@ -108,7 +114,7 @@ trainLabel = args.train_label
 print("Threshold: " + str(thrs))
 print("eps: " + str(epsNum))
 print("Minimal Samples: " + str(minSamples))
-print("reTrain Flag: " + reTrainFlag)
+print("reTrain Flag: " + str(reTrainFlag))
 print("Model Nums: " + str(numModels))
 print("Train Set: " + trainSet)
 print("Train Label: " + trainLabel)
@@ -142,7 +148,7 @@ modelFullRes = []
 if not os.path.exists("./models"):
     os.mkdir("./models")
 for i in tqdm(range(NUM_MODEL)):
-    modelPosData = posTrain.sample(frac=(1 / NUM_MODEL))
+    modelPosData = posTrain.sample(frac=(1 / NUM_MODEL), replace=True)
     modelNegData = negTrain.sample(frac=1, replace=True)
     modelData = pd.concat([modelPosData, modelNegData], axis = 0, ignore_index=True, join="inner")
     labels = modelData["Label"]
@@ -202,13 +208,13 @@ print(countNeg)
 testLabelDf = testLabelDf["DEFAULT_LABEL"]
 convertActualLabel = testLabelDf.apply(lambda x:1 if x == 0  else 0)
 
-acc = accuracy_score(modelLabel, testLabelDf)
-print("Accuracy: " + str(acc))
-precisioin = precision_score(modelLabel, convertActualLabel)
-print("Precision: " + str(precisioin))
-recall = recall_score(modelLabel, convertActualLabel)
-print("Recall: " + str(recall))
-f1score = f1_score(modelLabel, convertActualLabel)
-print("F1: " + str(f1score))
+# acc = accuracy_score(modelLabel, testLabelDf)
+# print("Accuracy: " + str(acc))
+# precisioin = precision_score(modelLabel, convertActualLabel)
+# print("Precision: " + str(precisioin))
+# recall = recall_score(modelLabel, convertActualLabel)
+# print("Recall: " + str(recall))
+# f1score = f1_score(modelLabel, convertActualLabel)
+# print("F1: " + str(f1score))
 AUC = calAUC(testLabelDf, modelScore)
 print("AUC: " + str(AUC))
